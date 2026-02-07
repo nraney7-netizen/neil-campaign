@@ -4,147 +4,150 @@
   <meta charset="UTF-8">
   <title>Neil Raney for President</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background-color: #f4f4f4;
-      color: #222;
-      line-height: 1.6;
+    body { margin:0; font-family:'Roboto', Arial, sans-serif; line-height:1.6; color:#222; background:#f4f4f4;}
+    a { text-decoration:none; }
+    h1,h2 { margin:0 0 10px 0; font-weight:700; }
+    
+    :root {
+      --primary-blue: #002868;
+      --primary-red: #bf0a30;
+      --light-gray: #f4f4f4;
+      --white: #ffffff;
     }
+
+    /* HEADER HERO */
     header {
-      background-color: #002868;
-      color: white;
-      padding: 50px 20px;
-      text-align: center;
+      background: url('https://via.placeholder.com/1200x400') no-repeat center center/cover;
+      color:white; text-align:center; padding:120px 20px 60px 20px; position:relative;
     }
-    header h1 {
-      margin-bottom: 10px;
-    }
-    nav {
-      background: #bf0a30;
-      padding: 10px;
-      text-align: center;
-    }
-    nav a {
-      color: white;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    section {
-      padding: 40px 20px;
-      max-width: 900px;
-      margin: auto;
-      background: white;
-      margin-top: 20px;
-      border-radius: 8px;
-    }
-    .cta-button {
-      display: inline-block;
-      background: #bf0a30;
-      color: white;
-      padding: 15px 25px;
-      text-decoration: none;
-      font-size: 18px;
-      margin: 10px 5px 0 0;
-      border-radius: 5px;
-    }
-    footer {
-      background: #002868;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
-    }
-    input[type="email"] {
-      padding: 10px;
-      width: 250px;
-      max-width: 90%;
-      margin-right: 10px;
-    }
-    img.profile-photo {
-      border-radius: 10px;
-      max-width: 200px;
-      margin-right: 20px;
-    }
-    .flex-container {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 20px;
-    }
-    ul li {
-      margin-bottom: 10px;
+    header h1 { font-size:3em; margin-bottom:10px; text-shadow:2px 2px 4px #000; }
+    header p { font-size:1.3em; margin-bottom:20px; text-shadow:1px 1px 3px #000; }
+    .hero-cta { display:inline-block; background:var(--primary-red); color:white; padding:15px 30px; font-size:18px; border-radius:5px; margin:5px; font-weight:bold; }
+
+    /* NAVIGATION */
+    nav { background:var(--primary-blue); text-align:center; }
+    nav a { color:white; margin:0 15px; font-weight:bold; display:inline-block; padding:15px 0; transition:color 0.3s; }
+    nav a:hover { color:var(--primary-red); }
+
+    /* SECTIONS */
+    section { max-width:900px; margin:auto; padding:60px 20px; border-radius:8px; margin-top:20px; background:white; }
+    #about, #volunteer, #contact, #updates, #social { background:var(--light-gray); }
+    #issues, #donate { background:white; }
+
+    /* FLEX CONTAINER */
+    .flex-container { display:flex; flex-wrap:wrap; align-items:center; gap:20px; }
+    .profile-photo { border-radius:10px; max-width:250px; flex-shrink:0; }
+
+    /* ICONS */
+    .icon { width:25px; vertical-align:middle; margin-right:8px; }
+
+    /* LISTS */
+    ul li { margin-bottom:15px; font-size:1.1em; }
+
+    /* CTA BUTTONS */
+    .cta-button { display:inline-block; background:var(--primary-red); color:white; padding:15px 30px; font-size:18px; margin:10px 5px 0 0; border-radius:5px; font-weight:bold; text-align:center; transition:background 0.3s; }
+    .cta-button:hover { background:#a50727; }
+
+    /* FORM */
+    input[type="email"] { padding:10px; width:250px; max-width:90%; margin-right:10px; border-radius:4px; border:1px solid #ccc; }
+
+    /* FOOTER */
+    footer { background:var(--primary-blue); color:white; text-align:center; padding:20px; margin-top:40px; }
+
+    /* RESPONSIVE */
+    @media (max-width:768px) {
+      .flex-container { flex-direction:column; text-align:center; }
+      .profile-photo { margin:0 auto 20px auto; }
     }
   </style>
 </head>
 <body>
 
+<!-- HERO -->
 <header>
   <h1>Neil Raney for President</h1>
   <p>A Campaign for the People — Not the Powerful</p>
-  <a href="#donate" class="cta-button">Donate</a>
-  <a href="#volunteer" class="cta-button">Volunteer</a>
+  <a href="#donate" class="hero-cta">Donate Now</a>
+  <a href="#volunteer" class="hero-cta">Join the Movement</a>
 </header>
 
+<!-- NAVIGATION -->
 <nav>
   <a href="#about">About</a>
   <a href="#issues">Issues</a>
   <a href="#volunteer">Volunteer</a>
   <a href="#donate">Donate</a>
+  <a href="#updates">Updates</a>
   <a href="#contact">Contact</a>
 </nav>
 
+<!-- ABOUT -->
 <section id="about">
   <h2>About Neil</h2>
   <div class="flex-container">
-    <img src="https://via.placeholder.com/200" alt="Neil Raney" class="profile-photo">
+    <img src="https://via.placeholder.com/250" alt="Neil Raney" class="profile-photo">
     <div>
-      <p>
-        Neil Raney is running for President to restore government to the people. 
-        With a career rooted in community service and fighting for transparency, 
-        Neil believes leaders should be accountable to voters, not corporate lobbyists.
-      </p>
-      <p>
-        He is committed to protecting freedom, defending the Constitution, 
-        and ensuring every American has a voice in government.
-      </p>
+      <p>Neil Raney is running for President to restore government to the people. With a career rooted in community service and fighting for transparency, Neil believes leaders should be accountable to voters, not corporate lobbyists.</p>
+      <p>He is committed to protecting freedom, defending the Constitution, and ensuring every American has a voice in government. This campaign is about real reform, honesty, and empowering citizens.</p>
     </div>
   </div>
 </section>
 
+<!-- ISSUES -->
 <section id="issues">
   <h2>My Priorities</h2>
   <ul>
-    <li><strong>End Corporate Control of Politics:</strong> Ban lobbyist money and restore fair elections.</li>
-    <li><strong>Protect Working Americans:</strong> Raise wages, protect Social Security, and bring jobs home.</li>
-    <li><strong>Defend Freedom and the Constitution:</strong> Protect free speech, privacy, and individual rights.</li>
-    <li><strong>Affordable Healthcare:</strong> Ensure healthcare is accessible and affordable for all.</li>
+    <li><img src="https://img.icons8.com/ios-filled/50/002868/balance-scale.png" class="icon"> <strong>End Corporate Control of Politics:</strong> Ban lobbyist money and restore fair elections.</li>
+    <li><img src="https://img.icons8.com/ios-filled/50/002868/work.png" class="icon"> <strong>Protect Working Americans:</strong> Raise wages, protect Social Security, and bring jobs home.</li>
+    <li><img src="https://img.icons8.com/ios-filled/50/002868/shield.png" class="icon"> <strong>Defend Freedom and the Constitution:</strong> Protect free speech, privacy, and individual rights.</li>
+    <li><img src="https://img.icons8.com/ios-filled/50/002868/heart-health.png" class="icon"> <strong>Affordable Healthcare:</strong> Ensure healthcare is accessible and affordable for all.</li>
   </ul>
 </section>
 
+<!-- VOLUNTEER -->
 <section id="volunteer">
   <h2>Get Involved</h2>
-  <p>
-    This campaign belongs to the people. If you believe in honest government and real reform,
-    we invite you to be part of this movement.
-  </p>
+  <p>This campaign belongs to the people. Join the movement and help build a government that works for everyone!</p>
   <a href="#" class="cta-button">Join the Campaign</a>
 </section>
 
+<!-- DONATE -->
 <section id="donate">
   <h2>Support the Campaign</h2>
   <p>Your donation helps us reach voters, organize volunteers, and challenge the political establishment. Every contribution makes a difference.</p>
   <div>
-    <!-- Replace each href with your Stripe Payment Link -->
-    <a href="PASTE_YOUR_STRIPE_LINK_HERE" class="cta-button" target="_blank">$25</a>
-    <a href="PASTE_YOUR_STRIPE_LINK_HERE" class="cta-button" target="_blank">$50</a>
-    <a href="PASTE_YOUR_STRIPE_LINK_HERE" class="cta-button" target="_blank">$100</a>
-    <a href="PASTE_YOUR_STRIPE_LINK_HERE" class="cta-button" target="_blank">Custom Amount</a>
+    <a href="PASTE_YOUR_STRIPE_LINK_HERE_25" class="cta-button" target="_blank">$25 One-Time</a>
+    <a href="PASTE_YOUR_STRIPE_LINK_HERE_50" class="cta-button" target="_blank">$50 One-Time</a>
+    <a href="PASTE_YOUR_STRIPE_LINK_HERE_100" class="cta-button" target="_blank">$100 One-Time</a>
+    <a href="PASTE_YOUR_STRIPE_LINK_HERE_MONTHLY" class="cta-button" target="_blank">$10 / Month</a>
+    <a href="PASTE_YOUR_STRIPE_LINK_HERE_CUSTOM" class="cta-button" target="_blank">Custom Amount</a>
   </div>
 </section>
 
+<!-- UPDATES -->
+<section id="updates">
+  <h2>Latest Updates</h2>
+  <ul>
+    <li><strong>Feb 5, 2026:</strong> Neil announced new housing plan for Americans. <a href="#">Read More</a></li>
+    <li><strong>Jan 28, 2026:</strong> Campaign kickoff rally in Los Angeles. <a href="#">Read More</a></li>
+    <li><strong>Jan 15, 2026:</strong> Volunteer sign-ups open for local canvassing. <a href="#">Read More</a></li>
+  </ul>
+</section>
+
+<!-- SOCIAL -->
+<section id="social">
+  <h2>Follow Neil</h2>
+  <p>Stay connected and help spread the word!</p>
+  <a href="https://twitter.com/yourhandle" target="_blank"><img src="https://img.icons8.com/ios-filled/50/002868/twitter.png" class="icon"></a>
+  <a href="https://instagram.com/yourhandle" target="_blank"><img src="https://img.icons8.com/ios-filled/50/002868/instagram-new.png" class="icon"></a>
+  <a href="https://facebook.com/yourhandle" target="_blank"><img src="https://img.icons8.com/ios-filled/50/002868/facebook-new.png" class="icon"></a>
+  <a href="https://youtube.com/yourchannel" target="_blank"><img src="https://img.icons8.com/ios-filled/50/002868/youtube-play.png" class="icon"></a>
+</section>
+
+<!-- CONTACT -->
 <section id="contact">
   <h2>Stay in Touch</h2>
   <p>Join our email list for campaign updates:</p>
@@ -155,10 +158,10 @@
   <p>Email: campaign@example.com</p>
 </section>
 
+<!-- FOOTER -->
 <footer>
   <p>Paid for by Neil Raney for President</p>
 </footer>
 
 </body>
 </html>
-
