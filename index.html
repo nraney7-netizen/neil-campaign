@@ -4,59 +4,44 @@
   <meta charset="UTF-8">
   <title>Neil Raney for President</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    body { margin:0; font-family:'Roboto', Arial, sans-serif; line-height:1.6; color:#222; background:#f4f4f4; scroll-behavior:smooth;}
-    a { text-decoration:none; }
-    h1,h2 { margin:0 0 10px 0; font-weight:700; }
+    body {margin:0; font-family:'Roboto', sans-serif; background:#f4f4f4; color:#222; scroll-behavior:smooth;}
+    h1,h2 {margin:0 0 10px 0; font-weight:700;}
+    a {text-decoration:none; color:inherit;}
+    :root {--primary-blue:#002868; --primary-red:#bf0a30; --light-gray:#f4f4f4; --white:#fff;}
 
-    :root {
-      --primary-blue: #002868;
-      --primary-red: #bf0a30;
-      --light-gray: #f4f4f4;
-      --white: #ffffff;
-    }
+    header {background:url('https://via.placeholder.com/1200x400') no-repeat center/cover; color:white; text-align:center; padding:120px 20px 60px; overflow:hidden;}
+    header h1, header p {opacity:0; transform:translateY(20px); animation:fadeInUp 1s forwards;}
+    header h1 {animation-delay:0.3s; font-size:3em; text-shadow:2px 2px 4px #000;}
+    header p {animation-delay:0.6s; font-size:1.3em; margin-bottom:20px; text-shadow:1px 1px 3px #000;}
+    .hero-cta {display:inline-block; background:var(--primary-red); color:white; padding:15px 30px; font-size:18px; border-radius:5px; margin:5px; font-weight:bold; transition: transform 0.3s;}
+    .hero-cta:hover {transform:scale(1.05);}
+    @keyframes fadeInUp {to {opacity:1; transform:translateY(0);}}
 
-    /* HERO */
-    header { background:url('https://via.placeholder.com/1200x400') no-repeat center center/cover; color:white; text-align:center; padding:120px 20px 60px 20px; overflow:hidden;}
-    header h1, header p { opacity:0; transform:translateY(20px); animation:fadeInUp 1s forwards; }
-    header h1 { animation-delay:0.3s; font-size:3em; text-shadow:2px 2px 4px #000; }
-    header p { animation-delay:0.6s; font-size:1.3em; margin-bottom:20px; text-shadow:1px 1px 3px #000; }
-    .hero-cta { display:inline-block; background:var(--primary-red); color:white; padding:15px 30px; font-size:18px; border-radius:5px; margin:5px; font-weight:bold; transition: transform 0.3s;}
-    .hero-cta:hover { transform:scale(1.05); }
+    nav {background:var(--primary-blue); text-align:center; position:sticky; top:0; z-index:999;}
+    nav a {color:white; margin:0 15px; font-weight:bold; display:inline-block; padding:15px 0; transition:color 0.3s;}
+    nav a:hover {color:var(--primary-red);}
 
-    @keyframes fadeInUp { to { opacity:1; transform:translateY(0);} }
+    section {max-width:900px; margin:auto; padding:60px 20px; border-radius:8px; margin-top:20px; background:white; scroll-margin-top:70px;}
+    #about, #volunteer, #contact, #updates, #social {background:var(--light-gray);}
+    .flex-container {display:flex; flex-wrap:wrap; align-items:center; gap:20px;}
+    .profile-photo {border-radius:10px; max-width:250px; flex-shrink:0;}
+    .icon {width:25px; vertical-align:middle; margin-right:8px;}
+    ul li {margin-bottom:15px; font-size:1.1em;}
+    .cta-button {display:inline-block; background:var(--primary-red); color:white; padding:15px 30px; font-size:18px; margin:10px 5px 0 0; border-radius:5px; font-weight:bold; text-align:center; transition: transform 0.3s, background 0.3s;}
+    .cta-button:hover {transform:scale(1.05); background:#a50727;}
+    input[type="email"] {padding:10px; width:250px; max-width:90%; margin-right:10px; border-radius:4px; border:1px solid #ccc;}
+    footer {background:var(--primary-blue); color:white; text-align:center; padding:20px; margin-top:40px;}
+    @media (max-width:768px) {.flex-container {flex-direction:column; text-align:center;} .profile-photo {margin:0 auto 20px auto;}}
 
-    /* NAV */
-    nav { background:var(--primary-blue); text-align:center; position:sticky; top:0; z-index:999; }
-    nav a { color:white; margin:0 15px; font-weight:bold; display:inline-block; padding:15px 0; transition:color 0.3s; }
-    nav a:hover { color:var(--primary-red); }
+    #floating-donate {position:fixed; right:20px; bottom:20px; background:var(--primary-red); color:white; padding:15px 25px; border-radius:50px; font-weight:bold; font-size:16px; box-shadow:0 4px 8px rgba(0,0,0,0.2); z-index:999; cursor:pointer; transition: transform 0.3s;}
+    #floating-donate:hover {transform:scale(1.1);}
 
-    /* SECTIONS */
-    section { max-width:900px; margin:auto; padding:60px 20px; border-radius:8px; margin-top:20px; background:white; scroll-margin-top:70px;}
-    #about, #volunteer, #contact, #updates, #social { background:var(--light-gray); }
-    #issues, #donate { background:white; }
-
-    .flex-container { display:flex; flex-wrap:wrap; align-items:center; gap:20px; }
-    .profile-photo { border-radius:10px; max-width:250px; flex-shrink:0; }
-    .icon { width:25px; vertical-align:middle; margin-right:8px; }
-    ul li { margin-bottom:15px; font-size:1.1em; }
-    .cta-button { display:inline-block; background:var(--primary-red); color:white; padding:15px 30px; font-size:18px; margin:10px 5px 0 0; border-radius:5px; font-weight:bold; text-align:center; transition: transform 0.3s, background 0.3s;}
-    .cta-button:hover { transform:scale(1.05); background:#a50727; }
-    input[type="email"] { padding:10px; width:250px; max-width:90%; margin-right:10px; border-radius:4px; border:1px solid #ccc; }
-    footer { background:var(--primary-blue); color:white; text-align:center; padding:20px; margin-top:40px; }
-    @media (max-width:768px) { .flex-container { flex-direction:column; text-align:center; } .profile-photo { margin:0 auto 20px auto; } }
-
-    /* FLOATING DONATE BUTTON */
-    #floating-donate { position:fixed; right:20px; bottom:20px; background:var(--primary-red); color:white; padding:15px 25px; border-radius:50px; font-weight:bold; font-size:16px; box-shadow:0 4px 8px rgba(0,0,0,0.2); z-index:999; transition: transform 0.3s; cursor:pointer;}
-    #floating-donate:hover { transform:scale(1.1); }
-
-    /* NEWSLETTER MODAL */
-    #newsletter-modal { display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.6); z-index:1000; justify-content:center; align-items:center; }
-    #newsletter-content { background:white; padding:30px 40px; border-radius:10px; max-width:400px; text-align:center; position:relative; }
-    #newsletter-content h2 { margin-bottom:15px; }
-    #close-modal { position:absolute; top:10px; right:15px; font-size:20px; cursor:pointer; color:#555; }
+    #newsletter-modal {display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.6); z-index:1000; justify-content:center; align-items:center;}
+    #newsletter-content {background:white; padding:30px 40px; border-radius:10px; max-width:400px; text-align:center; position:relative;}
+    #newsletter-content h2 {margin-bottom:15px;}
+    #close-modal {position:absolute; top:10px; right:15px; font-size:20px; cursor:pointer; color:#555;}
   </style>
 </head>
 <body>
@@ -82,8 +67,8 @@
   <div class="flex-container">
     <img src="https://via.placeholder.com/250" alt="Neil Raney" class="profile-photo">
     <div>
-      <p>Neil Raney is running for President to restore government to the people. With a career rooted in community service and fighting for transparency, Neil believes leaders should be accountable to voters, not corporate lobbyists.</p>
-      <p>He is committed to protecting freedom, defending the Constitution, and ensuring every American has a voice in government. This campaign is about real reform, honesty, and empowering citizens.</p>
+      <p>Neil Raney is running for President to restore government to the people. He has dedicated his career to community service and fighting corporate influence in politics.</p>
+      <p>Neil’s vision: a government accountable to citizens, defending freedom, protecting working families, and ensuring every American has a voice.</p>
     </div>
   </div>
 </section>
@@ -91,10 +76,10 @@
 <section id="issues">
   <h2>My Priorities</h2>
   <ul>
-    <li><img src="https://img.icons8.com/ios-filled/50/002868/balance-scale.png" class="icon"> <strong>End Corporate Control of Politics:</strong> Ban lobbyist money and restore fair elections.</li>
-    <li><img src="https://img.icons8.com/ios-filled/50/002868/work.png" class="icon"> <strong>Protect Working Americans:</strong> Raise wages, protect Social Security, and bring jobs home.</li>
-    <li><img src="https://img.icons8.com/ios-filled/50/002868/shield.png" class="icon"> <strong>Defend Freedom and the Constitution:</strong> Protect free speech, privacy, and individual rights.</li>
-    <li><img src="https://img.icons8.com/ios-filled/50/002868/heart-health.png" class="icon"> <strong>Affordable Healthcare:</strong> Ensure healthcare is accessible and affordable for all.</li>
+    <li><img src="https://img.icons8.com/ios-filled/50/002868/balance-scale.png" class="icon"><strong>End Corporate Control:</strong> Ban lobbyist money and restore fair elections.</li>
+    <li><img src="https://img.icons8.com/ios-filled/50/002868/work.png" class="icon"><strong>Protect Working Americans:</strong> Raise wages, protect Social Security, and bring jobs home.</li>
+    <li><img src="https://img.icons8.com/ios-filled/50/002868/shield.png" class="icon"><strong>Defend Freedom:</strong> Protect free speech, privacy, and individual rights.</li>
+    <li><img src="https://img.icons8.com/ios-filled/50/002868/heart-health.png" class="icon"><strong>Affordable Healthcare:</strong> Ensure healthcare is accessible for all.</li>
   </ul>
 </section>
 
@@ -106,7 +91,7 @@
 
 <section id="donate">
   <h2>Support the Campaign</h2>
-  <p>Your donation helps us reach voters, organize volunteers, and challenge the political establishment. Every contribution makes a difference.</p>
+  <p>Your donation helps us reach voters and organize volunteers. Every contribution makes a difference.</p>
   <div>
     <button class="cta-button" onclick="donate('price_25USD')">$25 One-Time</button>
     <button class="cta-button" onclick="donate('price_50USD')">$50 One-Time</button>
@@ -120,7 +105,7 @@
   <h2>Latest Updates</h2>
   <ul>
     <li><strong>Feb 5, 2026:</strong> Neil announced new housing plan. <a href="#">Read More</a></li>
-    <li><strong>Jan 28, 2026:</strong> Campaign kickoff rally in Los Angeles. <a href="#">Read More</a></li>
+    <li><strong>Jan 28, 2026:</strong> Campaign kickoff rally. <a href="#">Read More</a></li>
     <li><strong>Jan 15, 2026:</strong> Volunteer sign-ups open. <a href="#">Read More</a></li>
   </ul>
 </section>
@@ -131,12 +116,10 @@
   <a href="https://twitter.com/yourhandle" target="_blank"><img src="https://img.icons8.com/ios-filled/50/002868/twitter.png" class="icon"></a>
   <a href="https://instagram.com/yourhandle" target="_blank"><img src="https://img.icons8.com/ios-filled/50/002868/instagram-new.png" class="icon"></a>
   <a href="https://facebook.com/yourhandle" target="_blank"><img src="https://img.icons8.com/ios-filled/50/002868/facebook-new.png" class="icon"></a>
-  <a href="https://youtube.com/yourchannel" target="_blank"><img src="https://img.icons8.com/ios-filled/50/002868/youtube-play.png" class="icon"></a>
 </section>
 
 <section id="contact">
   <h2>Stay in Touch</h2>
-  <p>Join our email list for campaign updates:</p>
   <form action="#" method="post">
     <input type="email" placeholder="Enter your email" required>
     <button class="cta-button" type="submit">Sign Up</button>
@@ -148,10 +131,8 @@
   <p>Paid for by Neil Raney for President</p>
 </footer>
 
-<!-- Floating Donate -->
 <div id="floating-donate" onclick="document.querySelector('#donate').scrollIntoView({behavior:'smooth'});">Donate</div>
 
-<!-- Newsletter Modal -->
 <div id="newsletter-modal">
   <div id="newsletter-content">
     <span id="close-modal">&times;</span>
@@ -164,31 +145,26 @@
   </div>
 </div>
 
-<!-- Stripe JS -->
 <script src="https://js.stripe.com/v3/"></script>
 <script>
-  const stripe = Stripe('YOUR_PUBLISHABLE_KEY_HERE'); // Replace with your Stripe public key
-  function donate(priceId) {
+  const stripe = Stripe('YOUR_PUBLISHABLE_KEY_HERE'); // Replace with Stripe key
+  function donate(priceId){
     stripe.redirectToCheckout({
-      lineItems: [{price: priceId, quantity:1}],
-      mode: 'payment', // or 'subscription'
-      successUrl: window.location.href + '?success=true',
-      cancelUrl: window.location.href + '?canceled=true'
-    })
-    .then(function(result){ if(result.error) alert(result.error.message); });
+      lineItems:[{price:priceId,quantity:1}],
+      mode:'payment',
+      successUrl:window.location.href+'?success=true',
+      cancelUrl:window.location.href+'?canceled=true'
+    }).then(r=>{if(r.error) alert(r.error.message);});
   }
 
-  // Smart Newsletter Modal (shows once per visitor)
   const modal = document.getElementById('newsletter-modal');
   const closeBtn = document.getElementById('close-modal');
-
-  if(!localStorage.getItem('newsletterShown')) {
-    setTimeout(() => { modal.style.display='flex'; }, 10000); // 10 seconds
-    localStorage.setItem('newsletterShown', 'true');
+  if(!localStorage.getItem('newsletterShown')){
+    setTimeout(()=>{modal.style.display='flex';},10000);
+    localStorage.setItem('newsletterShown','true');
   }
-
-  closeBtn.onclick = () => { modal.style.display='none'; }
-  window.onclick = e => { if(e.target==modal) modal.style.display='none'; }
+  closeBtn.onclick = ()=>{modal.style.display='none';}
+  window.onclick = e=>{if(e.target==modal) modal.style.display='none';}
 </script>
 
 </body>
