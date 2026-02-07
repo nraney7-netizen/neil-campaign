@@ -13,9 +13,9 @@
       line-height: 1.6;
     }
     header {
-      background: #0b3c6d;
+      background: linear-gradient(to right, #0b3c6d, #0f5fa8);
       color: white;
-      padding: 40px 20px;
+      padding: 70px 20px;
       text-align: center;
     }
     nav {
@@ -23,6 +23,8 @@
       color: white;
       padding: 10px;
       text-align: center;
+      position: sticky;
+      top: 0;
     }
     nav a {
       color: white;
@@ -31,11 +33,12 @@
       font-weight: bold;
     }
     section {
-      padding: 40px 20px;
-      max-width: 900px;
+      padding: 50px 20px;
+      max-width: 1000px;
       margin: auto;
       background: white;
       margin-top: 20px;
+      border-radius: 6px;
     }
     h1, h2 {
       color: #0b3c6d;
@@ -44,10 +47,15 @@
       display: inline-block;
       background: #c62828;
       color: white;
-      padding: 12px 20px;
+      padding: 14px 22px;
       text-decoration: none;
       border-radius: 5px;
       margin-top: 10px;
+      font-size: 1.1em;
+    }
+    .cta-box {
+      text-align: center;
+      margin-top: 20px;
     }
     footer {
       background: #222;
@@ -57,65 +65,95 @@
       margin-top: 20px;
       font-size: 0.9em;
     }
+    input[type="email"] {
+      padding: 10px;
+      width: 250px;
+      max-width: 90%;
+    }
   </style>
 </head>
 <body>
 
 <header>
   <h1>Neil for President</h1>
-  <p>Putting the People First</p>
+  <p><strong>Restore honesty. Defend liberty. Serve the people.</strong></p>
+  <div class="cta-box">
+    <a class="button" href="#donate">Donate</a>
+    <a class="button" href="#volunteer">Volunteer</a>
+  </div>
 </header>
 
 <nav>
   <a href="#about">About</a>
-  <a href="#platform">Platform</a>
+  <a href="#issues">Issues</a>
   <a href="#volunteer">Volunteer</a>
   <a href="#donate">Donate</a>
+  <a href="#updates">Updates</a>
   <a href="#contact">Contact</a>
 </nav>
 
 <section id="about">
   <h2>About Neil</h2>
   <p>
-    Neil is running for President to restore honesty, accountability, and liberty
-    to American government. This campaign is about serving citizens instead of
-    special interests.
+    Neil is running for President to return government to the people it serves.
+    He believes America works best when leaders follow the Constitution,
+    respect individual liberty, and tell the truth to voters.
+  </p>
+  <p>
+    This campaign is focused on restoring trust in government, defending free speech,
+    and ending the culture of corruption and insider control in Washington.
   </p>
 </section>
 
-<section id="platform">
-  <h2>Platform</h2>
+<section id="issues">
+  <h2>Issues</h2>
   <ul>
-    <li>Defend the Constitution</li>
-    <li>End corruption and insider politics</li>
-    <li>Protect free speech and civil liberties</li>
-    <li>Put Americans before lobbyists</li>
-    <li>Restore trust in government</li>
+    <li><strong>Constitutional Government:</strong> Enforce the Constitution as written and stop executive overreach.</li>
+    <li><strong>Economic Freedom:</strong> Reduce inflation, cut wasteful spending, and protect small businesses.</li>
+    <li><strong>Free Speech:</strong> Defend the First Amendment and oppose censorship.</li>
+    <li><strong>Anti-Corruption:</strong> End insider politics and revolving-door lobbying.</li>
+    <li><strong>Secure Borders:</strong> Enforce the law with fairness and humanity.</li>
   </ul>
 </section>
 
 <section id="volunteer">
   <h2>Volunteer</h2>
   <p>
-    This campaign depends on people like you. Help collect signatures,
-    spread the word, and organize locally.
+    Real change only happens when people step up. Help collect signatures,
+    spread the message, and organize in your community.
   </p>
-  <a class="button" href="#">Sign Up to Volunteer</a>
+  <div class="cta-box">
+    <a class="button" href="#contact">Join Team Neil</a>
+  </div>
 </section>
 
 <section id="donate">
   <h2>Donate</h2>
   <p>
-    Your contribution helps print materials, travel to meet voters,
-    and spread the message.
+    Your contribution helps fund travel, campaign materials, and outreach to voters.
+    Every dollar makes a difference.
   </p>
-  <a class="button" href="https://buy.stripe.com/eVqcN65n2eRc2RX3vG4ko00">Donate Now</a>
+  <div class="cta-box">
+    <!-- Replace # with your Stripe link when approved -->
+    <a class="button" href="#" target="_blank">Donate Now</a>
+  </div>
+</section>
+
+<section id="updates">
+  <h2>Campaign Updates</h2>
+  <p>
+    Coming soon: campaign announcements, events, and press updates.
+  </p>
 </section>
 
 <section id="contact">
-  <h2>Contact</h2>
+  <h2>Stay In Touch</h2>
+  <p>Join our email list for campaign updates:</p>
+  <form>
+    <input type="email" placeholder="Enter your email" required>
+    <button class="button" type="submit">Sign Up</button>
+  </form>
   <p>Email: campaign@neilforpresident.com</p>
-  <p>Phone: (555) 123-4567</p>
 </section>
 
 <footer>
