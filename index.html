@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Neil Raney for President</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -14,8 +15,11 @@
     header {
       background-color: #002868;
       color: white;
-      padding: 40px 20px;
+      padding: 50px 20px;
       text-align: center;
+    }
+    header h1 {
+      margin-bottom: 10px;
     }
     nav {
       background: #bf0a30;
@@ -34,6 +38,7 @@
       margin: auto;
       background: white;
       margin-top: 20px;
+      border-radius: 8px;
     }
     .cta-button {
       display: inline-block;
@@ -42,7 +47,8 @@
       padding: 15px 25px;
       text-decoration: none;
       font-size: 18px;
-      margin-top: 15px;
+      margin: 10px 5px 0 0;
+      border-radius: 5px;
     }
     footer {
       background: #002868;
@@ -50,6 +56,26 @@
       text-align: center;
       padding: 20px;
       margin-top: 40px;
+    }
+    input[type="email"] {
+      padding: 10px;
+      width: 250px;
+      max-width: 90%;
+      margin-right: 10px;
+    }
+    img.profile-photo {
+      border-radius: 10px;
+      max-width: 200px;
+      margin-right: 20px;
+    }
+    .flex-container {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 20px;
+    }
+    ul li {
+      margin-bottom: 10px;
     }
   </style>
 </head>
@@ -59,6 +85,7 @@
   <h1>Neil Raney for President</h1>
   <p>A Campaign for the People — Not the Powerful</p>
   <a href="#donate" class="cta-button">Donate</a>
+  <a href="#volunteer" class="cta-button">Volunteer</a>
 </header>
 
 <nav>
@@ -70,16 +97,21 @@
 </nav>
 
 <section id="about">
-  <h2>Why I’m Running</h2>
-  <p>
-    I am running for President because our government no longer works for everyday Americans.
-    Corporations and special interests have too much influence over our politics, while working
-    families struggle to get ahead.
-  </p>
-  <p>
-    I believe the purpose of government is to serve the people, protect freedom, and ensure fairness.
-    This campaign is about restoring honesty, transparency, and accountability to leadership.
-  </p>
+  <h2>About Neil</h2>
+  <div class="flex-container">
+    <img src="https://via.placeholder.com/200" alt="Neil Raney" class="profile-photo">
+    <div>
+      <p>
+        Neil Raney is running for President to restore government to the people. 
+        With a career rooted in community service and fighting for transparency, 
+        Neil believes leaders should be accountable to voters, not corporate lobbyists.
+      </p>
+      <p>
+        He is committed to protecting freedom, defending the Constitution, 
+        and ensuring every American has a voice in government.
+      </p>
+    </div>
+  </div>
 </section>
 
 <section id="issues">
@@ -103,15 +135,23 @@
 
 <section id="donate">
   <h2>Support the Campaign</h2>
-  <p>
-    Your donation helps us reach voters, organize volunteers, and challenge the political establishment.
-    Every contribution makes a difference.
-  </p>
-  <a href="PASTE_YOUR_STRIPE_LINK_HERE" class="cta-button" target="_blank">Donate Now</a>
+  <p>Your donation helps us reach voters, organize volunteers, and challenge the political establishment. Every contribution makes a difference.</p>
+  <div>
+    <!-- Replace each href with your Stripe Payment Link -->
+    <a href="PASTE_YOUR_STRIPE_LINK_HERE" class="cta-button" target="_blank">$25</a>
+    <a href="PASTE_YOUR_STRIPE_LINK_HERE" class="cta-button" target="_blank">$50</a>
+    <a href="PASTE_YOUR_STRIPE_LINK_HERE" class="cta-button" target="_blank">$100</a>
+    <a href="PASTE_YOUR_STRIPE_LINK_HERE" class="cta-button" target="_blank">Custom Amount</a>
+  </div>
 </section>
 
 <section id="contact">
-  <h2>Contact</h2>
+  <h2>Stay in Touch</h2>
+  <p>Join our email list for campaign updates:</p>
+  <form action="#" method="post">
+    <input type="email" placeholder="Enter your email" required>
+    <button class="cta-button" type="submit">Sign Up</button>
+  </form>
   <p>Email: campaign@example.com</p>
 </section>
 
