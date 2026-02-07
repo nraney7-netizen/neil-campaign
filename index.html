@@ -8,14 +8,14 @@
   <script src="https://js.stripe.com/v3/"></script>
   <style>
     body { margin:0; font-family: Arial, sans-serif; line-height:1.6; }
+    nav { background:#0b1c45; color:#fff; padding:10px 20px; display:flex; justify-content:space-between; align-items:center; position:sticky; top:0; z-index:100; }
+    nav a { color:#fff; margin:0 10px; text-decoration:none; font-weight:bold; }
     header { background: url('images/hero.jpg') center/cover no-repeat; color:#fff; padding:100px 20px; text-align:center; position:relative; }
     header h1 { font-size:3rem; margin-bottom:10px; }
     header p { font-size:1.3rem; margin-bottom:20px; }
-    .btn { padding:15px 30px; margin:5px; text-decoration:none; color:#fff; border-radius:5px; font-weight:bold; display:inline-block; }
+    .btn { padding:15px 30px; margin:5px; text-decoration:none; color:#fff; border-radius:5px; font-weight:bold; display:inline-block; cursor:pointer; border:none; }
     .btn-red { background:#d32f2f; }
     .btn-blue { background:#1976d2; }
-    nav { background:#0b1c45; color:#fff; padding:10px 20px; display:flex; justify-content:space-between; align-items:center; position:sticky; top:0; z-index:100; }
-    nav a { color:#fff; margin:0 10px; text-decoration:none; font-weight:bold; }
     section { padding:60px 20px; max-width:1200px; margin:0 auto; }
     section h2 { font-size:2rem; margin-bottom:20px; }
     section img { max-width:100%; height:auto; border-radius:10px; }
@@ -26,6 +26,11 @@
     .newsletter { background:rgba(255,255,255,0.95); position:fixed; top:0; left:0; width:100%; height:100%; display:flex; justify-content:center; align-items:center; display:none; z-index:1000; }
     .newsletter-content { background:#fff; padding:30px; border-radius:10px; max-width:400px; text-align:center; box-shadow:0 0 20px rgba(0,0,0,0.3); }
     .close { position:absolute; top:10px; right:15px; font-size:1.5rem; cursor:pointer; }
+    input, textarea { width:100%; padding:10px; margin:8px 0; border-radius:5px; border:1px solid #ccc; }
+    /* Dynamic News Carousel */
+    .news-carousel { overflow:hidden; position:relative; }
+    .news-carousel .grid { display:flex; transition:transform 0.5s ease-in-out; }
+    .news-carousel .card { min-width:300px; margin-right:20px; flex-shrink:0; }
   </style>
 </head>
 <body>
@@ -120,10 +125,10 @@
   <button class="btn btn-red" onclick="donate('price_100USD')">Donate $100</button>
 </section>
 
-<!-- News Section -->
+<!-- News Section with Dynamic Carousel -->
 <section id="news">
   <h2>Latest News & Updates</h2>
-  <div class="grid">
+  <div class="news-carousel grid">
     <div class="card">
       <h3>April 14, 2026</h3>
       <p>Neil unveils plan for affordable healthcare.</p>
@@ -134,16 +139,38 @@
       <p>Big rally turnout in Philadelphia supporting Neil's campaign.</p>
       <a href="#" class="btn btn-blue">Read More</a>
     </div>
+    <div class="card">
+      <h3>March 28, 2026</h3>
+      <p>Neil meets local volunteers to discuss grassroots strategies.</p>
+      <a href="#" class="btn btn-blue">Read More</a>
+    </div>
   </div>
 </section>
 
-<!-- Contact / Newsletter -->
-<section id="contact">
-  <h2>Stay Updated</h2>
-  <form action="#" method="post">
-    <input type="email" placeholder="Enter your email" required>
-    <button type="submit" class="btn btn-red">Sign Up</button>
+<!-- Contact / Newsletter Section -->
+<section id="contact" style="background:#f0f0f0; padding:80px 20px; border-radius:10px;">
+  <h2>Get in Touch</h2>
+  <p>Have questions or want to get involved? Send us a message or subscribe for updates.</p>
+
+  <!-- Contact Form -->
+  <form action="YOUR_EMAIL_HANDLER_URL" method="POST">
+    <label for="name">Name (optional)</label><br>
+    <input type="text" id="name" name="name" placeholder="Your name">
+
+    <label for="email">Email *</label><br>
+    <input type="email" id="email" name="email" placeholder="you@example.com" required>
+
+    <label for="message">Message</label><br>
+    <textarea id="message" name="message" rows="4" placeholder="Type your message here..."></textarea>
+
+    <button type="submit" class="btn btn-red">Send Message</button>
   </form>
+
+  <p>Or email us at: <a href="mailto:campaign@example.com">campaign@example.com</a></p>
+  <p>Follow us on social:</p>
+  <a href="https://twitter.com/yourhandle" target="_blank">Twitter</a> |
+  <a href="https://facebook.com/yourhandle" target="_blank">Facebook</a> |
+  <a href="https://instagram.com/yourhandle" target="_blank">Instagram</a>
 </section>
 
 <!-- Footer -->
@@ -180,6 +207,19 @@
 
   // Newsletter modal after 10 seconds
   setTimeout(()=>{document.getElementById('newsletterModal').style.display='flex';},10000);
+
+  // Dynamic News Carousel
+  let carouselIndex = 0;
+  const carousel = document.querySelector('.news-carousel .grid');
+  const cards = carousel.querySelectorAll('.card');
+  const totalCards = cards.length;
+  function rotateCarousel() {
+    carouselIndex++;
+    if (carouselIndex >= totalCards) carouselIndex = 0;
+    const offset = -carouselIndex * 320; // width + margin approx
+    carousel.style.transform = `translateX(${offset}px)`;
+  }
+  setInterval(rotateCarousel, 5000); // rotate every 5 seconds
 </script>
 
 </body>
