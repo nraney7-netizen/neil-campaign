@@ -39,35 +39,35 @@ input, textarea { width:100%; padding:10px; margin:8px 0; border-radius:5px; bor
   <div class="logo">Neil Raney</div>
   <div class="nav-links">
     <a href="#about">About</a>
-    <a href="#issues">Issues</a>
+    <a href="#issues">Platform</a>
     <a href="#volunteer">Volunteer</a>
     <a href="#donate">Donate</a>
-    <a href="#news">News</a>
+    <a href="#news">Updates</a>
     <a href="#contact">Contact</a>
   </div>
 </nav>
 
 <!-- Hero Section -->
 <header>
-  <h1>Putting Power Back in the People’s Hands</h1>
-  <p>Neil Raney fights corporate control, protects freedoms, and builds a government that works for everyone.</p>
+  <h1>A Government That Works for You — Not Big Money</h1>
+  <p>Neil Raney fights corporate influence, protects freedoms, and builds opportunity for every American. Join the movement to restore democracy, accountability, and the people’s power.</p>
   <a href="#volunteer" class="btn btn-red">Join the Movement</a>
   <a href="#donate" class="btn btn-blue">Donate Now</a>
 </header>
 
 <!-- About Section -->
 <section id="about">
-  <h2>About Neil</h2>
+  <h2>About Neil Raney</h2>
   <div class="grid">
     <div>
       <img src="images/neil.jpg" alt="Neil Raney">
     </div>
     <div>
-      <p>Neil Raney is running for President to restore democracy and serve the people. He stands up to corporate interests, protects individual freedoms, and builds a government that works for everyone.</p>
+      <p>Neil Raney is running for President to restore a government that serves the people, not corporate interests. As a longtime advocate for accountability, freedom, and fairness, Neil has spent his career listening to communities and fighting for policies that truly make a difference.</p>
       <ul>
-        <li>End corporate lobbying</li>
-        <li>Protect individual liberties</li>
-        <li>Restore accountability in government</li>
+        <li>End corporate lobbying and restore fair elections</li>
+        <li>Protect individual liberties and privacy</li>
+        <li>Ensure government accountability and transparency</li>
       </ul>
       <a href="#" class="btn btn-red">Read More</a>
     </div>
@@ -80,15 +80,15 @@ input, textarea { width:100%; padding:10px; margin:8px 0; border-radius:5px; bor
   <div class="grid">
     <div class="card">
       <h3>Corporate Accountability</h3>
-      <p>Ban lobbyist money and restore fair elections.</p>
+      <p>Ban lobbyist money, eliminate pay-to-play politics, and restore fair elections.</p>
     </div>
     <div class="card">
       <h3>Healthcare for All</h3>
-      <p>Ensure affordable healthcare for every American.</p>
+      <p>Guarantee affordable healthcare access for every American, including protections for pre-existing conditions.</p>
     </div>
     <div class="card">
       <h3>Education Reform</h3>
-      <p>Invest in public schools and teachers nationwide.</p>
+      <p>Invest in public schools, teachers, and student programs to create equal opportunities for every child.</p>
     </div>
   </div>
 </section>
@@ -117,14 +117,14 @@ input, textarea { width:100%; padding:10px; margin:8px 0; border-radius:5px; bor
 
 <!-- Donate Section -->
 <section id="donate">
-  <h2>Donate</h2>
-  <p>Your contribution fuels our fight for the people.</p>
+  <h2>Fuel the People’s Movement</h2>
+  <p>Your contribution fuels Neil’s fight for accountability, fairness, and freedom. Every donation helps bring real change to every American.</p>
   <button class="btn btn-red" onclick="donate('price_25USD')">Donate $25</button>
   <button class="btn btn-red" onclick="donate('price_50USD')">Donate $50</button>
   <button class="btn btn-red" onclick="donate('price_100USD')">Donate $100</button>
 </section>
 
-<!-- News Section with Dynamic Carousel -->
+<!-- News Section -->
 <section id="news">
   <h2>Latest News & Updates</h2>
   <div class="news-carousel grid">
@@ -135,12 +135,12 @@ input, textarea { width:100%; padding:10px; margin:8px 0; border-radius:5px; bor
     </div>
     <div class="card">
       <h3>April 4, 2026</h3>
-      <p>Big rally turnout in Philadelphia supporting Neil's campaign.</p>
+      <p>Rally turnout in Philadelphia supports Neil’s campaign.</p>
       <a href="#" class="btn btn-blue">Read More</a>
     </div>
     <div class="card">
       <h3>March 28, 2026</h3>
-      <p>Neil meets local volunteers to discuss grassroots strategies.</p>
+      <p>Neil meets volunteers to discuss grassroots strategy.</p>
       <a href="#" class="btn btn-blue">Read More</a>
     </div>
   </div>
@@ -148,8 +148,8 @@ input, textarea { width:100%; padding:10px; margin:8px 0; border-radius:5px; bor
 
 <!-- Contact Section -->
 <section id="contact" style="background:#f0f0f0; padding:80px 20px; border-radius:10px;">
-  <h2>Get in Touch</h2>
-  <p>Have questions or want to get involved? Send us a message or subscribe for updates.</p>
+  <h2>Stay Connected</h2>
+  <p>Have questions or want to get involved? Send us a message or subscribe for updates, policy announcements, and campaign events.</p>
 
   <form action="YOUR_EMAIL_HANDLER_URL" method="POST">
     <label for="name">Name (optional)</label><br>
@@ -214,7 +214,7 @@ input, textarea { width:100%; padding:10px; margin:8px 0; border-radius:5px; bor
     const offset = -carouselIndex * 320; // width + margin approx
     carousel.style.transform = `translateX(${offset}px)`;
   }
-  setInterval(rotateCarousel, 5000); // rotate every 5 seconds
+  setInterval(rotateCarousel, 5000);
 </script>
 
 </body>
