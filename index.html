@@ -2,135 +2,219 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Neil Raney for President</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-</head>
+  <title>Neil Raney for President 2028</title>
 
+  <!-- Link to CSS -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+</head>
 <body>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-overlay">
-    <h1>A Government That Works for <span>You</span></h1>
-    <p>Neil Raney is running for President to restore honesty, accountability, and freedom by putting people back in charge of their government.</p>
-    <a href="#signup" class="btn-primary">Stand With Neil</a>
-    <a href="#donate" class="btn-secondary">Donate Now</a>
+<!-- STICKY HEADER -->
+<header id="site-header">
+  <div class="logo">
+    <a href="#hero">Neil Raney</a>
   </div>
-</section>
+  <nav>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#platform">Platform</a></li>
+      <li><a href="#events">Events</a></li>
+      <li><a href="#signup">Join</a></li>
+      <li><a href="#donate">Donate</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </nav>
+</header>
 
-<!-- ABOUT -->
-<section id="about">
-  <h2>Meet Neil Raney</h2>
-  <div class="about-grid">
-    <img src="images/neil-portrait.jpg" alt="Neil Raney">
-    <div>
-      <p>Neil Raney is running for President to challenge a political system captured by corporate lobbyists and special interests. He believes government should serve working families, protect individual freedom, and stay accountable to the people — not donors or insiders.</p>
-      <ul>
-        <li>End corporate control of politics</li>
-        <li>Defend constitutional freedoms</li>
-        <li>Restore trust in government</li>
-      </ul>
-      <a href="#platform" class="btn-primary">Read Neil’s Story</a>
+<!-- HERO SECTION -->
+<section id="hero" class="hero fade-in">
+  <div class="hero-overlay">
+    <h1>A Government That Works for Your Family</h1>
+    <p>Join Neil Raney — Standing Up for Everyday Americans Against Special Interests. Act now and be part of a grassroots movement that puts people first.</p>
+    <div class="hero-buttons">
+      <a href="#donate" class="btn-primary" onclick="gtag('event','click',{'event_category':'CTA','event_label':'Hero Donate'});">Donate Now</a>
+      <a href="#signup" class="btn-secondary" onclick="gtag('event','click',{'event_category':'CTA','event_label':'Hero Join'});">Join the Movement</a>
     </div>
   </div>
 </section>
 
-<!-- PLATFORM -->
-<section id="platform">
-  <h2>Our Priorities</h2>
+<!-- ABOUT SECTION -->
+<section id="about" class="fade-in">
+  <h2>About Neil Raney</h2>
+  <div class="about-grid">
+    <img src="images/neil-portrait.jpg" alt="Neil Raney Portrait">
+    <p>Neil Raney is committed to putting people before corporate interests. With decades of experience advocating for everyday Americans, Neil brings a bold, grassroots approach to leadership. He believes in freedom, fairness, and a government that listens.</p>
+  </div>
+</section>
+
+<!-- PLATFORM SECTION -->
+<section id="platform" class="slide-left">
+  <h2>Our Platform</h2>
   <div class="card-grid">
     <div class="card">
-      <h3>End Corrupt Politics</h3>
-      <p>Ban lobbyist money, strengthen ethics laws, and make government answer to voters again.</p>
+      <h3>Anti-Corporate Policy</h3>
+      <p>Fight lobbying influence and ensure government policies work for people, not big corporations.</p>
     </div>
     <div class="card">
-      <h3>Affordable Healthcare</h3>
-      <p>No family should go bankrupt because someone gets sick. Healthcare should be accessible and fair.</p>
+      <h3>Economic Freedom</h3>
+      <p>Empower small businesses and reduce barriers to economic opportunity for every American.</p>
     </div>
     <div class="card">
-      <h3>Economic Fairness</h3>
-      <p>Support workers, small businesses, and fair competition instead of monopolies and political favoritism.</p>
-    </div>
-    <div class="card">
-      <h3>Strong Public Education</h3>
-      <p>Invest in schools and teachers so every child has a real chance to succeed.</p>
+      <h3>Education & Healthcare</h3>
+      <p>Invest in accessible, high-quality education and healthcare without increasing bureaucratic inefficiencies.</p>
     </div>
   </div>
 </section>
 
-<!-- EVENTS -->
-<section id="events">
+<!-- EVENTS SECTION -->
+<section id="events" class="slide-right">
   <h2>Join Neil on the Campaign Trail</h2>
+  <p>Meet Neil in person at rallies, town halls, and community events across the country. RSVP below to secure your spot!</p>
+
   <div class="event-grid">
-    <div class="event">
+    <div class="event-card">
       <h3>Town Hall – Iowa</h3>
-      <p>May 12</p>
+      <p><strong>Date:</strong> May 12, 2026</p>
+      <p><strong>Time:</strong> 6:00 PM</p>
+      <p><strong>Location:</strong> Des Moines Community Center</p>
+      <a href="RSVP_LINK_HERE" class="btn-primary" onclick="gtag('event','click',{'event_category':'CTA','event_label':'RSVP Iowa Town Hall'});">RSVP Now</a>
+      <a href="https://goo.gl/maps/EXAMPLE" target="_blank" class="btn-secondary">View Map</a>
     </div>
-    <div class="event">
+
+    <div class="event-card">
       <h3>Rally – Michigan</h3>
-      <p>May 23</p>
+      <p><strong>Date:</strong> May 23, 2026</p>
+      <p><strong>Time:</strong> 7:00 PM</p>
+      <p><strong>Location:</strong> Lansing Civic Hall</p>
+      <a href="RSVP_LINK_HERE" class="btn-primary" onclick="gtag('event','click',{'event_category':'CTA','event_label':'RSVP Michigan Rally'});">RSVP Now</a>
+      <a href="https://goo.gl/maps/EXAMPLE" target="_blank" class="btn-secondary">View Map</a>
     </div>
-    <div class="event">
+
+    <div class="event-card">
       <h3>Meet & Greet – Ohio</h3>
-      <p>June 5</p>
+      <p><strong>Date:</strong> June 5, 2026</p>
+      <p><strong>Time:</strong> 5:00 PM</p>
+      <p><strong>Location:</strong> Columbus Town Hall</p>
+      <a href="RSVP_LINK_HERE" class="btn-primary" onclick="gtag('event','click',{'event_category':'CTA','event_label':'RSVP Ohio Meet & Greet'});">RSVP Now</a>
+      <a href="https://goo.gl/maps/EXAMPLE" target="_blank" class="btn-secondary">View Map</a>
     </div>
   </div>
 </section>
 
-<!-- SIGNUP -->
-<section id="signup" class="signup">
+<!-- SIGNUP SECTION -->
+<section id="signup" class="signup fade-in">
   <h2>Stay in the Fight</h2>
-  <p>Get campaign updates, event announcements, and messages directly from Neil.</p>
-  <form>
-    <input type="text" placeholder="Your Name" required>
-    <input type="email" placeholder="Your Email" required>
-    <button type="submit">Sign Up for Updates</button>
+  <p>Get Neil’s weekly campaign updates, exclusive policy insights, and volunteer opportunities delivered straight to your inbox.</p>
+  <form onsubmit="gtag('event','submit',{'event_category':'Form','event_label':'Email Signup'});">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <button type="submit" class="btn-primary">Sign Up for Updates</button>
   </form>
 </section>
 
-<!-- NEWS -->
-<section id="news">
-  <h2>Campaign Updates</h2>
-  <div class="news-grid">
-    <div class="news-item">
-      <h3>Campaign Launch</h3>
-      <p>Neil announces his run for President.</p>
+<!-- DONATE SECTION -->
+<section id="donate" class="donate fade-in">
+  <h2>Power the People’s Campaign</h2>
+  <p>This campaign is funded by everyday Americans — not corporate PACs. Your contribution helps us reach more voters and build a grassroots movement.</p>
+
+  <div class="donation-options">
+    <h3>Choose Your Support</h3>
+
+    <div class="donation-tier">
+      <button onclick="window.location.href='YOUR_STRIPE_LINK_25_ONETIME'">$25 — Help Send Voter Messages</button>
+      <button onclick="window.location.href='YOUR_STRIPE_LINK_50_ONETIME'">$50 — Fuel a Rally</button>
+      <button onclick="window.location.href='YOUR_STRIPE_LINK_100_ONETIME'">$100 — Support Outreach Efforts</button>
     </div>
-    <div class="news-item">
-      <h3>Healthcare Plan Released</h3>
-      <p>A people-first healthcare strategy unveiled.</p>
+
+    <div class="donation-tier recurring">
+      <h4>Or Become a Monthly Supporter</h4>
+      <button onclick="window.location.href='YOUR_STRIPE_LINK_25_RECURRING'">$25 / month</button>
+      <button onclick="window.location.href='YOUR_STRIPE_LINK_50_RECURRING'">$50 / month</button>
+      <button onclick="window.location.href='YOUR_STRIPE_LINK_100_RECURRING'">$100 / month</button>
     </div>
-    <div class="news-item">
-      <h3>Grassroots Growth</h3>
-      <p>Volunteer teams expanding nationwide.</p>
+
+    <div class="donation-custom">
+      <h4>Custom Amount</h4>
+      <button onclick="window.location.href='YOUR_STRIPE_LINK_CUSTOM'">Donate Any Amount</button>
     </div>
   </div>
 </section>
 
-<!-- DONATE -->
-<section id="donate" class="donate">
-  <h2>Power the People’s Campaign</h2>
-  <p>This campaign is funded by everyday Americans — not corporate PACs. Your contribution helps us reach more voters and win this fight.</p>
-  <a href="YOUR_STRIPE_LINK_HERE" class="btn-primary">Donate Now</a>
-</section>
+<!-- ENDORSEMENTS / TESTIMONIALS -->
+<section id="endorsements" class="fade-in">
+  <h2>What Supporters Are Saying</h2>
+  <p>Neil has earned support from everyday Americans, community leaders, and organizations committed to fairness and freedom.</p>
 
-<!-- CONTACT -->
-<section id="contact">
-  <h2>Get in Touch</h2>
-  <form>
-    <input type="text" placeholder="Name" required>
-    <input type="email" placeholder="Email" required>
-    <textarea placeholder="Message" required></textarea>
-    <button type="submit">Send Message</button>
-  </form>
+  <div class="testimonial-grid">
+    <div class="testimonial-card">
+      <p>"Neil Raney is the only candidate who truly listens to working families. His policies put people first."</p>
+      <h4>- Maria S., Iowa Volunteer</h4>
+    </div>
+
+    <div class="testimonial-card">
+      <p>"I trust Neil to fight corporate influence in politics. His vision is clear and principled."</p>
+      <h4>- James L., Michigan Small Business Owner</h4>
+    </div>
+
+    <div class="testimonial-card">
+      <p>"Neil inspires volunteers across the country. He’s not a career politician — he’s a people-first leader."</p>
+      <h4>- Tanya K., Ohio Community Organizer</h4>
+    </div>
+  </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <p>Paid for by Neil Raney for President</p>
-  <p>© 2026 Neil Raney Campaign</p>
+  <p>© 2026 Neil Raney for President</p>
+  <p><a href="#hero">Back to Top</a> • <a href="privacy.html">Privacy</a> • <a href="terms.html">Terms</a></p>
+  <p>
+    <a href="#">Twitter</a> | 
+    <a href="#">Facebook</a> | 
+    <a href="#">Instagram</a>
+  </p>
 </footer>
+
+<!-- SCRIPTS -->
+<script>
+  // Hamburger menu
+  const hamburger = document.querySelector('.hamburger');
+  const navLinks = document.querySelector('.nav-links');
+  hamburger.addEventListener('click', () => { navLinks.classList.toggle('active'); });
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => { navLinks.classList.remove('active'); });
+  });
+
+  // Scroll-triggered animations
+  const faders = document.querySelectorAll('.fade-in');
+  const slidersLeft = document.querySelectorAll('.slide-left');
+  const slidersRight = document.querySelectorAll('.slide-right');
+  const appearOptions = { threshold: 0.2, rootMargin: "0px 0px -50px 0px" };
+  const appearOnScroll = new IntersectionObserver(function(entries, observer){
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    });
+  }, appearOptions);
+  faders.forEach(fader => appearOnScroll.observe(fader));
+  slidersLeft.forEach(slider => appearOnScroll.observe(slider));
+  slidersRight.forEach(slider => appearOnScroll.observe(slider));
+</script>
 
 </body>
 </html>
