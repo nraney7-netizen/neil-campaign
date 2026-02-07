@@ -21,23 +21,18 @@
 
 <!-- STICKY HEADER -->
 <header id="site-header">
-  <div class="logo">
-    <a href="#hero">Neil Raney</a>
-  </div>
+  <div class="logo"><a href="#hero">Neil Raney</a></div>
   <nav>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#platform">Platform</a></li>
+      <li><a href="#issues">Issues</a></li>
       <li><a href="#events">Events</a></li>
       <li><a href="#signup">Join</a></li>
       <li><a href="#donate">Donate</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
-    <div class="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
+    <div class="hamburger"><span></span><span></span><span></span></div>
   </nav>
 </header>
 
@@ -45,7 +40,7 @@
 <section id="hero" class="hero fade-in">
   <div class="hero-overlay">
     <h1>A Government That Works for Your Family</h1>
-    <p>Join Neil Raney — Standing Up for Everyday Americans Against Special Interests. Act now and be part of a grassroots movement that puts people first.</p>
+    <p>Join Neil Raney — Standing Up for Everyday Americans Against Special Interests. Be part of a grassroots movement that puts people first.</p>
     <div class="hero-buttons">
       <a href="#donate" class="btn-primary" onclick="gtag('event','click',{'event_category':'CTA','event_label':'Hero Donate'});">Donate Now</a>
       <a href="#signup" class="btn-secondary" onclick="gtag('event','click',{'event_category':'CTA','event_label':'Hero Join'});">Join the Movement</a>
@@ -77,6 +72,38 @@
     <div class="card">
       <h3>Education & Healthcare</h3>
       <p>Invest in accessible, high-quality education and healthcare without increasing bureaucratic inefficiencies.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ISSUES / POLICY SECTION -->
+<section id="issues" class="fade-in">
+  <h2>Neil Raney’s Key Policies</h2>
+  <p>Explore the issues that matter most. Neil is committed to people-first policies that fight corporate influence and protect everyday Americans.</p>
+
+  <div class="issues-grid">
+    <div class="issue-card">
+      <h3>Anti-Corporate Lobbying</h3>
+      <p>Stop special interests from controlling policy. Neil will implement transparency and limits on corporate lobbying.</p>
+      <a href="#donate" class="btn-primary" onclick="gtag('event','click',{'event_category':'CTA','event_label':'Donate Anti-Corporate'});">Support This Policy</a>
+    </div>
+
+    <div class="issue-card">
+      <h3>Economic Freedom</h3>
+      <p>Reduce barriers for small businesses, encourage entrepreneurship, and protect the rights of workers and consumers.</p>
+      <a href="#donate" class="btn-primary" onclick="gtag('event','click',{'event_category':'CTA','event_label':'Donate Economic Freedom'});">Support This Policy</a>
+    </div>
+
+    <div class="issue-card">
+      <h3>Education & Healthcare</h3>
+      <p>Invest in high-quality, accessible education and healthcare without unnecessary bureaucracy. Every American deserves opportunity and care.</p>
+      <a href="#donate" class="btn-primary" onclick="gtag('event','click',{'event_category':'CTA','event_label':'Donate Education Healthcare'});">Support This Policy</a>
+    </div>
+
+    <div class="issue-card">
+      <h3>Government Accountability</h3>
+      <p>Ensure public funds and programs serve the people. Neil will promote audits, transparency reports, and citizen oversight.</p>
+      <a href="#donate" class="btn-primary" onclick="gtag('event','click',{'event_category':'CTA','event_label':'Donate Accountability'});">Support This Policy</a>
     </div>
   </div>
 </section>
@@ -134,7 +161,6 @@
 
   <div class="donation-options">
     <h3>Choose Your Support</h3>
-
     <div class="donation-tier">
       <button onclick="window.location.href='YOUR_STRIPE_LINK_25_ONETIME'">$25 — Help Send Voter Messages</button>
       <button onclick="window.location.href='YOUR_STRIPE_LINK_50_ONETIME'">$50 — Fuel a Rally</button>
