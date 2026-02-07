@@ -1,143 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Neil Raney for President</title>
-
-<!-- LINK TO EXTERNAL CSS -->
-<link rel="stylesheet" href="styles.css">
-
-<script src="https://js.stripe.com/v3/"></script>
+  <meta charset="UTF-8">
+  <title>Neil Raney for President</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Neil Raney for President – A government that works for your family. Join the movement for real change.">
+  <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
-<!-- Navigation -->
-<nav>
-  <div class="logo">Neil Raney</div>
-  <div class="nav-links">
-    <a href="#about">About</a>
-    <a href="#issues">Platform</a>
-    <a href="#volunteer">Volunteer</a>
-    <a href="#donate">Donate</a>
-    <a href="#news">Updates</a>
-    <a href="#contact">Contact</a>
+<header class="hero">
+  <div class="hero-overlay">
+    <h1>A Government That Works for <span>YOUR FAMILY</span></h1>
+    <p>Neil Raney stands up to big money, defends your freedoms, and fights for a brighter future for all Americans.</p>
+    <div class="hero-buttons">
+      <a href="#signup" class="btn-primary">Join the Movement</a>
+      <a href="#donate" class="btn-secondary">Donate Now</a>
+    </div>
   </div>
-</nav>
-
-<!-- Hero -->
-<header>
-  <h1>A Government That Works for You — Not Big Money</h1>
-  <p>Neil Raney fights corporate influence, protects freedoms, and builds opportunity for every American.</p>
-  <a href="#volunteer" class="btn btn-red">Join the Movement</a>
-  <a href="#donate" class="btn btn-blue">Donate Now</a>
 </header>
 
-<!-- About -->
-<section id="about">
-  <h2>About Neil Raney</h2>
-  <div class="grid">
+<section class="banner">
+  <h2>Stand With Neil Raney for Real Change</h2>
+</section>
+
+<section class="about" id="about">
+  <div class="about-grid">
+    <img src="images/neil-portrait.jpg" alt="Neil Raney">
     <div>
-      <img src="images/neil.jpg" alt="Neil Raney">
-    </div>
-    <div>
-      <p>Neil Raney is running for President to restore a government that serves the people, not corporate interests.</p>
+      <h2>Meet Neil Raney</h2>
+      <h3>A Leader for the People</h3>
       <ul>
-        <li>End corporate lobbying</li>
-        <li>Protect individual liberties</li>
-        <li>Restore government accountability</li>
+        <li>Fighting corporate greed</li>
+        <li>Protecting individual liberties</li>
+        <li>Restoring government accountability</li>
       </ul>
+      <a href="#issues" class="btn-primary">Learn More</a>
     </div>
   </div>
 </section>
 
-<!-- Issues -->
-<section id="issues">
+<section class="priorities" id="issues">
   <h2>Our Priorities</h2>
-  <div class="grid">
+  <div class="card-grid">
     <div class="card">
-      <h3>Corporate Accountability</h3>
-      <p>Ban lobbyist money and end pay-to-play politics.</p>
+      <h3>End Corrupt Lobbying</h3>
+      <p>Kick big money out of politics and return power to the people.</p>
     </div>
     <div class="card">
       <h3>Healthcare for All</h3>
-      <p>Affordable care and protection for pre-existing conditions.</p>
+      <p>Affordable care that no family has to fear.</p>
     </div>
     <div class="card">
-      <h3>Education Reform</h3>
-      <p>Strong public schools and opportunity for every child.</p>
+      <h3>Education for the Future</h3>
+      <p>Better schools and brighter opportunities.</p>
     </div>
   </div>
 </section>
 
-<!-- Volunteer -->
-<section id="volunteer">
-  <h2>Get Involved</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>Volunteer</h3>
-      <p>Help spread the word and organize locally.</p>
-      <a href="#" class="btn btn-red">Stand With Neil</a>
+<section class="events">
+  <h2>Upcoming Events</h2>
+  <div class="event-grid">
+    <div class="event">
+      <h3>Town Hall in Des Moines</h3>
+      <p>May 12th</p>
+      <button>RSVP</button>
     </div>
-    <div class="card">
-      <h3>Events</h3>
-      <p>Find rallies and town halls near you.</p>
-      <a href="#" class="btn btn-blue">Find Events</a>
+    <div class="event">
+      <h3>Rally in Detroit</h3>
+      <p>May 23rd</p>
+      <button>RSVP</button>
     </div>
-    <div class="card">
-      <h3>Share</h3>
-      <p>Support online and bring others in.</p>
-      <a href="#" class="btn btn-red">Follow Us</a>
-    </div>
-  </div>
-</section>
-
-<!-- Donate -->
-<section id="donate">
-  <h2>Fuel the People’s Movement</h2>
-  <p>Your support powers this campaign.</p>
-  <button class="btn btn-red">Donate $25</button>
-  <button class="btn btn-red">Donate $50</button>
-  <button class="btn btn-red">Donate $100</button>
-</section>
-
-<!-- News -->
-<section id="news">
-  <h2>Latest Updates</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>April 2026</h3>
-      <p>Neil announces healthcare reform plan.</p>
-    </div>
-    <div class="card">
-      <h3>March 2026</h3>
-      <p>Major rally held in Pennsylvania.</p>
-    </div>
-    <div class="card">
-      <h3>February 2026</h3>
-      <p>Volunteer network expands nationwide.</p>
+    <div class="event">
+      <h3>Meet & Greet in Ohio</h3>
+      <p>June 5th</p>
+      <button>RSVP</button>
     </div>
   </div>
 </section>
 
-<!-- Contact -->
-<section id="contact">
-  <h2>Stay Connected</h2>
+<section class="signup" id="signup">
+  <h2>Get Campaign Updates</h2>
+  <p>Stay informed with the latest news and events.</p>
   <form>
-    <input type="text" placeholder="Your Name">
-    <input type="email" placeholder="Your Email" required>
-    <textarea placeholder="Your Message"></textarea>
-    <button class="btn btn-red">Send Message</button>
+    <input type="email" placeholder="Enter your email" required>
+    <button type="submit">Subscribe</button>
   </form>
 </section>
 
-<!-- Footer -->
-<footer>
-  Paid for by Neil Raney for President
-</footer>
+<section class="news">
+  <h2>Latest News</h2>
+  <div class="news-grid">
+    <div class="news-item">
+      <h3>April 2026 – Campaign Plan Unveiled</h3>
+      <p>Neil outlines bold reforms for the American people.</p>
+    </div>
+    <div class="news-item">
+      <h3>March 2026 – Pennsylvania Rally Success</h3>
+      <p>Thousands attend historic rally.</p>
+    </div>
+    <div class="news-item">
+      <h3>February 2026 – Network Grows</h3>
+      <p>Grassroots support expands nationwide.</p>
+    </div>
+  </div>
+</section>
 
-<!-- Floating Donate -->
-<button class="floating-donate" onclick="document.querySelector('#donate').scrollIntoView({behavior:'smooth'})">Donate</button>
+<section class="donate" id="donate">
+  <h2>Support the Campaign</h2>
+  <p>Your donation fuels real change.</p>
+  <a href="https://your-stripe-link-here" class="btn-primary">Donate Securely</a>
+</section>
+
+<footer>
+  <p>Paid for by Neil Raney for President</p>
+  <p>© 2026 Neil Raney Campaign</p>
+</footer>
 
 </body>
 </html>
