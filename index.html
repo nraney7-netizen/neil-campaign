@@ -2,129 +2,55 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Neil Raney for Mayor</title>
+  <title>Neil Raney for LA Mayor</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Sticky Header -->
-  <header id="header">
-    <div class="top-bar">
-      <span>Stand With Neil</span>
-      <nav>
-        <a href="#donate" class="cta">Donate</a>
-        <a href="#volunteer" class="cta">Volunteer</a>
-        <a href="#signup" class="cta">Sign Up</a>
-      </nav>
-    </div>
-  </header>
 
-  <!-- Hero Section -->
-  <section id="hero">
-    <div class="hero-content">
-      <h1>People First. Zero Corporate Money. Real Change for <em>Los Angeles</em>.</h1>
-      <p>Join the movement to put the people back in power.</p>
-      <div class="hero-buttons">
-        <a href="#volunteer" class="btn primary">Stand With Neil</a>
-        <a href="#about" class="btn secondary">Learn More</a>
-      </div>
-    </div>
-  </section>
+<header>
+  <h1>People First. Zero Corporate Money.</h1>
+  <p>Join the movement to put Los Angeles back in the hands of its people.</p>
+  <a href="#signup" class="btn primary">Stand With Neil</a>
+  <a href="https://buy.stripe.com/YOUR_STRIPE_LINK" class="btn secondary">Donate</a>
+</header>
 
-  <!-- Priorities Section -->
-  <section id="priorities">
-    <h2>Our Priorities for Los Angeles</h2>
-    <div class="cards">
-      <div class="card">
-        <div class="icon">🏠</div>
-        <h3>Housing for All</h3>
-        <p>Affordable homes for everyone.</p>
-      </div>
-      <div class="card">
-        <div class="icon">🛡️</div>
-        <h3>Community Safety</h3>
-        <p>Safe and thriving neighborhoods.</p>
-      </div>
-      <div class="card">
-        <div class="icon">🔍</div>
-        <h3>Transparency & Accountability</h3>
-        <p>No lobbyists, no corporate cash.</p>
-      </div>
-    </div>
-  </section>
+<section id="signup">
+  <h2>Join the Campaign</h2>
 
-  <!-- Video Section -->
-  <section id="video">
-    <h2>Hear From Neil</h2>
-    <div class="video-wrapper">
-      <video controls poster="video-placeholder.jpg">
-        <source src="campaign-video.mp4" type="video/mp4">
-      </video>
-      <a href="#volunteer" class="btn primary">Join the Movement Today</a>
-    </div>
-  </section>
+  <form id="signupForm">
+    <input type="text" name="entry.111111" placeholder="Full Name" required>
+    <input type="email" name="entry.222222" placeholder="Email" required>
+    <input type="text" name="entry.333333" placeholder="Zip Code">
 
-  <!-- Testimonials -->
-  <section id="testimonials">
-    <h2>Supporters Say</h2>
-    <div class="testimonial-grid">
-      <blockquote>“Neil truly listens to our community.” — Maria R.</blockquote>
-      <blockquote>“A leader we can trust!” — James T.</blockquote>
-      <blockquote>“Grassroots energy that inspires!” — Kevin L.</blockquote>
-    </div>
-    <p>Over 2,500 Volunteers & Supporters!</p>
-    <a href="#volunteer" class="btn primary">Become a Volunteer</a>
-  </section>
+    <label>How would you like to help?</label>
+    <select name="entry.444444">
+      <option>Canvassing</option>
+      <option>Phone Banking</option>
+      <option>Events</option>
+      <option>Tech / Design</option>
+      <option>Social Media</option>
+    </select>
 
-  <!-- Events -->
-  <section id="events">
-    <h2>Upcoming Events</h2>
-    <ul>
-      <li>Community Town Hall — April 12</li>
-      <li>Canvassing Rally — April 15</li>
-      <li>Meet & Greet — April 20</li>
-    </ul>
-    <a href="#signup" class="btn secondary">RSVP & Get Involved</a>
-  </section>
+    <label>Which area are you in?</label>
+    <select name="entry.555555">
+      <option>Downtown</option>
+      <option>Hollywood</option>
+      <option>San Fernando Valley</option>
+      <option>South LA</option>
+      <option>Westside</option>
+      <option>Other</option>
+    </select>
 
-  <!-- Donate / Sign-up -->
-  <section id="donate-signup">
-    <div id="donate">
-      <h2>Fuel the People’s Movement</h2>
-      <div class="donate-buttons">
-        <button>$25</button>
-        <button>$50</button>
-        <button>$100</button>
-        <button>Other</button>
-      </div>
-      <button class="btn primary">Donate Now</button>
-    </div>
-    <div id="signup">
-      <h2>Join the Campaign</h2>
-      <form>
-        <input type="text" placeholder="Name" required>
-        <input type="email" placeholder="Email Address" required>
-        <button class="btn secondary">Sign Up</button>
-      </form>
-    </div>
-  </section>
+    <button type="submit" class="btn primary">Join Now</button>
+  </form>
 
-  <!-- Footer -->
-  <footer>
-    <nav>
-      <a href="#hero">Home</a>
-      <a href="#priorities">Issues</a>
-      <a href="#events">Events</a>
-      <a href="#donate">Donate</a>
-    </nav>
-    <div class="social">
-      <a href="#">Twitter</a>
-      <a href="#">Facebook</a>
-      <a href="#">Instagram</a>
-    </div>
-    <p>© 2026 Neil Raney Campaign. Privacy Policy | Contact</p>
-  </footer>
+  <p id="formMessage"></p>
+</section>
 
-  <script src="scripts.js"></script>
+<footer>
+  <p>Paid for by Friends of Neil Raney</p>
+</footer>
+
+<script src="scripts.js"></script>
 </body>
 </html>
