@@ -3,8 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Neil Raney 2028 Campaign</title>
+<title>Neil Raney 2026 Campaign | People First</title>
+<meta name="description" content="Neil Raney 2026 campaign. Fighting corporate influence, empowering communities, and building a government that works for the people.">
 <link rel="stylesheet" href="styles.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -22,59 +26,60 @@
       <li><a href="#signup">Join</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
-    <div class="hamburger"><span></span><span></span><span></span></div>
+    <div class="hamburger" aria-label="Menu" role="button" tabindex="0"><span></span><span></span><span></span></div>
   </nav>
 </header>
 
 <!-- HERO -->
-<section id="hero" class="hero">
+<section id="hero" class="hero" aria-label="Hero section with campaign mission">
   <div class="hero-overlay">
     <h1>Putting Community First — A Government That Works for You</h1>
     <p>Neil Raney is fighting corporate influence, championing small businesses, and building a government that answers to the people, not lobbyists.</p>
     <div class="hero-buttons">
-      <a href="YOUR_STRIPE_LINK" class="btn-primary" target="_blank">Donate</a>
+      <a href="YOUR_STRIPE_LINK" class="btn-primary" target="_blank" rel="noopener">Donate</a>
       <a href="#signup" class="btn-secondary">Join the Campaign</a>
     </div>
   </div>
 </section>
 
 <!-- ABOUT -->
-<section id="about" class="fade-in">
-  <h2>About Neil Raney</h2>
+<section id="about" class="fade-in" aria-labelledby="about-heading">
+  <h2 id="about-heading">About Neil Raney</h2>
   <div class="about-grid">
     <div>
       <p>Neil Raney has spent decades fighting for everyday Americans. From organizing local community initiatives to championing transparency in government, Neil has always put people first.</p>
       <p>Running as a progressive outsider, Neil’s mission is clear: dismantle special interest influence, empower small businesses, and create opportunities for families across the nation.</p>
       <p>His vision is a government that listens to the people — not lobbyists — and acts decisively to protect your future.</p>
+      <a href="#issues" class="btn-secondary">See Neil's Policies</a>
     </div>
     <div>
-      <img src="images/hero-bg.jpg" alt="Neil Raney">
+      <img src="images/hero-bg.jpg" alt="Neil Raney speaking to community" loading="lazy">
     </div>
   </div>
 </section>
 
 <!-- ISSUES -->
-<section id="issues" class="fade-in">
-  <h2>Key Issues</h2>
+<section id="issues" class="fade-in" aria-labelledby="issues-heading">
+  <h2 id="issues-heading">Key Issues</h2>
   <div class="issues-grid">
     <div class="issue-card">
       <h3>Healthcare</h3>
-      <p>Ensuring affordable healthcare for all citizens. <a href="issues/healthcare.html">Learn more</a>.</p>
+      <p>Affordable healthcare for all Americans. <a href="issues/healthcare.html">Learn more</a>.</p>
     </div>
     <div class="issue-card">
       <h3>Education</h3>
-      <p>Investing in schools, teachers, and equal opportunity. <a href="issues/education.html">Learn more</a>.</p>
+      <p>Investing in schools and teachers to give every student equal opportunity. <a href="issues/education.html">Learn more</a>.</p>
     </div>
     <div class="issue-card">
       <h3>Economic Freedom</h3>
-      <p>Reducing corporate influence and supporting small businesses. <a href="issues/economy.html">Learn more</a>.</p>
+      <p>Reducing corporate influence and empowering small businesses. <a href="issues/economy.html">Learn more</a>.</p>
     </div>
   </div>
 </section>
 
 <!-- EVENTS / RSVP -->
-<section id="events" class="fade-in">
-  <h2>Join Neil on the Campaign Trail</h2>
+<section id="events" class="fade-in" aria-labelledby="events-heading">
+  <h2 id="events-heading">Upcoming Events</h2>
   <p>Meet Neil at rallies, town halls, and community events. RSVP below!</p>
   <div class="event-grid">
     <div class="event-card">
@@ -82,19 +87,19 @@
       <p><strong>Date:</strong> May 12, 2026</p>
       <p><strong>Time:</strong> 6:00 PM</p>
       <p><strong>Location:</strong> Des Moines Community Center</p>
-      <form class="rsvp-form" onsubmit="handleRSVP(event)">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
+      <form class="rsvp-form" onsubmit="handleRSVP(event)" aria-label="RSVP form">
+        <input type="text" name="name" placeholder="Your Name" required aria-label="Your Name">
+        <input type="email" name="email" placeholder="Your Email" required aria-label="Your Email">
         <button type="submit" class="btn-primary">RSVP Now</button>
-        <p class="form-response"></p>
+        <p class="form-response" role="status"></p>
       </form>
     </div>
   </div>
 </section>
 
 <!-- PRESS / ENDORSEMENTS -->
-<section id="press" class="fade-in">
-  <h2>Endorsements & Media</h2>
+<section id="press" class="fade-in" aria-labelledby="press-heading">
+  <h2 id="press-heading">Endorsements & Media</h2>
   <div class="press-grid">
     <div class="press-card">
       <p>“Neil Raney is the bold leadership our community needs.” – Jane Doe, Local Leader</p>
@@ -109,29 +114,29 @@
 </section>
 
 <!-- VIDEO -->
-<section id="video" class="fade-in">
-  <h2>Watch Neil’s Message</h2>
+<section id="video" class="fade-in" aria-labelledby="video-heading">
+  <h2 id="video-heading">Watch Neil’s Message</h2>
   <div class="video-wrapper">
     <iframe width="100%" height="500" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" 
-      title="Neil Raney Campaign Video" frameborder="0" allowfullscreen></iframe>
+      title="Neil Raney Campaign Video" frameborder="0" allowfullscreen loading="lazy"></iframe>
   </div>
 </section>
 
 <!-- EMAIL SIGNUP -->
-<section id="signup" class="signup fade-in">
-  <h2>Join the People’s Campaign</h2>
+<section id="signup" class="signup fade-in" aria-labelledby="signup-heading">
+  <h2 id="signup-heading">Join the People’s Campaign</h2>
   <p>Get weekly updates, exclusive policy insights, and behind-the-scenes campaign access.</p>
-  <form id="signup-form" onsubmit="handleSignup(event)">
-    <input type="text" name="name" placeholder="Your Name" required>
-    <input type="email" name="email" placeholder="Your Email" required>
+  <form id="signup-form" onsubmit="handleSignup(event)" aria-label="Signup form">
+    <input type="text" name="name" placeholder="Your Name" required aria-label="Your Name">
+    <input type="email" name="email" placeholder="Your Email" required aria-label="Your Email">
     <button type="submit" class="btn-primary">Sign Up for Updates</button>
-    <p class="form-response"></p>
+    <p class="form-response" role="status"></p>
   </form>
 </section>
 
 <!-- SOCIAL MEDIA -->
-<section id="social" class="fade-in">
-  <h2>Follow Neil on Social Media</h2>
+<section id="social" class="fade-in" aria-labelledby="social-heading">
+  <h2 id="social-heading">Follow Neil on Social Media</h2>
   <div class="social-grid">
     <div class="social-feed">
       <a class="twitter-timeline" data-height="500" href="https://twitter.com/NeilRaney2028?ref_src=twsrc%5Etfw">
@@ -146,7 +151,7 @@
 </section>
 
 <!-- STICKY DONATE -->
-<a href="YOUR_STRIPE_LINK" class="floating-donate" target="_blank">Donate</a>
+<a href="YOUR_STRIPE_LINK" class="floating-donate" target="_blank" rel="noopener">Donate</a>
 
 <!-- FOOTER -->
 <footer>
@@ -157,11 +162,14 @@
   </p>
 </footer>
 
+<!-- SCRIPTS -->
 <script>
+  // Hamburger menu toggle
   const hamburger = document.querySelector('.hamburger');
   const navUL = document.querySelector('nav ul');
   hamburger.addEventListener('click', () => navUL.classList.toggle('active'));
 
+  // RSVP form handler
   function handleRSVP(event){
     event.preventDefault();
     const form = event.target;
@@ -171,6 +179,7 @@
     form.reset();
   }
 
+  // Signup form handler
   function handleSignup(event){
     event.preventDefault();
     const form = document.getElementById('signup-form');
