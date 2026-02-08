@@ -17,24 +17,22 @@
 </div>
 
 <!-- HEADER -->
-<header id="site-header">
+<header>
   <div class="logo"><a href="#">Neil Raney</a></div>
   <nav>
     <ul>
       <li><a href="#about">About</a></li>
       <li><a href="#issues">Issues</a></li>
-      <li><a href="#testimonials">Endorsements</a></li>
       <li><a href="#press">News</a></li>
       <li><a href="#events">Events</a></li>
       <li><a href="#voter-tools">Voter Tools</a></li>
       <li><a href="#signup">Join</a></li>
     </ul>
-    <div class="hamburger"><span></span><span></span><span></span></div>
   </nav>
 </header>
 
-<!-- HERO SECTION -->
-<section id="hero" class="hero">
+<!-- HERO -->
+<section id="hero">
   <video autoplay muted loop id="hero-video">
     <source src="images/hero-video.mp4" type="video/mp4">
   </video>
@@ -50,7 +48,7 @@
 </section>
 
 <!-- ABOUT -->
-<section id="about" class="fade-in">
+<section id="about">
   <h2>About Neil Raney</h2>
   <div class="about-grid">
     <p>Neil is a progressive, anti-lobbyist candidate committed to putting people first. From housing to education, Neil leads with transparency and results.</p>
@@ -59,7 +57,7 @@
 </section>
 
 <!-- ISSUES -->
-<section id="issues" class="fade-in">
+<section id="issues">
   <h2>Key Issues</h2>
   <div class="issues-grid">
     <div class="issue-card">
@@ -83,40 +81,14 @@
   </div>
 </section>
 
-<!-- DONATE -->
-<section id="donate" class="fade-in">
-  <h2>Support Neil’s Campaign</h2>
-  <p>Your contribution powers our grassroots movement. Every dollar helps us fight corporate influence and put people first.</p>
-  <div class="donate-buttons">
-    <a href="YOUR_STRIPE_LINK" class="btn-primary" target="_blank">Donate $10</a>
-    <a href="YOUR_STRIPE_LINK" class="btn-primary" target="_blank">Donate $25</a>
-    <a href="YOUR_STRIPE_LINK" class="btn-primary" target="_blank">Donate $50</a>
-  </div>
-</section>
-
-<!-- TESTIMONIALS -->
-<section id="testimonials" class="fade-in">
-  <h2>Endorsements</h2>
-  <div class="testimonials-grid">
-    <div class="testimonial-card">
-      <p>"Neil is the leader LA needs — honest, transparent, and committed to the people."</p>
-      <span>- Jane Doe, Community Organizer</span>
-    </div>
-    <div class="testimonial-card">
-      <p>"A true advocate for small businesses and working families."</p>
-      <span>- John Smith, Local Entrepreneur</span>
-    </div>
-  </div>
-</section>
-
 <!-- NEWS / PRESS -->
-<section id="press" class="fade-in">
+<section id="press">
   <h2>Latest News & Press</h2>
   <div id="press-grid" class="press-grid"></div>
 </section>
 
 <!-- EVENTS -->
-<section id="events" class="fade-in">
+<section id="events">
   <h2>Upcoming Events</h2>
   <div class="events-grid" id="events-grid"></div>
   <div id="rsvp-modal" class="modal">
@@ -133,20 +105,8 @@
   </div>
 </section>
 
-<!-- POLL -->
-<section id="poll" class="fade-in">
-  <h2>What Issue Matters Most to You?</h2>
-  <form id="issue-poll">
-    <label><input type="radio" name="issue" value="Housing"> Affordable Housing</label><br>
-    <label><input type="radio" name="issue" value="Healthcare"> Healthcare</label><br>
-    <label><input type="radio" name="issue" value="Education"> Education</label><br>
-    <button type="submit" class="btn-primary">Submit</button>
-  </form>
-  <p id="poll-feedback" style="display:none; margin-top:10px;"></p>
-</section>
-
 <!-- VOTER TOOLS -->
-<section id="voter-tools" class="fade-in">
+<section id="voter-tools">
   <h2>Voter Resources</h2>
   <div class="voter-grid">
     <div class="voter-card">
@@ -168,7 +128,7 @@
 </section>
 
 <!-- SIGNUP -->
-<section id="signup" class="fade-in">
+<section id="signup">
   <h2>Join the Campaign</h2>
   <form id="signup-form" action="YOUR_CRM_ENDPOINT" method="POST" target="_blank">
     <input type="text" name="NAME" placeholder="Full Name" required>
@@ -176,13 +136,6 @@
     <button type="submit" class="btn-primary">Sign Up</button>
     <p id="signup-feedback" style="display:none; margin-top:10px;"></p>
   </form>
-</section>
-
-<!-- SOCIAL MEDIA -->
-<section id="social" class="fade-in">
-  <h2>Latest Updates</h2>
-  <a class="twitter-timeline" data-height="500" href="https://twitter.com/NeilRaneyOfficial?ref_src=twsrc%5Etfw">Tweets by NeilRaneyOfficial</a> 
-  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </section>
 
 <!-- FOOTER -->
