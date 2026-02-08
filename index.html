@@ -49,7 +49,7 @@
   </div>
 </section>
 
-<!-- ABOUT SECTION -->
+<!-- ABOUT -->
 <section id="about" class="fade-in">
   <h2>About Neil Raney</h2>
   <div class="about-grid">
@@ -58,7 +58,7 @@
   </div>
 </section>
 
-<!-- ISSUES SECTION -->
+<!-- ISSUES -->
 <section id="issues" class="fade-in">
   <h2>Key Issues</h2>
   <div class="issues-grid">
@@ -80,6 +80,17 @@
       <button class="more-btn" onclick="togglePolicy(this)">Learn More</button>
       <div class="policy-details">Neil will reduce bureaucracy, provide micro-grants, and create a small-business advisory council.</div>
     </div>
+  </div>
+</section>
+
+<!-- DONATE -->
+<section id="donate" class="fade-in">
+  <h2>Support Neil’s Campaign</h2>
+  <p>Your contribution powers our grassroots movement. Every dollar helps us fight corporate influence and put people first.</p>
+  <div class="donate-buttons">
+    <a href="YOUR_STRIPE_LINK" class="btn-primary" target="_blank">Donate $10</a>
+    <a href="YOUR_STRIPE_LINK" class="btn-primary" target="_blank">Donate $25</a>
+    <a href="YOUR_STRIPE_LINK" class="btn-primary" target="_blank">Donate $50</a>
   </div>
 </section>
 
@@ -124,6 +135,18 @@
   </div>
 </section>
 
+<!-- POLL -->
+<section id="poll" class="fade-in">
+  <h2>What Issue Matters Most to You?</h2>
+  <form id="issue-poll">
+    <label><input type="radio" name="issue" value="Housing"> Affordable Housing</label><br>
+    <label><input type="radio" name="issue" value="Healthcare"> Healthcare</label><br>
+    <label><input type="radio" name="issue" value="Education"> Education</label><br>
+    <button type="submit" class="btn-primary">Submit</button>
+  </form>
+  <p id="poll-feedback" style="display:none; margin-top:10px;"></p>
+</section>
+
 <!-- VOTER TOOLS -->
 <section id="voter-tools" class="fade-in">
   <h2>Voter Resources</h2>
@@ -135,18 +158,18 @@
     </div>
     <div class="voter-card">
       <h3>Find Your Polling Place</h3>
-      <p>Locate your local polling station for Election Day.</p>
+      <p>Locate your polling station for Election Day.</p>
       <a href="https://www.lavote.gov/PrecinctFinder" target="_blank" class="btn-secondary">Find Polling Place</a>
     </div>
     <div class="voter-card">
-      <h3>District & Map Info</h3>
+      <h3>District Info & Maps</h3>
       <p>See your council district, neighborhood info, and local representation.</p>
       <a href="https://www.lacity.org/government/your-council-district" target="_blank" class="btn-secondary">View District Map</a>
     </div>
   </div>
 </section>
 
-<!-- SIGNUP FORM -->
+<!-- SIGNUP -->
 <section id="signup" class="fade-in">
   <h2>Join the Campaign</h2>
   <form id="signup-form" action="YOUR_CRM_ENDPOINT" method="POST" target="_blank">
@@ -157,12 +180,18 @@
   </form>
 </section>
 
+<!-- SOCIAL MEDIA -->
+<section id="social" class="fade-in">
+  <h2>Latest Updates</h2>
+  <a class="twitter-timeline" data-height="500" href="https://twitter.com/NeilRaneyOfficial?ref_src=twsrc%5Etfw">Tweets by NeilRaneyOfficial</a> 
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</section>
+
 <!-- FOOTER -->
 <footer>
   <p>&copy; 2026 Neil Raney Campaign</p>
 </footer>
 
-<!-- SCRIPTS -->
 <script src="scripts.js"></script>
 </body>
 </html>
