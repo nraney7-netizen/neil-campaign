@@ -22,7 +22,6 @@
       <li><a href="#issues">Issues</a></li>
       <li><a href="#events">Events</a></li>
       <li><a href="#press">News</a></li>
-      <li><a href="#video">Video</a></li>
       <li><a href="#signup">Join</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -50,7 +49,6 @@
     <div>
       <p>Neil Raney has spent decades fighting for everyday Americans. From organizing local community initiatives to championing transparency in government, Neil has always put people first.</p>
       <p>Running as a progressive outsider, Neil’s mission is clear: dismantle special interest influence, empower small businesses, and create opportunities for families across the nation.</p>
-      <p>His vision is a government that listens to the people — not lobbyists — and acts decisively to protect your future.</p>
       <a href="#issues" class="btn-secondary">See Neil's Policies</a>
     </div>
     <div>
@@ -81,8 +79,6 @@
 <!-- EVENTS / VOLUNTEER -->
 <section id="events" class="fade-in">
   <h2>Upcoming Events & Volunteer Opportunities</h2>
-  <p>Join Neil at rallies, town halls, and community volunteer initiatives.</p>
-
   <div class="events-grid">
     <article class="event-card">
       <h3>City Hall Town Hall</h3>
@@ -95,67 +91,14 @@
         <button type="submit">RSVP</button>
       </form>
     </article>
-
-    <article class="event-card">
-      <h3>Neighborhood Volunteer Day</h3>
-      <p><strong>Date:</strong> March 20, 2026<br>
-         <strong>Time:</strong> 9:00 AM – 2:00 PM<br>
-         <strong>Location:</strong> Lincoln Park</p>
-      <form class="rsvp-form">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <button type="submit">RSVP</button>
-      </form>
-    </article>
-  </div>
-
-  <iframe 
-    src="https://calendar.google.com/calendar/embed?src=YOUR_CALENDAR_ID&ctz=America/Chicago" 
-    style="border:0" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
-</section>
-
-<!-- TESTIMONIALS -->
-<section id="testimonials" class="fade-in">
-  <h2>What People Are Saying</h2>
-  <div class="testimonials-grid">
-    <div class="testimonial-card">
-      <p>“Neil Raney is a true advocate for families and small businesses.”</p>
-      <span>— John Smith</span>
-    </div>
-    <div class="testimonial-card">
-      <p>“A bold leader who fights for the people, not lobbyists.”</p>
-      <span>— Jane Doe</span>
-    </div>
-    <div class="testimonial-card">
-      <p>“Neil’s vision gives hope to everyday Americans.”</p>
-      <span>— Maria Lopez</span>
-    </div>
   </div>
 </section>
 
-<!-- NEWS / PRESS -->
+<!-- DYNAMIC NEWS / PRESS -->
 <section id="press" class="fade-in">
   <h2>Latest News & Press</h2>
-  <div class="press-grid">
-    <article class="press-card">
-      <h3>Neil Raney on Local Business Reforms</h3>
-      <p>May 1, 2026 – Neil speaks at City Hall about empowering small businesses.</p>
-      <a href="#">Read more</a>
-    </article>
-    <article class="press-card">
-      <h3>Interview with Neil Raney on TV News</h3>
-      <p>April 28, 2026 – Discussing transparency and anti-lobbyist initiatives.</p>
-      <a href="#">Read more</a>
-    </article>
-  </div>
-</section>
-
-<!-- VIDEO -->
-<section id="video" class="fade-in">
-  <h2>Watch Neil’s Message</h2>
-  <div class="video-wrapper">
-    <iframe width="100%" height="500" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" 
-      title="Neil Raney Campaign Video" frameborder="0" allowfullscreen loading="lazy"></iframe>
+  <div id="press-grid" class="press-grid">
+    <!-- News items will load here dynamically -->
   </div>
 </section>
 
@@ -170,33 +113,8 @@
   </form>
 </section>
 
-<!-- SOCIAL MEDIA -->
-<section id="social" class="fade-in">
-  <h2>Follow Neil on Social Media</h2>
-  <div class="social-grid">
-    <div class="social-feed">
-      <a class="twitter-timeline" data-height="500" href="https://twitter.com/NeilRaney2028?ref_src=twsrc%5Etfw">
-         Tweets by NeilRaney2028
-      </a>
-    </div>
-    <div class="social-feed">
-      <iframe src="https://snapwidget.com/embed/EXAMPLE_WIDGET_ID" class="instagram-feed" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
-    </div>
-  </div>
-</section>
-
 <!-- FLOATING DONATE BUTTON -->
 <a href="YOUR_STRIPE_LINK" class="floating-donate" target="_blank" rel="noopener">Donate</a>
-
-<!-- FLOATING EMAIL SIGNUP BAR -->
-<div id="signup-bar">
-  <form id="signup-bar-form" onsubmit="handleFloatingSignup(event)">
-    <label for="signup-bar-email">Get Updates from Neil Raney:</label>
-    <input type="email" id="signup-bar-email" name="email" placeholder="Your Email" required>
-    <button type="submit">Sign Up</button>
-  </form>
-  <span id="signup-bar-msg"></span>
-</div>
 
 <!-- FOOTER -->
 <footer>
@@ -210,6 +128,7 @@ const hamburger = document.querySelector('.hamburger');
 const navUL = document.querySelector('nav ul');
 hamburger.addEventListener('click', () => navUL.classList.toggle('active'));
 
+// Signup Form
 function handleSignup(event){
   event.preventDefault();
   const form = event.target;
@@ -218,26 +137,29 @@ function handleSignup(event){
   form.reset();
 }
 
-document.querySelectorAll('.rsvp-form').forEach(form => {
-  form.addEventListener('submit', function(e) {
-    e.preventDefault();
-    const name = form.name.value;
-    form.querySelector('button').textContent = 'Thank you!';
-    form.reset();
-    alert(`Thanks ${name}, your RSVP is received!`);
-  });
-});
-
-function handleFloatingSignup(event) {
-  event.preventDefault();
-  const emailInput = document.getElementById('signup-bar-email');
-  const msg = document.getElementById('signup-bar-msg');
-  msg.textContent = `Thanks! ${emailInput.value} is signed up.`;
-  msg.style.color = '#fff';
-  emailInput.value = '';
-  // TODO: integrate with email CRM
+// Load news dynamically
+async function loadNews() {
+  try {
+    const res = await fetch('news.json');
+    const newsItems = await res.json();
+    const container = document.getElementById('press-grid');
+    newsItems.forEach(item => {
+      const card = document.createElement('article');
+      card.classList.add('press-card');
+      card.innerHTML = `
+        <h3>${item.title}</h3>
+        <p><strong>Date:</strong> ${item.date}</p>
+        <p>${item.snippet}</p>
+        <a href="${item.link}">Read More</a>
+      `;
+      container.appendChild(card);
+    });
+  } catch(err) {
+    console.error('Failed to load news:', err);
+  }
 }
+
+document.addEventListener('DOMContentLoaded', loadNews);
 </script>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </body>
 </html>
