@@ -4,205 +4,156 @@
   <meta charset="UTF-8" />
   <title>Community Forward</title>
 
-  <!-- Basic SEO -->
-  <meta name="title" content="Community Forward">
-  <meta name="description" content="A community-focused effort built on transparency, accountability, and constructive leadership.">
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="Community Forward">
-  <meta property="og:description" content="A community-focused effort built on transparency, accountability, and constructive leadership.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://your-site-url.com">
-  <meta property="og:image" content="https://your-site-url.com/share-card.png">
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Community Forward">
-  <meta name="twitter:description" content="A community-focused effort built on transparency, accountability, and constructive leadership.">
-  <meta name="twitter:image" content="https://your-site-url.com/share-card.png">
-
-  <!-- Mobile + Browser Theme -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#0A2A6C">
-  <meta name="color-scheme" content="light dark">
 
-  <!-- Favicon / Icons -->
-  <link rel="icon" type="image/png" href="/favicon.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="manifest" href="/site.webmanifest">
-
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
-  <header class="site-header" role="banner">
-    <nav class="nav" role="navigation" aria-label="Main navigation">
+  <header class="site-header">
+    <nav class="nav">
       <div class="nav-inner">
         <a href="#hero" class="brand">Community Forward</a>
-        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links">
-          <span class="sr-only">Toggle navigation</span>
-          ☰
-        </button>
+
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links">☰</button>
+
         <div class="nav-links" id="nav-links">
           <a href="#signup">Sign Up</a>
           <a href="#about">About</a>
           <a href="#priorities">Priorities</a>
           <a href="#volunteer">Get Involved</a>
           <a href="#support">Support</a>
+          <a href="contact.html">Contact</a>
+          <a href="faq.html">FAQ</a>
         </div>
       </div>
     </nav>
   </header>
 
-  <main role="main">
-    <!-- Hero -->
-    <section id="hero" class="hero fade-in" aria-labelledby="hero-title">
+  <main>
+
+    <!-- HERO -->
+    <section id="hero" class="hero fade-in">
       <div class="section-inner readable">
-        <h1 id="hero-title">Building Our Future, Together</h1>
+        <h1>Building Our Future, Together</h1>
         <p class="lead">
           A steady, community-focused effort grounded in transparency, accountability, and constructive leadership.
         </p>
+
         <div class="hero-actions">
-          <a href="#signup" class="btn primary hero-button">Join the Movement</a>
+          <a href="#signup" class="btn primary">Join the Movement</a>
           <a href="#about" class="btn ghost">Learn More</a>
         </div>
-        <p class="hero-soft-landing">
-          Join the effort and stay connected as we move forward together.
-        </p>
       </div>
     </section>
 
-    <!-- Signup -->
-    <section id="signup" class="section-light fade-in" aria-labelledby="signup-title">
+    <!-- SIGNUP -->
+    <section id="signup" class="section-light fade-in">
       <div class="section-inner readable">
-        <h2 id="signup-title">Stay Connected</h2>
+        <h2>Stay Connected</h2>
         <div class="section-divider"></div>
+
         <p class="lead">
           Be the first to hear about updates, events, and ways to get involved.
         </p>
-        <p>
-          We’ll only send relevant updates and you can opt out at any time.
-        </p>
-        <form class="signup-form" aria-label="Email signup form">
-          <label class="sr-only" for="email">Email address</label>
-          <input id="email" type="email" name="email" placeholder="you@example.com" required />
+
+        <form class="signup-form">
+          <input type="email" placeholder="you@example.com" required />
           <button type="submit" class="btn primary">Sign Up</button>
         </form>
-        <p class="microcopy">We respect your time and your inbox.</p>
-        <p class="soft-landing">
-          Here’s the foundation behind this work.
-        </p>
       </div>
     </section>
 
-    <!-- About / Vision -->
-    <section id="about" class="section-white fade-in" aria-labelledby="about-title">
+    <!-- ABOUT -->
+    <section id="about" class="section-white fade-in">
       <div class="section-inner readable">
-        <h2 id="about-title">Why Community Forward</h2>
+        <h2>Why Community Forward</h2>
         <div class="section-divider"></div>
+
         <p class="lead">
           Community Forward is built on a simple idea: progress is strongest when it’s shared, steady, and grounded in trust.
         </p>
+
         <p>
           This effort focuses on listening first, understanding real needs, and working toward solutions that reflect the voices of the people most affected by them.
         </p>
+
         <p>
-          Transparency, accountability, and constructive dialogue guide every decision. The goal is not quick wins, but durable progress that benefits everyone.
-        </p>
-        <p class="soft-landing">
-          These values guide the priorities we focus on.
+          Transparency, accountability, and constructive dialogue guide every decision.
         </p>
       </div>
     </section>
 
-    <!-- Core Priorities -->
-    <section id="priorities" class="section-light fade-in" aria-labelledby="priorities-title">
+    <!-- PRIORITIES -->
+    <section id="priorities" class="section-light fade-in">
       <div class="section-inner">
-        <h2 id="priorities-title">Core Priorities</h2>
+        <h2>Core Priorities</h2>
         <div class="section-divider"></div>
-        <p class="lead readable">
-          Clear, focused priorities help turn shared values into real outcomes.
-        </p>
+
         <div class="priority-grid">
+
           <article class="priority-card">
             <h3>Transparent Decision‑Making</h3>
-            <p>
-              Make information accessible, explain decisions clearly, and invite questions so people understand how and why choices are made.
-            </p>
+            <p>Make information accessible and explain decisions clearly.</p>
           </article>
+
           <article class="priority-card">
             <h3>Accountable Leadership</h3>
-            <p>
-              Set clear expectations, follow through on commitments, and create structures where feedback is welcomed and acted upon.
-            </p>
+            <p>Set clear expectations and follow through on commitments.</p>
           </article>
+
           <article class="priority-card">
             <h3>Community Engagement</h3>
-            <p>
-              Create meaningful opportunities for residents to participate, share their experiences, and help shape the path forward.
-            </p>
+            <p>Create meaningful opportunities for residents to participate.</p>
           </article>
+
           <article class="priority-card">
             <h3>Steady, Sustainable Progress</h3>
-            <p>
-              Focus on long‑term solutions that are realistic, responsible, and built to last.
-            </p>
+            <p>Focus on long‑term solutions built to last.</p>
           </article>
+
         </div>
-        <p class="soft-landing readable">
-          Real progress happens when people get involved.
-        </p>
       </div>
     </section>
 
-    <!-- Volunteer -->
-    <section id="volunteer" class="section-white fade-in" aria-labelledby="volunteer-title">
+    <!-- VOLUNTEER -->
+    <section id="volunteer" class="section-white fade-in">
       <div class="section-inner readable">
-        <h2 id="volunteer-title">Get Involved</h2>
+        <h2>Get Involved</h2>
         <div class="section-divider"></div>
+
         <p class="lead">
           Every skill, every hour, and every voice can help strengthen this effort.
         </p>
-        <p>
-          Whether you’re able to share ideas, connect with neighbors, or lend a hand at events, there’s a place for you here.
-        </p>
-        <button class="btn primary volunteer-button cta-space" type="button">
-          I’m Interested in Volunteering
-        </button>
-        <p class="soft-landing">
-          Every form of support strengthens this effort.
-        </p>
+
+        <button class="btn primary cta-space">I’m Interested in Volunteering</button>
       </div>
     </section>
 
-    <!-- Support -->
-    <section id="support" class="section-deep fade-in" aria-labelledby="support-title">
+    <!-- SUPPORT -->
+    <section id="support" class="section-deep fade-in">
       <div class="section-inner readable">
-        <h2 id="support-title">Support the Effort</h2>
+        <h2>Support the Effort</h2>
         <div class="section-divider section-divider-light"></div>
+
         <p class="lead">
-          Support helps sustain outreach, communication, and the tools needed to stay connected with the community.
+          Support helps sustain outreach, communication, and the tools needed to stay connected.
         </p>
-        <p>
-          Any contribution—time, attention, or resources—helps keep this work moving forward in a steady, responsible way.
-        </p>
-        <button class="btn secondary donate-button cta-space" type="button">
-          Learn How to Support
-        </button>
-        <p class="soft-landing">
-          Thank you for being part of this community.
-        </p>
+
+        <button class="btn secondary cta-space">Learn How to Support</button>
       </div>
     </section>
+
   </main>
 
-  <footer class="site-footer" role="contentinfo">
+  <footer class="site-footer">
     <div class="footer-inner">
       <p>Community Forward · Built on transparency, accountability, and constructive leadership.</p>
-      <p class="footer-meta">© <span id="year"></span> Community Forward. All rights reserved.</p>
+      <p class="footer-meta">© <span id="year"></span> Community Forward</p>
     </div>
   </footer>
 
