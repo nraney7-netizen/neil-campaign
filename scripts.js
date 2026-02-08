@@ -11,7 +11,7 @@ form.addEventListener("submit", function(e){
     mode: "no-cors",
     body: data
   }).then(() => {
-    message.innerText = "Welcome to the movement. We'll be in touch soon.";
+    message.textContent = "You're in! Welcome to the movement.";
     form.reset();
   });
 });
