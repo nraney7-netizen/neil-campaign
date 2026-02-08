@@ -2,17 +2,64 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Neil Raney for LA Mayor</title>
+  <title>Neil Raney for Mayor</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="People First. Zero Corporate Money. Real Change for Los Angeles.">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<header>
-  <h1>People First. Zero Corporate Money.</h1>
-  <p>Join the movement to put Los Angeles back in the hands of its people.</p>
-  <a href="#signup" class="btn primary">Stand With Neil</a>
-  <a href="https://buy.stripe.com/YOUR_STRIPE_LINK" class="btn secondary">Donate</a>
+<nav>
+  <div class="logo">NEIL RANEY</div>
+  <div class="nav-links">
+    <a href="#about">Meet Neil</a>
+    <a href="#priorities">Priorities</a>
+    <a href="#signup" class="btn small">Volunteer</a>
+    <a href="https://buy.stripe.com/YOUR_STRIPE_LINK" class="btn donate">Donate</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <h1>People First.<br>Zero Corporate Money.<br>Real Change for LA.</h1>
+  <p>Join the movement to put power back in the hands of the people.</p>
+  <div class="hero-buttons">
+    <a href="#signup" class="btn primary">Stand With Neil</a>
+    <a href="#about" class="btn secondary">Learn More</a>
+  </div>
 </header>
+
+<section id="about">
+  <h2>Meet Neil Raney</h2>
+  <div class="about-grid">
+    <img src="neil.jpg" alt="Neil Raney">
+    <div>
+      <p>Neil Raney is a people-first leader fighting for affordable housing, real public safety, and a city government that works for residents instead of lobbyists.</p>
+      <ul>
+        <li>No corporate PAC money</li>
+        <li>Community-driven solutions</li>
+        <li>Transparent leadership</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="priorities">
+  <h2>Our Priorities</h2>
+  <div class="card-grid">
+    <div class="card">
+      <h3>Housing for All</h3>
+      <p>Affordable homes and rent stabilization.</p>
+    </div>
+    <div class="card">
+      <h3>Community Safety</h3>
+      <p>Prevention-first public safety solutions.</p>
+    </div>
+    <div class="card">
+      <h3>Transparency</h3>
+      <p>No lobbyists. No corporate cash. Full accountability.</p>
+    </div>
+  </div>
+</section>
 
 <section id="signup">
   <h2>Join the Campaign</h2>
@@ -22,23 +69,13 @@
     <input type="email" name="entry.222222" placeholder="Email" required>
     <input type="text" name="entry.333333" placeholder="Zip Code">
 
-    <label>How would you like to help?</label>
+    <label>How can you help?</label>
     <select name="entry.444444">
       <option>Canvassing</option>
       <option>Phone Banking</option>
       <option>Events</option>
       <option>Tech / Design</option>
       <option>Social Media</option>
-    </select>
-
-    <label>Which area are you in?</label>
-    <select name="entry.555555">
-      <option>Downtown</option>
-      <option>Hollywood</option>
-      <option>San Fernando Valley</option>
-      <option>South LA</option>
-      <option>Westside</option>
-      <option>Other</option>
     </select>
 
     <button type="submit" class="btn primary">Join Now</button>
@@ -51,6 +88,6 @@
   <p>Paid for by Friends of Neil Raney</p>
 </footer>
 
-<script src="scripts.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
