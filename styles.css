@@ -243,25 +243,43 @@ section h2 {
   color: #e63946;
 }
 
-/* POLL / FEEDBACK */
-#poll form {
-  max-width: 400px;
-  margin: 0 auto;
-  text-align: left;
+/* PRESS / NEWS */
+.press-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
 }
 
-#poll form input[type="radio"] {
-  margin-right: 0.5rem;
+.press-card {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
 }
 
-#poll button {
-  margin-top: 0.5rem;
+.press-card:hover {
+  transform: translateY(-5px);
 }
 
 /* VIDEO */
 .video-wrapper iframe {
   width: 100%;
   border-radius: 12px;
+  height: 500px;
+}
+
+/* SIGNUP FORM */
+form input {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 0.75rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+form button {
+  width: 100%;
 }
 
 /* SOCIAL MEDIA */
@@ -276,19 +294,6 @@ section h2 {
   border-radius: 12px;
   height: 500px;
   border: 0;
-}
-
-/* SIGNUP FORM */
-.signup form input {
-  width: 100%;
-  padding: 0.75rem;
-  margin-bottom: 0.75rem;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-}
-
-.signup form button {
-  width: 100%;
 }
 
 /* STICKY DONATE BUTTON */
