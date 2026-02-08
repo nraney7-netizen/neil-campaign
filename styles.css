@@ -1,128 +1,58 @@
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f4f4f4;
-  color: #222;
-}
-
-nav {
-  display: flex;
-  justify-content: space-between;
-  padding: 1rem 2rem;
-  background: #0a2540;
-  color: white;
-  position: sticky;
-  top: 0;
-  z-index: 10;
-}
-
-.nav-links a {
-  margin-left: 1rem;
-  text-decoration: none;
-  color: white;
-}
-
-.hero {
-  background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)), url("hero.jpg");
-  background-size: cover;
-  color: white;
-  text-align: center;
-  padding: 5rem 1rem;
-}
-
-.hero-buttons {
-  margin-top: 2rem;
-}
-
-section {
-  padding: 3rem 1rem;
-  background: white;
-  margin: 2rem;
-  border-radius: 10px;
-}
-
+/* ------------------ ABOUT ------------------ */
 .about-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
+  align-items: start;
+  position: relative;
+  overflow: hidden;
 }
 
-.card-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
-  gap: 1rem;
-}
+.about-grid img { width: 100%; border-radius: 10px; object-fit: cover; }
+.about-text ul { list-style: none; padding-left: 0; margin: 1rem 0; }
+.about-text ul li { margin-bottom: 0.5rem; }
+.about-text blockquote { background: #dce8f2; padding: 1rem; border-radius: 8px; margin: 1.5rem 0; font-style: italic; }
+.subheading { font-size: 1.2rem; font-weight: 400; color: #555; margin-bottom: 1rem; }
 
-.card {
-  padding: 1.5rem;
-  background: #eef2f7;
-  border-radius: 8px;
-}
+/* ------------------ TIMELINE ------------------ */
+.timeline { position: relative; margin: 1.5rem 0; padding-left: 2rem; }
+.timeline-line { position: absolute; left: 12px; top: 0; width: 4px; height: 0; background: #d62828; transition: height 1s ease-out; border-radius: 2px; z-index: 0; }
+.timeline-item { position: relative; margin-bottom: 2rem; z-index: 1; opacity: 0; transform: translateX(-30px); transition: all 0.8s ease-out; }
+.timeline-item.show { opacity: 1; transform: translateX(0); }
+.timeline-item::before { content: ''; position: absolute; left: -9px; top: 0; width: 18px; height: 18px; background: #d62828; border-radius: 50%; z-index: 1; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+.timeline-item:hover::before { transform: scale(1.4); box-shadow: 0 0 12px rgba(214,40,40,0.7); }
+.timeline-item:hover .year { color: #d62828; font-weight: bold; transform: scale(1.1); transition: transform 0.3s ease, color 0.3s ease; }
+.timeline-item .tooltip { visibility: hidden; width: 180px; background: #333; color: #fff; text-align: center; padding: 6px; border-radius: 6px; position: absolute; left: 25px; top: -5px; opacity: 0; transform: translateY(-5px); transition: opacity 0.3s ease, transform 0.3s ease; z-index: 2; }
+.timeline-item:hover .tooltip { visibility: visible; opacity: 1; transform: translateY(0); }
 
-.testimonial {
-  background: #dce8f2;
-  padding: 1.5rem;
-  border-radius: 8px;
-  margin-top: 1rem;
-}
+/* ------------------ CARDS ------------------ */
+.cards-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(250px,1fr)); gap: 1.5rem; margin-top: 1rem; }
+.card { background: #f7f7f7; padding: 1.5rem; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); opacity: 0; transform: translateY(30px); transition: all 0.7s ease-out; }
+.card.show { opacity: 1; transform: translateY(0); }
+.card:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.2); }
+.card h3::before { content:"📅"; display:inline-block; margin-right:8px; transition: transform 0.3s ease; }
+.card:hover h3::before { transform: rotate(-10deg) scale(1.2); }
 
-ul {
-  list-style: none;
-  padding-left: 0;
-}
+/* ------------------ BUTTONS ------------------ */
+.btn { padding: 12px 20px; border-radius: 6px; text-decoration: none; display:inline-block; font-weight: bold; transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease; }
+.btn:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(214,40,40,0.3),0 0 8px rgba(214,40,40,0.2); }
+.btn:active { transform: translateY(1px); box-shadow: 0 2px 5px rgba(0,0,0,0.2); }
+.btn.primary:hover { background: #b71c1c; color: white; }
+.btn.donate:hover { background: #26a69a; color: black; }
+@keyframes bounce-in { 0%{transform:scale(0.9);opacity:0;}50%{transform:scale(1.05);opacity:1;}100%{transform:scale(1);opacity:1;} }
+.btn.primary { animation: bounce-in 0.6s ease forwards; }
 
-ul li {
-  margin: 0.5rem 0;
-  font-weight: bold;
-}
+/* ------------------ BACKGROUND ACCENTS ------------------ */
+#about::before { content:''; position:absolute; top:-50%; left:-50%; width:200%; height:200%; background: linear-gradient(45deg, rgba(214,40,40,0.05) 25%, transparent 25%, transparent 50%, rgba(214,40,40,0.05) 50%, rgba(214,40,40,0.05) 75%, transparent 75%, transparent); background-size:50px 50px; animation: moveBg 15s linear infinite; z-index:0; }
+@keyframes moveBg { 0%{transform:translate(0,0);}100%{transform:translate(50px,50px);} }
+.about-text { position: relative; z-index:1; }
 
-input, select {
-  width: 100%;
-  padding: 10px;
-  margin: 10px 0;
-}
+/* ------------------ FLOATING CTA ------------------ */
+#floating-cta { position: fixed; bottom:20px; right:20px; z-index:999; transition: transform 0.3s ease, opacity 0.3s ease; }
+#floating-cta .btn { padding:14px 24px; border-radius:50px; font-weight:bold; box-shadow:0 4px 15px rgba(0,0,0,0.2); animation:pulse 2.5s infinite; }
+#floating-cta .btn:hover { transform: scale(1.1); box-shadow:0 8px 25px rgba(214,40,40,0.3),0 0 8px rgba(214,40,40,0.2); }
+@keyframes pulse { 0%{transform:scale(1);}50%{transform:scale(1.05);}100%{transform:scale(1);} }
 
-.btn {
-  padding: 12px 20px;
-  border-radius: 6px;
-  text-decoration: none;
-  display: inline-block;
-  font-weight: bold;
-}
-
-.primary {
-  background: #d62828;
-  color: white;
-}
-
-.secondary {
-  background: #fcbf49;
-  color: black;
-}
-
-.donate {
-  background: #2ec4b6;
-  color: black;
-}
-
-.small {
-  padding: 8px 12px;
-}
-
-footer {
-  text-align: center;
-  padding: 1.5rem;
-  background: #0a2540;
-  color: white;
-}
-
-#formMessage {
-  color: green;
-  font-weight: bold;
-}
-
-@media (max-width: 700px) {
-  .about-grid {
-    grid-template-columns: 1fr;
-  }
-}
+/* ------------------ RESPONSIVE ------------------ */
+@media (max-width:700px){ .about-grid { grid-template-columns:1fr; } .about-cta .btn { display:block; margin-bottom:1rem; } }
+@media (max-width:400px){ #floating-cta { display:none; } }
