@@ -21,7 +21,7 @@
       <li><a href="#about">About</a></li>
       <li><a href="#issues">Issues</a></li>
       <li><a href="#events">Events</a></li>
-      <li><a href="#press">Press</a></li>
+      <li><a href="#press">News</a></li>
       <li><a href="#video">Video</a></li>
       <li><a href="#signup">Join</a></li>
       <li><a href="#contact">Contact</a></li>
@@ -31,7 +31,7 @@
 </header>
 
 <!-- HERO -->
-<section id="hero" class="hero" aria-label="Hero section">
+<section id="hero" class="hero">
   <div class="hero-overlay">
     <h1>Putting Community First — A Government That Works for You</h1>
     <p>Neil Raney fights corporate influence, champions small businesses, and builds a government that answers to the people.</p>
@@ -44,8 +44,8 @@
 </section>
 
 <!-- ABOUT -->
-<section id="about" class="fade-in" aria-labelledby="about-heading">
-  <h2 id="about-heading">About Neil Raney</h2>
+<section id="about" class="fade-in">
+  <h2>About Neil Raney</h2>
   <div class="about-grid">
     <div>
       <p>Neil Raney has spent decades fighting for everyday Americans. From organizing local community initiatives to championing transparency in government, Neil has always put people first.</p>
@@ -60,56 +60,36 @@
 </section>
 
 <!-- ISSUES -->
-<section id="issues" class="fade-in" aria-labelledby="issues-heading">
-  <h2 id="issues-heading">Key Issues</h2>
+<section id="issues" class="fade-in">
+  <h2>Key Issues</h2>
   <div class="issues-grid">
     <div class="issue-card">
       <h3>Healthcare</h3>
-      <p>Affordable healthcare for all Americans. <a href="issues/healthcare.html">Learn more</a>.</p>
+      <p>Affordable healthcare for all Americans. <a href="#">Learn more</a>.</p>
     </div>
     <div class="issue-card">
       <h3>Education</h3>
-      <p>Investing in schools and teachers to give every student equal opportunity. <a href="issues/education.html">Learn more</a>.</p>
+      <p>Investing in schools and teachers to give every student equal opportunity. <a href="#">Learn more</a>.</p>
     </div>
     <div class="issue-card">
       <h3>Economic Freedom</h3>
-      <p>Reducing corporate influence and empowering small businesses. <a href="issues/economy.html">Learn more</a>.</p>
+      <p>Reducing corporate influence and empowering small businesses. <a href="#">Learn more</a>.</p>
     </div>
   </div>
 </section>
 
 <!-- EVENTS -->
-<section id="events" class="fade-in" aria-labelledby="events-heading">
-  <h2 id="events-heading">Upcoming Events</h2>
-  <p>Meet Neil at rallies, town halls, and community events. RSVP below!</p>
-  <div class="event-grid">
-    <div class="event-card">
-      <h3>Town Hall – Iowa</h3>
-      <p><strong>Date:</strong> May 12, 2026</p>
-      <p><strong>Time:</strong> 6:00 PM</p>
-      <p><strong>Location:</strong> Des Moines Community Center</p>
-      <form class="rsvp-form" onsubmit="handleRSVP(event)">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <button type="submit" class="btn-primary">RSVP Now</button>
-        <p class="form-response" role="status"></p>
-      </form>
-    </div>
-  </div>
-</section>
-
-<!-- VOLUNTEER / CALENDAR -->
-<section id="volunteer" class="fade-in" aria-labelledby="volunteer-heading">
-  <h2 id="volunteer-heading">Volunteer & Events</h2>
-  <p>Sign up to volunteer and attend upcoming campaign events near you.</p>
+<section id="events" class="fade-in">
+  <h2>Upcoming Events</h2>
+  <p>Meet Neil at rallies, town halls, and volunteer opportunities.</p>
   <iframe 
     src="https://calendar.google.com/calendar/embed?src=YOUR_CALENDAR_ID&ctz=America/Chicago" 
     style="border:0" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
 </section>
 
 <!-- TESTIMONIALS -->
-<section id="testimonials" class="fade-in" aria-labelledby="testimonials-heading">
-  <h2 id="testimonials-heading">What People Are Saying</h2>
+<section id="testimonials" class="fade-in">
+  <h2>What People Are Saying</h2>
   <div class="testimonials-grid">
     <div class="testimonial-card">
       <p>“Neil Raney is a true advocate for families and small businesses.”</p>
@@ -126,35 +106,26 @@
   </div>
 </section>
 
-<!-- POLL / FEEDBACK -->
-<section id="poll" class="fade-in" aria-labelledby="poll-heading">
-  <h2 id="poll-heading">Tell Us What Matters Most</h2>
-  <form id="issue-poll" onsubmit="submitPoll(event)">
-    <label><input type="radio" name="priority" value="Healthcare" required> Healthcare</label><br>
-    <label><input type="radio" name="priority" value="Education"> Education</label><br>
-    <label><input type="radio" name="priority" value="Economy"> Economy</label><br>
-    <label><input type="radio" name="priority" value="Climate"> Climate</label><br><br>
-    <button type="submit" class="btn-primary">Submit</button>
-    <p class="form-response" role="status"></p>
-  </form>
-</section>
-
-<!-- PRESS -->
-<section id="press" class="fade-in" aria-labelledby="press-heading">
-  <h2 id="press-heading">Endorsements & Media</h2>
+<!-- NEWS / PRESS -->
+<section id="press" class="fade-in">
+  <h2>Latest News & Press</h2>
   <div class="press-grid">
-    <div class="press-card">
-      <p>“Neil Raney is the bold leadership our community needs.” – Jane Doe</p>
-    </div>
-    <div class="press-card">
-      <p>Featured in The Daily News for his progressive work and fight against corporate influence.</p>
-    </div>
+    <article class="press-card">
+      <h3>Neil Raney on Local Business Reforms</h3>
+      <p>May 1, 2026 – Neil speaks at City Hall about empowering small businesses.</p>
+      <a href="#">Read more</a>
+    </article>
+    <article class="press-card">
+      <h3>Interview with Neil Raney on TV News</h3>
+      <p>April 28, 2026 – Discussing transparency and anti-lobbyist initiatives.</p>
+      <a href="#">Read more</a>
+    </article>
   </div>
 </section>
 
 <!-- VIDEO -->
-<section id="video" class="fade-in" aria-labelledby="video-heading">
-  <h2 id="video-heading">Watch Neil’s Message</h2>
+<section id="video" class="fade-in">
+  <h2>Watch Neil’s Message</h2>
   <div class="video-wrapper">
     <iframe width="100%" height="500" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" 
       title="Neil Raney Campaign Video" frameborder="0" allowfullscreen loading="lazy"></iframe>
@@ -162,18 +133,17 @@
 </section>
 
 <!-- SIGNUP -->
-<section id="signup" class="signup fade-in">
-  <h2>Join the People’s Campaign</h2>
-  <p>Get weekly updates, exclusive policy insights, and behind-the-scenes access.</p>
+<section id="signup" class="fade-in">
+  <h2>Join the Campaign</h2>
   <form id="signup-form" onsubmit="handleSignup(event)">
     <input type="text" name="name" placeholder="Your Name" required>
     <input type="email" name="email" placeholder="Your Email" required>
-    <button type="submit" class="btn-primary">Sign Up for Updates</button>
+    <button type="submit" class="btn-primary">Sign Up</button>
     <p class="form-response" role="status"></p>
   </form>
 </section>
 
-<!-- SOCIAL -->
+<!-- SOCIAL MEDIA -->
 <section id="social" class="fade-in">
   <h2>Follow Neil on Social Media</h2>
   <div class="social-grid">
@@ -183,8 +153,7 @@
       </a>
     </div>
     <div class="social-feed">
-      <iframe src="https://snapwidget.com/embed/EXAMPLE_WIDGET_ID" 
-              class="instagram-feed" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+      <iframe src="https://snapwidget.com/embed/EXAMPLE_WIDGET_ID" class="instagram-feed" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
     </div>
   </div>
 </section>
@@ -200,34 +169,17 @@
 
 <!-- SCRIPTS -->
 <script>
-  const hamburger = document.querySelector('.hamburger');
-  const navUL = document.querySelector('nav ul');
-  hamburger.addEventListener('click', () => navUL.classList.toggle('active'));
+const hamburger = document.querySelector('.hamburger');
+const navUL = document.querySelector('nav ul');
+hamburger.addEventListener('click', () => navUL.classList.toggle('active'));
 
-  function handleRSVP(event){
-    event.preventDefault();
-    const form = event.target;
-    form.querySelector('.form-response').textContent = `Thanks ${form.name.value}! You’re RSVP’d.`;
-    form.querySelector('.form-response').style.color = 'green';
-    form.reset();
-  }
-
-  function handleSignup(event){
-    event.preventDefault();
-    const form = event.target;
-    form.querySelector('.form-response').textContent = `Thanks ${form.name.value}! You’re signed up.`;
-    form.querySelector('.form-response').style.color = 'green';
-    form.reset();
-  }
-
-  function submitPoll(event){
-    event.preventDefault();
-    const form = event.target;
-    const selected = form.priority.value;
-    form.querySelector('.form-response').textContent = `Thanks! You voted for: ${selected}`;
-    form.querySelector('.form-response').style.color = 'green';
-    form.reset();
-  }
+function handleSignup(event){
+  event.preventDefault();
+  const form = event.target;
+  form.querySelector('.form-response').textContent = `Thanks ${form.name.value}! You’re signed up.`;
+  form.querySelector('.form-response').style.color = 'green';
+  form.reset();
+}
 </script>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </body>
