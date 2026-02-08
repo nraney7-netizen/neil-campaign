@@ -1,55 +1,15 @@
-body { font-family:'Roboto',sans-serif; margin:0; padding:0; line-height:1.6; color:#222; background:#f7f7f7; }
-a { text-decoration:none; }
-h1,h2,h3{ color:#1d3557; }
-section{ padding:60px 20px; }
-.fade-in{ opacity:0; animation:fadeIn 1s forwards;}
-@keyframes fadeIn{ to { opacity:1; }}
+/* Hero, Buttons, Header, Sections, etc. previously provided */
 
-#site-header { display:flex; justify-content:space-between; align-items:center; padding:15px 20px; background:#fff; position:sticky; top:0; z-index:1000; box-shadow:0 2px 6px rgba(0,0,0,.1);}
-#site-header .logo a{ font-weight:700; font-size:1.5rem; color:#e63946;}
-#site-header nav ul{ display:flex; list-style:none; gap:20px;}
-#site-header nav ul li a{ color:#222; font-weight:500;}
-.hamburger{ display:none; flex-direction:column; cursor:pointer;}
-.hamburger span{ height:3px; width:25px; background:#222; margin:4px 0; border-radius:2px;}
+.events-grid, .issues-grid, .press-grid, .voter-grid, .testimonials-grid { display:grid; gap:20px; }
 
-#sticky-cta{ position:fixed; bottom:20px; right:20px; display:flex; flex-direction:column; gap:10px; z-index:999;}
-#sticky-cta a{ padding:.75rem 1.25rem; border-radius:8px; text-align:center; font-weight:bold; color:#fff; box-shadow:0 2px 6px rgba(0,0,0,.15); transition: transform .2s ease, box-shadow .2s ease;}
-#sticky-cta .btn-primary{ background:#e63946;}
-#sticky-cta .btn-secondary{ background:#457b9d;}
-#sticky-cta a:hover{ transform:translateY(-3px); box-shadow:0 6px 12px rgba(0,0,0,.2); }
+/* RSVP Modal */
+.modal { display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,.6); justify-content:center; align-items:center; z-index:1000; }
+.modal-content { background:#fff; padding:30px; border-radius:12px; width:90%; max-width:400px; text-align:center; position:relative; }
+.modal .close { position:absolute; top:10px; right:15px; font-size:1.5rem; cursor:pointer; }
 
-.hero{ position:relative; height:90vh; display:flex; align-items:center; justify-content:center; color:#fff; text-align:center; overflow:hidden;}
-#hero-video{ position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; z-index:0; }
-.hero-overlay{ position:relative; z-index:1; background:rgba(29,53,87,.7); padding:40px; border-radius:12px;}
-.hero-buttons a{ margin:10px;}
-
-.btn-primary,.btn-secondary{ padding:.75rem 1.5rem; border-radius:8px; font-weight:bold; transition: transform .2s, box-shadow .2s;}
-.btn-primary{ background:#e63946; color:#fff;}
-.btn-secondary{ background:#457b9d; color:#fff;}
-.btn-primary:hover,.btn-secondary:hover{ transform:translateY(-3px); box-shadow:0 6px 12px rgba(0,0,0,.2);}
-
-.about-grid,.issues-grid,.events-grid,.press-grid,.testimonials-grid{ display:grid; gap:30px;}
-.about-grid{ grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); align-items:center;}
-.issues-grid,.events-grid{ grid-template-columns:repeat(auto-fit,minmax(250px,1fr));}
-.issue-card,.event-card,.press-card,.testimonial-card{ background:#fff; padding:20px; border-radius:12px; box-shadow:0 2px 8px rgba(0,0,0,.05);}
-.policy-details{ display:none; margin-top:10px; color:#1d3557; font-size:.95rem;}
-.more-btn{ margin-top:10px; padding:.4rem .8rem; border:none; border-radius:6px; background:#457b9d; color:#fff; cursor:pointer;}
-.more-btn:hover{ background:#e63946;}
-
-.press-card h3{ color:#e63946; margin-bottom:.5rem;}
-.press-card a{ font-weight:bold; color:#e63946;}
-.press-card:hover{ transform:translateY(-5px); box-shadow:0 6px 15px rgba(0,0,0,.1);}
-
-.share-buttons{ margin-top:10px; display:flex; gap:10px;}
-.share-buttons a{ background:#1d3557; color:#fff; padding:5px 10px; border-radius:6px; font-size:.85rem; text-decoration:none; transition:background .2s ease;}
-.share-buttons a:hover{ background:#e63946;}
-
-footer{ background:#1d3557; color:#fff; text-align:center; padding:20px;}
-
-@media (max-width:768px){
-  #site-header nav ul{ display:none; flex-direction:column; position:absolute; top:60px; right:20px; padding:20px; background:#fff; border-radius:8px; box-shadow:0 2px 12px rgba(0,0,0,.2);}
-  #site-header nav ul.active{ display:flex;}
-  .hamburger{ display:flex;}
-  #sticky-cta{ flex-direction:row; bottom:10px; right:10px; left:10px; justify-content:space-around;}
-  #sticky-cta a{ flex:1; font-size:.9rem; padding:.6rem;}
+/* Voter Tools */
+.voter-card, .event-card, .issue-card, .press-card, .testimonial-card { 
+  background:#fff; padding:20px; border-radius:12px; box-shadow:0 2px 8px rgba(0,0,0,.05); 
+  transition: transform .2s, box-shadow .2s; text-align:center; 
 }
+.voter-card:hover, .event-card:hover, .issue-card:hover, .press-card:hover { transform:translateY(-5px); box-shadow:0 6px 15px rgba(0,0,0,.1); }
