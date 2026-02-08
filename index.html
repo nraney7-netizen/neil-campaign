@@ -19,6 +19,7 @@
       <ul>
         <li><a href="#about">About</a></li>
         <li><a href="#issues">Issues</a></li>
+        <li><a href="#testimonials">Endorsements</a></li>
         <li><a href="#press">News</a></li>
         <li><a href="#events">Events</a></li>
         <li><a href="#signup">Join</a></li>
@@ -60,9 +61,39 @@
   <section id="issues" class="fade-in">
     <h2>Key Issues</h2>
     <div class="issues-grid">
-      <div class="issue-card"><h3>Affordable Housing</h3><p>Ensuring every Angeleno has a safe place to live.</p></div>
-      <div class="issue-card"><h3>Healthcare</h3><p>Making healthcare accessible and affordable.</p></div>
-      <div class="issue-card"><h3>Small Business Support</h3><p>Championing local entrepreneurs and jobs.</p></div>
+      <div class="issue-card">
+        <h3>Affordable Housing</h3>
+        <p>Ensuring every Angeleno has a safe place to live.</p>
+        <button class="more-btn" onclick="togglePolicy(this)">Learn More</button>
+        <div class="policy-details">Neil will expand affordable housing, regulate short-term rentals, and ensure equitable urban development.</div>
+      </div>
+      <div class="issue-card">
+        <h3>Healthcare</h3>
+        <p>Making healthcare accessible and affordable.</p>
+        <button class="more-btn" onclick="togglePolicy(this)">Learn More</button>
+        <div class="policy-details">Neil supports expanding community clinics and mental health resources across Los Angeles.</div>
+      </div>
+      <div class="issue-card">
+        <h3>Small Business Support</h3>
+        <p>Championing local entrepreneurs and jobs.</p>
+        <button class="more-btn" onclick="togglePolicy(this)">Learn More</button>
+        <div class="policy-details">Neil will reduce bureaucracy, provide micro-grants, and create a small-business advisory council.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS / ENDORSEMENTS -->
+  <section id="testimonials" class="fade-in">
+    <h2>Endorsements</h2>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <p>"Neil is the leader LA needs — honest, transparent, and committed to the people."</p>
+        <span>- Jane Doe, Community Organizer</span>
+      </div>
+      <div class="testimonial-card">
+        <p>"A true advocate for small businesses and working families."</p>
+        <span>- John Smith, Local Entrepreneur</span>
+      </div>
     </div>
   </section>
 
@@ -98,55 +129,40 @@
     <p>&copy; 2026 Neil Raney Campaign</p>
   </footer>
 
-  <!-- DYNAMIC NEWS LOADER + JSON-LD + SHARE BUTTONS -->
+  <!-- SCRIPTS -->
   <script>
-  async function loadNews() {
-    try {
-      const res = await fetch('news.json');
-      const newsItems = await res.json();
-      const container = document.getElementById('press-grid');
-
-      newsItems.forEach(item => {
-        const card = document.createElement('article');
-        card.classList.add('press-card');
-        card.innerHTML = `
-          <h3>${item.title}</h3>
-          <p><strong>Date:</strong> ${item.date}</p>
-          <p>${item.snippet}</p>
-          <a href="${item.link}" target="_blank" rel="noopener">Read More</a>
-          <div class="share-buttons">
-            <a href="https://twitter.com/intent/tweet?text=${encodeURIComponent(item.title)}&url=${encodeURIComponent(item.link)}" target="_blank" rel="noopener">Twitter</a>
-            <a href="https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(item.link)}" target="_blank" rel="noopener">Facebook</a>
-          </div>
-        `;
-        container.appendChild(card);
-      });
-
-      // Structured data for SEO
-      const structuredNews = {
-        "@context": "https://schema.org",
-        "@type": "Blog",
-        "name": "Neil Raney Campaign News",
-        "url": window.location.href,
-        "blogPost": newsItems.map(item => ({
-          "@type": "BlogPosting",
-          "headline": item.title,
-          "datePublished": item.date,
-          "url": item.link,
-          "description": item.snippet
-        }))
-      };
-      const script = document.createElement('script');
-      script.type = 'application/ld+json';
-      script.text = JSON.stringify(structuredNews);
-      document.head.appendChild(script);
-
-    } catch(err) {
-      console.error('Failed to load news:', err);
+    // Toggle policy details
+    function togglePolicy(btn) {
+      const details = btn.nextElementSibling;
+      details.style.display = details.style.display === 'block' ? 'none' : 'block';
     }
-  }
 
-  document.addEventListener('DOMContentLoaded', loadNews);
+    // Load dynamic news
+    async function loadNews() {
+      try {
+        const res = await fetch('news.json');
+        const newsItems = await res.json();
+        const container = document.getElementById('press-grid');
+        newsItems.forEach(item => {
+          const card = document.createElement('article');
+          card.classList.add('press-card');
+          card.innerHTML = `
+            <h3>${item.title}</h3>
+            <p><strong>Date:</strong> ${item.date}</p>
+            <p>${item.snippet}</p>
+            <a href="${item.link}" target="_blank" rel="noopener">Read More</a>
+            <div class="share-buttons">
+              <a href="https://twitter.com/intent/tweet?text=${encodeURIComponent(item.title)}&url=${encodeURIComponent(item.link)}" target="_blank" rel="noopener">Twitter</a>
+              <a href="https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(item.link)}" target="_blank" rel="noopener">Facebook</a>
+            </div>
+          `;
+          container.appendChild(card);
+        });
+      } catch(err) {
+        console.error('Failed to load news:', err);
+      }
+    }
+    document.addEventListener('DOMContentLoaded', loadNews);
   </script>
 
 </body>
