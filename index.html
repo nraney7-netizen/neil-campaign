@@ -4,166 +4,182 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Neil Raney for Mayor</title>
-  <meta name="description" content="Neil Raney fights for the people of Los Angeles — grassroots leadership, accountability, and community-first policies.">
+  <meta name="description" content="Neil Raney fights for Los Angeles — grassroots leadership, accountability, and community-first policies.">
   <meta property="og:title" content="Neil Raney for Mayor">
-  <meta property="og:description" content="Neil Raney fights for the people of Los Angeles — grassroots leadership, accountability, and community-first policies.">
-  <meta property="og:type" content="website">
+  <meta property="og:description" content="Neil Raney fights for Los Angeles — grassroots leadership, accountability, and community-first policies.">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <!-- HEADER -->
-  <header id="site-header">
-    <div class="logo"><a href="#">Neil Raney</a></div>
-    <nav>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#issues">Issues</a></li>
-        <li><a href="#testimonials">Endorsements</a></li>
-        <li><a href="#press">News</a></li>
-        <li><a href="#events">Events</a></li>
-        <li><a href="#signup">Join</a></li>
-      </ul>
-      <div class="hamburger"><span></span><span></span><span></span></div>
-    </nav>
-  </header>
+<!-- HEADER -->
+<header id="site-header">
+  <div class="logo"><a href="#">Neil Raney</a></div>
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#issues">Issues</a></li>
+      <li><a href="#testimonials">Endorsements</a></li>
+      <li><a href="#press">News</a></li>
+      <li><a href="#events">Events</a></li>
+      <li><a href="#signup">Join</a></li>
+    </ul>
+    <div class="hamburger"><span></span><span></span><span></span></div>
+  </nav>
+</header>
 
-  <!-- STICKY CTA -->
-  <div id="sticky-cta">
-    <a href="YOUR_STRIPE_LINK" class="btn-primary" target="_blank" rel="noopener">Donate</a>
-    <a href="#signup" class="btn-secondary">Join</a>
-    <a href="#events" class="btn-secondary">Volunteer</a>
+<!-- STICKY CTA -->
+<div id="sticky-cta">
+  <a href="YOUR_STRIPE_LINK" class="btn-primary" target="_blank">Donate</a>
+  <a href="#signup" class="btn-secondary">Join</a>
+  <a href="#events" class="btn-secondary">Volunteer</a>
+</div>
+
+<!-- HERO SECTION WITH VIDEO -->
+<section id="hero" class="hero">
+  <video autoplay muted loop id="hero-video">
+    <source src="images/hero-video.mp4" type="video/mp4">
+  </video>
+  <div class="hero-overlay">
+    <h1>Putting Community First — Government That Works for You</h1>
+    <p>Neil Raney fights corporate influence, champions small businesses, and builds a government that answers to the people.</p>
+    <div class="hero-buttons">
+      <a href="YOUR_STRIPE_LINK" class="btn-primary">Donate</a>
+      <a href="#signup" class="btn-secondary">Join</a>
+      <a href="#events" class="btn-secondary">Volunteer</a>
+    </div>
   </div>
+</section>
 
-  <!-- HERO SECTION -->
-  <section id="hero" class="hero">
-    <div class="hero-overlay">
-      <h1>Putting Community First — Government That Works for You</h1>
-      <p>Neil Raney fights corporate influence, champions small businesses, and builds a government that answers to the people.</p>
-      <div class="hero-buttons">
-        <a href="YOUR_STRIPE_LINK" class="btn-primary" target="_blank" rel="noopener">Donate</a>
-        <a href="#signup" class="btn-secondary">Join</a>
-        <a href="#events" class="btn-secondary">Volunteer</a>
-      </div>
+<!-- ABOUT SECTION -->
+<section id="about" class="fade-in">
+  <h2>About Neil Raney</h2>
+  <div class="about-grid">
+    <p>Neil is a progressive, anti-lobbyist candidate committed to putting people first. From housing to education, Neil leads with transparency and results.</p>
+    <img src="images/hero-bg.jpg" alt="Neil Raney speaking to the community">
+  </div>
+</section>
+
+<!-- ISSUES SECTION -->
+<section id="issues" class="fade-in">
+  <h2>Key Issues</h2>
+  <div class="issues-grid">
+    <div class="issue-card">
+      <h3>Affordable Housing</h3>
+      <p>Ensuring every Angeleno has a safe place to live.</p>
+      <button class="more-btn" onclick="togglePolicy(this)">Learn More</button>
+      <div class="policy-details">Neil will expand affordable housing, regulate short-term rentals, and ensure equitable urban development.</div>
     </div>
-  </section>
-
-  <!-- ABOUT SECTION -->
-  <section id="about" class="fade-in">
-    <h2>About Neil Raney</h2>
-    <div class="about-grid">
-      <p>Neil is a progressive, anti-lobbyist candidate committed to putting people first. From housing to education, Neil leads with transparency and results.</p>
-      <img src="images/hero-bg.jpg" alt="Neil Raney speaking to the community">
+    <div class="issue-card">
+      <h3>Healthcare</h3>
+      <p>Making healthcare accessible and affordable.</p>
+      <button class="more-btn" onclick="togglePolicy(this)">Learn More</button>
+      <div class="policy-details">Neil supports expanding community clinics and mental health resources across Los Angeles.</div>
     </div>
-  </section>
-
-  <!-- ISSUES SECTION -->
-  <section id="issues" class="fade-in">
-    <h2>Key Issues</h2>
-    <div class="issues-grid">
-      <div class="issue-card">
-        <h3>Affordable Housing</h3>
-        <p>Ensuring every Angeleno has a safe place to live.</p>
-        <button class="more-btn" onclick="togglePolicy(this)">Learn More</button>
-        <div class="policy-details">Neil will expand affordable housing, regulate short-term rentals, and ensure equitable urban development.</div>
-      </div>
-      <div class="issue-card">
-        <h3>Healthcare</h3>
-        <p>Making healthcare accessible and affordable.</p>
-        <button class="more-btn" onclick="togglePolicy(this)">Learn More</button>
-        <div class="policy-details">Neil supports expanding community clinics and mental health resources across Los Angeles.</div>
-      </div>
-      <div class="issue-card">
-        <h3>Small Business Support</h3>
-        <p>Championing local entrepreneurs and jobs.</p>
-        <button class="more-btn" onclick="togglePolicy(this)">Learn More</button>
-        <div class="policy-details">Neil will reduce bureaucracy, provide micro-grants, and create a small-business advisory council.</div>
-      </div>
+    <div class="issue-card">
+      <h3>Small Business Support</h3>
+      <p>Championing local entrepreneurs and jobs.</p>
+      <button class="more-btn" onclick="togglePolicy(this)">Learn More</button>
+      <div class="policy-details">Neil will reduce bureaucracy, provide micro-grants, and create a small-business advisory council.</div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- TESTIMONIALS / ENDORSEMENTS -->
-  <section id="testimonials" class="fade-in">
-    <h2>Endorsements</h2>
-    <div class="testimonials-grid">
-      <div class="testimonial-card">
-        <p>"Neil is the leader LA needs — honest, transparent, and committed to the people."</p>
-        <span>- Jane Doe, Community Organizer</span>
-      </div>
-      <div class="testimonial-card">
-        <p>"A true advocate for small businesses and working families."</p>
-        <span>- John Smith, Local Entrepreneur</span>
-      </div>
+<!-- TESTIMONIALS / ENDORSEMENTS -->
+<section id="testimonials" class="fade-in">
+  <h2>Endorsements</h2>
+  <div class="testimonials-grid">
+    <div class="testimonial-card">
+      <p>"Neil is the leader LA needs — honest, transparent, and committed to the people."</p>
+      <span>- Jane Doe, Community Organizer</span>
     </div>
-  </section>
-
-  <!-- NEWS / PRESS SECTION -->
-  <section id="press" class="fade-in">
-    <h2>Latest News & Press</h2>
-    <div id="press-grid" class="press-grid">
-      <!-- Dynamically loaded from news.json -->
+    <div class="testimonial-card">
+      <p>"A true advocate for small businesses and working families."</p>
+      <span>- John Smith, Local Entrepreneur</span>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- EVENTS SECTION -->
-  <section id="events" class="fade-in">
-    <h2>Upcoming Events</h2>
-    <div class="events-grid">
-      <div class="event-card"><h3>Volunteer Rally</h3><p>March 15, 2026 — Join the grassroots movement!</p></div>
-      <div class="event-card"><h3>Town Hall Meeting</h3><p>March 22, 2026 — Share your ideas directly with Neil.</p></div>
+<!-- NEWS / PRESS SECTION -->
+<section id="press" class="fade-in">
+  <h2>Latest News & Press</h2>
+  <div id="press-grid" class="press-grid">
+    <!-- Dynamically loaded from news.json -->
+  </div>
+</section>
+
+<!-- EVENTS SECTION -->
+<section id="events" class="fade-in">
+  <h2>Upcoming Events</h2>
+  <div class="events-grid">
+    <div class="event-card">
+      <h3>Volunteer Rally</h3>
+      <p>March 15, 2026 — Join the grassroots movement!</p>
+      <button onclick="rsvpEvent('Volunteer Rally')">RSVP</button>
     </div>
-  </section>
+    <div class="event-card">
+      <h3>Town Hall Meeting</h3>
+      <p>March 22, 2026 — Share your ideas directly with Neil.</p>
+      <button onclick="rsvpEvent('Town Hall Meeting')">RSVP</button>
+    </div>
+  </div>
+</section>
 
-  <!-- SIGNUP SECTION -->
-  <section id="signup" class="fade-in">
-    <h2>Join the Campaign</h2>
-    <form id="signup-form">
-      <input type="text" name="name" placeholder="Full Name" required>
-      <input type="email" name="email" placeholder="Email Address" required>
-      <button type="submit" class="btn-primary">Sign Up</button>
-    </form>
-  </section>
+<!-- SIGNUP / CRM FORM -->
+<section id="signup" class="fade-in">
+  <h2>Join the Campaign</h2>
+  <form id="signup-form" action="YOUR_CRM_ENDPOINT" method="POST">
+    <input type="text" name="name" placeholder="Full Name" required>
+    <input type="email" name="email" placeholder="Email Address" required>
+    <button type="submit" class="btn-primary">Sign Up</button>
+  </form>
+</section>
 
-  <!-- FOOTER -->
-  <footer>
-    <p>&copy; 2026 Neil Raney Campaign</p>
-  </footer>
+<!-- FOOTER -->
+<footer>
+  <p>&copy; 2026 Neil Raney Campaign</p>
+</footer>
 
-  <!-- SCRIPTS -->
-  <script>
-    // Toggle policy details
-    function togglePolicy(btn) {
-      const details = btn.nextElementSibling;
-      details.style.display = details.style.display === 'block' ? 'none' : 'block';
+<!-- SCRIPTS -->
+<script>
+  // Toggle policy details
+  function togglePolicy(btn) {
+    const details = btn.nextElementSibling;
+    details.style.display = details.style.display === 'block' ? 'none' : 'block';
+  }
+
+  // Load dynamic news
+  async function loadNews() {
+    try {
+      const res = await fetch('news.json');
+      const newsItems = await res.json();
+      const container = document.getElementById('press-grid');
+      newsItems.forEach(item => {
+        const card = document.createElement('article');
+        card.classList.add('press-card');
+        card.innerHTML = `
+          <h3>${item.title}</h3>
+          <p><strong>Date:</strong> ${item.date}</p>
+          <p>${item.snippet}</p>
+          <a href="${item.link}" target="_blank">Read More</a>
+          <div class="share-buttons">
+            <a href="https://twitter.com/intent/tweet?text=${encodeURIComponent(item.title)}&url=${encodeURIComponent(item.link)}" target="_blank">Twitter</a>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(item.link)}" target="_blank">Facebook</a>
+          </div>
+        `;
+        container.appendChild(card);
+      });
+    } catch(err) {
+      console.error('Failed to load news:', err);
     }
+  }
 
-    // Load dynamic news
-    async function loadNews() {
-      try {
-        const res = await fetch('news.json');
-        const newsItems = await res.json();
-        const container = document.getElementById('press-grid');
-        newsItems.forEach(item => {
-          const card = document.createElement('article');
-          card.classList.add('press-card');
-          card.innerHTML = `
-            <h3>${item.title}</h3>
-            <p><strong>Date:</strong> ${item.date}</p>
-            <p>${item.snippet}</p>
-            <a href="${item.link}" target="_blank" rel="noopener">Read More</a>
-            <div class="share-buttons">
-              <a href="https://twitter.com/intent/tweet?text=${encodeURIComponent(item.title)}&url=${encodeURIComponent(item.link)}" target="_blank" rel="noopener">Twitter</a>
-              <a href="https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(item.link)}" target="_blank" rel="noopener">Facebook</a>
-            </div>
-          `;
-          container.appendChild(card);
-        });
-      } catch(err) {
-        console.error('Failed to load news:', err);
-      }
-    }
-    document.addEventListener('DOMContentLoaded', loadNews);
-  </script>
+  // Event RSVP alert (placeholder)
+  function rsvpEvent(name){
+    alert(`Thanks for RSVPing to ${name}! We'll be in touch.`);
+  }
+
+  document.addEventListener('DOMContentLoaded', loadNews);
+</script>
 
 </body>
 </html>
