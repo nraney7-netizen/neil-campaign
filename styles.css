@@ -194,11 +194,12 @@ section h2 {
   box-shadow: 0 6px 15px rgba(0,0,0,0.1);
 }
 
-/* EVENTS */
-.event-grid {
+/* EVENTS / VOLUNTEER */
+.events-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
+  margin-bottom: 2rem;
 }
 
 .event-card {
@@ -206,18 +207,34 @@ section h2 {
   padding: 1.5rem;
   border-radius: 12px;
   box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
 }
 
-.event-card form input {
+.event-card:hover {
+  transform: translateY(-5px);
+}
+
+.rsvp-form input {
   width: 100%;
   padding: 0.65rem;
   margin-bottom: 0.75rem;
-  border: 1px solid #ccc;
   border-radius: 6px;
+  border: 1px solid #ccc;
 }
 
-.event-card form button {
+.rsvp-form button {
   width: 100%;
+  background-color: #e63946;
+  color: #fff;
+  padding: 0.75rem;
+  border-radius: 8px;
+  font-weight: bold;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.rsvp-form button:hover {
+  background-color: #d62839;
 }
 
 /* TESTIMONIALS */
@@ -270,7 +287,7 @@ section h2 {
 }
 
 /* SIGNUP FORM */
-form input {
+#signup form input {
   width: 100%;
   padding: 0.75rem;
   margin-bottom: 0.75rem;
@@ -278,7 +295,7 @@ form input {
   border: 1px solid #ccc;
 }
 
-form button {
+#signup form button {
   width: 100%;
 }
 
