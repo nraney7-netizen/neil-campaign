@@ -1,15 +1,80 @@
-/* Hero, Buttons, Header, Sections, etc. previously provided */
+/* GENERAL RESET */
+* { margin:0; padding:0; box-sizing:border-box; font-family:'Helvetica',sans-serif; }
+body { background:#f4f4f4; color:#222; line-height:1.6; }
 
-.events-grid, .issues-grid, .press-grid, .voter-grid, .testimonials-grid { display:grid; gap:20px; }
+/* HEADER */
+header { display:flex; justify-content:space-between; align-items:center; padding:15px 50px; background:#fff; position:sticky; top:0; z-index:100; box-shadow:0 2px 6px rgba(0,0,0,.1); }
+.logo a { font-size:1.5rem; font-weight:bold; color:#e63946; text-decoration:none; }
+nav ul { list-style:none; display:flex; gap:20px; }
+nav ul li a { text-decoration:none; color:#222; font-weight:500; transition:color .2s; }
+nav ul li a:hover { color:#e63946; }
 
-/* RSVP Modal */
+/* HAMBURGER (for mobile) */
+.hamburger { display:none; flex-direction:column; cursor:pointer; gap:4px; }
+.hamburger span { width:25px; height:3px; background:#222; display:block; }
+
+/* HERO */
+.hero { position:relative; height:90vh; overflow:hidden; }
+#hero-video { width:100%; height:100%; object-fit:cover; }
+.hero-overlay { position:absolute; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,.5); display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; color:#fff; padding:0 20px; }
+.hero-overlay h1 { font-size:2.8rem; margin-bottom:20px; }
+.hero-overlay p { font-size:1.3rem; margin-bottom:25px; max-width:600px; }
+.hero-buttons a { margin:0 10px; padding:12px 25px; border-radius:8px; text-decoration:none; font-weight:bold; transition:background .2s; }
+.btn-primary { background:#e63946; color:#fff; }
+.btn-primary:hover { background:#a02635; }
+.btn-secondary { background:#457b9d; color:#fff; }
+.btn-secondary:hover { background:#1d3557; }
+
+/* STICKY CTA */
+#sticky-cta { position:fixed; bottom:15px; right:15px; display:flex; flex-direction:column; gap:10px; z-index:1000; }
+#sticky-cta a { padding:10px 15px; border-radius:8px; font-weight:bold; text-decoration:none; text-align:center; }
+#sticky-cta a.btn-primary { background:#e63946; color:#fff; }
+#sticky-cta a.btn-secondary { background:#457b9d; color:#fff; }
+
+/* SECTIONS */
+section { padding:60px 20px; }
+h2 { font-size:2rem; color:#e63946; margin-bottom:30px; text-align:center; }
+.fade-in { opacity:0; animation:fadeIn 1s forwards; }
+@keyframes fadeIn { to { opacity:1; } }
+
+/* GRIDS */
+.about-grid, .issues-grid, .testimonials-grid, .press-grid, .events-grid, .voter-grid { display:grid; gap:20px; }
+.about-grid { grid-template-columns:1fr 1fr; align-items:center; }
+.issues-grid, .testimonials-grid, .press-grid, .events-grid, .voter-grid { grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); }
+
+/* CARDS */
+.issue-card, .testimonial-card, .press-card, .event-card, .voter-card { background:#fff; padding:20px; border-radius:12px; box-shadow:0 2px 8px rgba(0,0,0,.05); transition: transform .2s, box-shadow .2s; text-align:center; }
+.issue-card:hover, .testimonial-card:hover, .press-card:hover, .event-card:hover, .voter-card:hover { transform:translateY(-5px); box-shadow:0 6px 15px rgba(0,0,0,.1); }
+
+/* ISSUE CARD DETAILS */
+.policy-details { display:none; margin-top:10px; }
+
+/* TESTIMONIALS */
+.testimonial-card p { font-style:italic; margin-bottom:10px; }
+.testimonial-card span { font-weight:bold; color:#222; }
+
+/* NEWS / PRESS */
+.press-card h3 { color:#e63946; margin-bottom:10px; }
+.share-buttons { margin-top:10px; display:flex; justify-content:center; gap:10px; }
+.share-buttons a { background:#1d3557; color:#fff; padding:5px 10px; border-radius:6px; text-decoration:none; font-size:.85rem; transition:background .2s; }
+.share-buttons a:hover { background:#e63946; }
+
+/* EVENTS + RSVP MODAL */
 .modal { display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,.6); justify-content:center; align-items:center; z-index:1000; }
 .modal-content { background:#fff; padding:30px; border-radius:12px; width:90%; max-width:400px; text-align:center; position:relative; }
 .modal .close { position:absolute; top:10px; right:15px; font-size:1.5rem; cursor:pointer; }
 
-/* Voter Tools */
-.voter-card, .event-card, .issue-card, .press-card, .testimonial-card { 
-  background:#fff; padding:20px; border-radius:12px; box-shadow:0 2px 8px rgba(0,0,0,.05); 
-  transition: transform .2s, box-shadow .2s; text-align:center; 
-}
-.voter-card:hover, .event-card:hover, .issue-card:hover, .press-card:hover { transform:translateY(-5px); box-shadow:0 6px 15px rgba(0,0,0,.1); }
+/* VOTER TOOLS */
+.voter-card h3 { color:#e63946; margin-bottom:10px; }
+.voter-card p { margin-bottom:15px; }
+
+/* SIGNUP FORM */
+#signup-form input { width:100%; padding:10px; margin-bottom:10px; border-radius:8px; border:1px solid #ccc; }
+#signup-form button { width:100%; padding:12px; border:none; border-radius:8px; background:#e63946; color:#fff; font-weight:bold; cursor:pointer; transition:background .2s; }
+#signup-form button:hover { background:#a02635; }
+
+/* FOOTER */
+footer { text-align:center; padding:20px; background:#222; color:#fff; }
+
+/* RESPONSIVE */
+@media(max-width:768px){ .about-grid { grid-template-columns:1fr; } nav ul { display:none; } .hamburger { display:flex; } }
