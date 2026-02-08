@@ -1,148 +1,109 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Neil Raney for Mayor</title>
-  <meta name="description" content="Neil Raney fights for Los Angeles — grassroots leadership, accountability, and community-first policies.">
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-
-<!-- STICKY CTA -->
-<div id="sticky-cta">
-  <a href="YOUR_STRIPE_LINK" class="btn-primary" target="_blank">Donate</a>
-  <a href="#signup" class="btn-secondary">Join</a>
-  <a href="#events" class="btn-secondary">Volunteer</a>
-</div>
-
-<!-- HEADER -->
-<header>
-  <div class="logo"><a href="#">Neil Raney</a></div>
-  <nav>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#issues">Issues</a></li>
-      <li><a href="#press">News</a></li>
-      <li><a href="#events">Events</a></li>
-      <li><a href="#voter-tools">Voter Tools</a></li>
-      <li><a href="#signup">Join</a></li>
-    </ul>
-  </nav>
-</header>
-
 <!-- HERO -->
 <section id="hero">
-  <video autoplay muted loop id="hero-video">
-    <source src="images/hero-video.mp4" type="video/mp4">
-  </video>
-  <div class="hero-overlay">
-    <h1>Neil Raney — Leadership You Can Trust</h1>
-    <p>Fighting corporate influence, supporting small businesses, and putting the people first.</p>
-    <div class="hero-buttons">
-      <a href="YOUR_STRIPE_LINK" class="btn-primary">Donate</a>
-      <a href="#signup" class="btn-secondary">Join</a>
-      <a href="#events" class="btn-secondary">Volunteer</a>
-    </div>
-  </div>
+  <h1>People First. Zero Corporate Money. Real Change for Los Angeles.</h1>
+  <p>I’m Neil Raney — running for Mayor to put power back in the hands of residents, not lobbyists.</p>
+  <a href="#donate" class="btn-primary">Donate Now</a>
+  <a href="#signup" class="btn-secondary">Join the Movement</a>
 </section>
 
 <!-- ABOUT -->
-<section id="about">
+<section id="about-long">
   <h2>About Neil Raney</h2>
-  <div class="about-grid">
-    <p>Neil is a progressive, anti-lobbyist candidate committed to putting people first. From housing to education, Neil leads with transparency and results.</p>
-    <img src="images/hero-bg.jpg" alt="Neil Raney speaking to the community">
-  </div>
+  <p>I’m not a career politician. I’m running because Los Angeles is being run for donors and insiders instead of the people.</p>
+  <p>Housing costs are crushing families. Streets are unsafe. Corruption blocks real solutions. This campaign takes zero corporate money and is powered by everyday people.</p>
 </section>
 
 <!-- ISSUES -->
-<section id="issues">
-  <h2>Key Issues</h2>
-  <div class="issues-grid">
-    <div class="issue-card">
-      <h3>Affordable Housing</h3>
-      <p>Ensuring every Angeleno has a safe place to live.</p>
-      <button class="more-btn" onclick="togglePolicy(this)">Learn More</button>
-      <div class="policy-details">Neil will expand affordable housing, regulate short-term rentals, and ensure equitable urban development.</div>
-    </div>
-    <div class="issue-card">
-      <h3>Healthcare</h3>
-      <p>Making healthcare accessible and affordable.</p>
-      <button class="more-btn" onclick="togglePolicy(this)">Learn More</button>
-      <div class="policy-details">Neil supports expanding community clinics and mental health resources across Los Angeles.</div>
-    </div>
-    <div class="issue-card">
-      <h3>Small Business Support</h3>
-      <p>Championing local entrepreneurs and jobs.</p>
-      <button class="more-btn" onclick="togglePolicy(this)">Learn More</button>
-      <div class="policy-details">Neil will reduce bureaucracy, provide micro-grants, and create a small-business advisory council.</div>
-    </div>
+<section id="issues-detailed">
+  <h2>Neil Raney’s Plan</h2>
+
+  <div class="issue-detailed">
+    <h3>🏠 Housing That People Can Afford</h3>
+    <ul>
+      <li>Build truly affordable housing.</li>
+      <li>End backroom zoning deals.</li>
+      <li>Streamline permitting for community projects.</li>
+    </ul>
+  </div>
+
+  <div class="issue-detailed">
+    <h3>🚔 Public Safety with Accountability</h3>
+    <ul>
+      <li>Increase police accountability.</li>
+      <li>Invest in crime prevention programs.</li>
+      <li>Improve emergency response systems.</li>
+    </ul>
+  </div>
+
+  <div class="issue-detailed">
+    <h3>💼 Good Jobs & Fair Pay</h3>
+    <ul>
+      <li>City contracts create local jobs.</li>
+      <li>Support small businesses.</li>
+      <li>Workforce training for high-demand sectors.</li>
+    </ul>
+  </div>
+
+  <div class="issue-detailed">
+    <h3>⚖️ End Corruption at City Hall</h3>
+    <ul>
+      <li>No corporate donations or lobbyist influence.</li>
+      <li>Increase transparency of decisions.</li>
+      <li>Independent oversight of budgets and contracts.</li>
+    </ul>
   </div>
 </section>
 
-<!-- NEWS / PRESS -->
-<section id="press">
-  <h2>Latest News & Press</h2>
-  <div id="press-grid" class="press-grid"></div>
-</section>
-
-<!-- EVENTS -->
-<section id="events">
-  <h2>Upcoming Events</h2>
-  <div class="events-grid" id="events-grid"></div>
-  <div id="rsvp-modal" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeRSVP()">&times;</span>
-      <h3 id="modal-event-title"></h3>
-      <form id="rsvp-form">
-        <input type="text" name="NAME" placeholder="Full Name" required>
-        <input type="email" name="EMAIL" placeholder="Email Address" required>
-        <button type="submit" class="btn-primary">RSVP</button>
-        <p id="rsvp-feedback" style="display:none; margin-top:10px;"></p>
-      </form>
-    </div>
-  </div>
-</section>
-
-<!-- VOTER TOOLS -->
-<section id="voter-tools">
-  <h2>Voter Resources</h2>
-  <div class="voter-grid">
-    <div class="voter-card">
-      <h3>Check Your Registration</h3>
-      <p>Ensure you are registered to vote in Los Angeles County.</p>
-      <a href="https://www.lavote.gov/" target="_blank" class="btn-secondary">Check Registration</a>
-    </div>
-    <div class="voter-card">
-      <h3>Find Your Polling Place</h3>
-      <p>Locate your polling station for Election Day.</p>
-      <a href="https://www.lavote.gov/PrecinctFinder" target="_blank" class="btn-secondary">Find Polling Place</a>
-    </div>
-    <div class="voter-card">
-      <h3>District Info & Maps</h3>
-      <p>See your council district, neighborhood info, and local representation.</p>
-      <a href="https://www.lacity.org/government/your-council-district" target="_blank" class="btn-secondary">View District Map</a>
-    </div>
-  </div>
-</section>
-
-<!-- SIGNUP -->
-<section id="signup">
-  <h2>Join the Campaign</h2>
-  <form id="signup-form" action="YOUR_CRM_ENDPOINT" method="POST" target="_blank">
-    <input type="text" name="NAME" placeholder="Full Name" required>
-    <input type="email" name="EMAIL" placeholder="Email Address" required>
-    <button type="submit" class="btn-primary">Sign Up</button>
-    <p id="signup-feedback" style="display:none; margin-top:10px;"></p>
+<!-- VOLUNTEER -->
+<section id="volunteer">
+  <h2>Volunteer for the Campaign</h2>
+  <p>Our campaign is powered by everyday people. No experience needed, training provided.</p>
+  <form>
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <input type="tel" placeholder="Phone Number">
+    <label><input type="checkbox"> Door knocking</label>
+    <label><input type="checkbox"> Phone/text banking</label>
+    <label><input type="checkbox"> Events & rallies</label>
+    <label><input type="checkbox"> Social media</label>
+    <button type="submit">Join the Team</button>
   </form>
 </section>
 
-<!-- FOOTER -->
-<footer>
-  <p>&copy; 2026 Neil Raney Campaign</p>
-</footer>
+<!-- DONATE -->
+<section id="donate-page">
+  <h2>Donate to the People’s Campaign</h2>
+  <p>No corporate money. Only people like you power this movement.</p>
+  <form>
+    <input type="text" placeholder="Other Amount" name="otherAmount">
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <button type="submit">Donate Now</button>
+  </form>
+  <p><strong>Legal Disclaimer:</strong> Contributions are not tax-deductible. Federal law requires reporting for contributions over $200.</p>
+</section>
 
-<script src="scripts.js"></script>
-</body>
-</html>
+<!-- NEWS / SOCIAL FEED -->
+<section id="news-feed">
+  <h2>Latest from the Campaign</h2>
+
+  <div class="feed-item">
+    <p>📢 “Excited to see the turnout at today’s town hall! #PeopleFirst #NoLobbyistMoney”</p>
+    <span class="feed-meta">Feb 5, 2026 • Threads</span>
+  </div>
+
+  <div class="feed-item">
+    <p>🏠 “Neil just announced our new affordable housing plan — real homes for families, not luxury condos.”</p>
+    <span class="feed-meta">Feb 4, 2026 • Campaign News</span>
+  </div>
+
+  <div class="feed-item">
+    <p>✊ “Volunteer signups are exploding! Join us this weekend for door-to-door canvassing.”</p>
+    <span class="feed-meta">Feb 3, 2026 • Threads</span>
+  </div>
+
+  <div class="feed-cta">
+    <a href="#signup" class="btn-primary">Join the Movement</a>
+    <a href="#volunteer" class="btn-primary">Volunteer Today</a>
+  </div>
+</section>
