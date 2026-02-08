@@ -1,108 +1,211 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Neil Raney for Mayor</title>
-<link rel="stylesheet" href="styles.css">
-<meta name="description" content="Neil Raney for Mayor — People First, Zero Corporate Money, Real Change for Los Angeles. Join the movement and take action today!">
-<meta property="og:title" content="Neil Raney for Mayor">
-<meta property="og:description" content="People First. Zero Corporate Money. Real Change for Los Angeles. Stand with Neil!">
-<meta property="og:image" content="neil-community.jpg">
+  <meta charset="UTF-8" />
+  <title>Community Forward</title>
+
+  <!-- Basic SEO -->
+  <meta name="title" content="Community Forward">
+  <meta name="description" content="A community-focused effort built on transparency, accountability, and constructive leadership.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Community Forward">
+  <meta property="og:description" content="A community-focused effort built on transparency, accountability, and constructive leadership.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://your-site-url.com">
+  <meta property="og:image" content="https://your-site-url.com/share-card.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Community Forward">
+  <meta name="twitter:description" content="A community-focused effort built on transparency, accountability, and constructive leadership.">
+  <meta name="twitter:image" content="https://your-site-url.com/share-card.png">
+
+  <!-- Mobile + Browser Theme -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0A2A6C">
+  <meta name="color-scheme" content="light dark">
+
+  <!-- Favicon / Icons -->
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-
-<!-- HERO SECTION -->
-<section id="hero">
-  <div class="hero-content">
-    <h1>People First. Zero Corporate Money. Real Change for Los Angeles.</h1>
-    <p>I’m Neil Raney — running for Mayor to restore integrity, accountability, and opportunity for all. City Hall should serve the people, not lobbyists.</p>
-    <div class="hero-cta">
-      <a href="#signup" class="btn primary">Stand With Neil</a>
-      <a href="#donate" class="btn donate">Donate Today</a>
-    </div>
-    <form id="signup" class="signup-form">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <input type="text" name="zip" placeholder="ZIP Code" required>
-      <button type="submit" class="btn primary">Join Now</button>
-    </form>
-  </div>
-</section>
-
-<!-- ABOUT SECTION -->
-<section id="about">
-  <h2>Why I’m Running for Mayor</h2>
-  <p class="subheading">Los Angeles deserves leadership that listens to its people, not big donors or lobbyists.</p>
-  <div class="about-grid">
-    <img src="neil-community.jpg" alt="Neil Raney engaging with the community">
-    <div class="about-text">
-      <p>I grew up in neighborhoods where working families struggled to be heard. I’ve seen lobbyists and big donors make decisions behind closed doors — and I’m running to change that.</p>
-      <ul>
-        <li><strong>No Corporate PAC Money:</strong> Every decision answers to the people.</li>
-        <li><strong>Community-Driven Solutions:</strong> Built with neighborhoods, for neighborhoods.</li>
-        <li><strong>Transparency & Accountability:</strong> City Hall communicates openly and honestly.</li>
-      </ul>
-
-      <h3>Neil’s Journey</h3>
-      <div class="timeline">
-        <div class="timeline-line"></div>
-        <div class="timeline-item hidden"><span class="year">2010</span><p>Started volunteering in local community programs focused on housing and youth support.</p><span class="tooltip">First volunteer project in South LA</span></div>
-        <div class="timeline-item hidden"><span class="year">2015</span><p>Led neighborhood advocacy group to push for transparency in city council decisions.</p><span class="tooltip">Organized first city council petition</span></div>
-        <div class="timeline-item hidden"><span class="year">2022</span><p>Announced campaign for Los Angeles Mayor — committed to zero corporate money.</p><span class="tooltip">Official campaign launch</span></div>
-        <div class="timeline-item hidden"><span class="year">2026</span><p>Aiming to build a city government that answers directly to the people.</p><span class="tooltip">Election year focus</span></div>
+  <header class="site-header" role="banner">
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+      <div class="nav-inner">
+        <a href="#hero" class="brand">Community Forward</a>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links">
+          <span class="sr-only">Toggle navigation</span>
+          ☰
+        </button>
+        <div class="nav-links" id="nav-links">
+          <a href="#signup">Sign Up</a>
+          <a href="#about">About</a>
+          <a href="#priorities">Priorities</a>
+          <a href="#volunteer">Get Involved</a>
+          <a href="#support">Support</a>
+        </div>
       </div>
+    </nav>
+  </header>
+
+  <main role="main">
+    <!-- Hero -->
+    <section id="hero" class="hero fade-in" aria-labelledby="hero-title">
+      <div class="section-inner readable">
+        <h1 id="hero-title">Building Our Future, Together</h1>
+        <p class="lead">
+          A steady, community-focused effort grounded in transparency, accountability, and constructive leadership.
+        </p>
+        <div class="hero-actions">
+          <a href="#signup" class="btn primary hero-button">Join the Movement</a>
+          <a href="#about" class="btn ghost">Learn More</a>
+        </div>
+        <p class="hero-soft-landing">
+          Join the effort and stay connected as we move forward together.
+        </p>
+      </div>
+    </section>
+
+    <!-- Signup -->
+    <section id="signup" class="section-light fade-in" aria-labelledby="signup-title">
+      <div class="section-inner readable">
+        <h2 id="signup-title">Stay Connected</h2>
+        <div class="section-divider"></div>
+        <p class="lead">
+          Be the first to hear about updates, events, and ways to get involved.
+        </p>
+        <p>
+          We’ll only send relevant updates and you can opt out at any time.
+        </p>
+        <form class="signup-form" aria-label="Email signup form">
+          <label class="sr-only" for="email">Email address</label>
+          <input id="email" type="email" name="email" placeholder="you@example.com" required />
+          <button type="submit" class="btn primary">Sign Up</button>
+        </form>
+        <p class="microcopy">We respect your time and your inbox.</p>
+        <p class="soft-landing">
+          Here’s the foundation behind this work.
+        </p>
+      </div>
+    </section>
+
+    <!-- About / Vision -->
+    <section id="about" class="section-white fade-in" aria-labelledby="about-title">
+      <div class="section-inner readable">
+        <h2 id="about-title">Why Community Forward</h2>
+        <div class="section-divider"></div>
+        <p class="lead">
+          Community Forward is built on a simple idea: progress is strongest when it’s shared, steady, and grounded in trust.
+        </p>
+        <p>
+          This effort focuses on listening first, understanding real needs, and working toward solutions that reflect the voices of the people most affected by them.
+        </p>
+        <p>
+          Transparency, accountability, and constructive dialogue guide every decision. The goal is not quick wins, but durable progress that benefits everyone.
+        </p>
+        <p class="soft-landing">
+          These values guide the priorities we focus on.
+        </p>
+      </div>
+    </section>
+
+    <!-- Core Priorities -->
+    <section id="priorities" class="section-light fade-in" aria-labelledby="priorities-title">
+      <div class="section-inner">
+        <h2 id="priorities-title">Core Priorities</h2>
+        <div class="section-divider"></div>
+        <p class="lead readable">
+          Clear, focused priorities help turn shared values into real outcomes.
+        </p>
+        <div class="priority-grid">
+          <article class="priority-card">
+            <h3>Transparent Decision‑Making</h3>
+            <p>
+              Make information accessible, explain decisions clearly, and invite questions so people understand how and why choices are made.
+            </p>
+          </article>
+          <article class="priority-card">
+            <h3>Accountable Leadership</h3>
+            <p>
+              Set clear expectations, follow through on commitments, and create structures where feedback is welcomed and acted upon.
+            </p>
+          </article>
+          <article class="priority-card">
+            <h3>Community Engagement</h3>
+            <p>
+              Create meaningful opportunities for residents to participate, share their experiences, and help shape the path forward.
+            </p>
+          </article>
+          <article class="priority-card">
+            <h3>Steady, Sustainable Progress</h3>
+            <p>
+              Focus on long‑term solutions that are realistic, responsible, and built to last.
+            </p>
+          </article>
+        </div>
+        <p class="soft-landing readable">
+          Real progress happens when people get involved.
+        </p>
+      </div>
+    </section>
+
+    <!-- Volunteer -->
+    <section id="volunteer" class="section-white fade-in" aria-labelledby="volunteer-title">
+      <div class="section-inner readable">
+        <h2 id="volunteer-title">Get Involved</h2>
+        <div class="section-divider"></div>
+        <p class="lead">
+          Every skill, every hour, and every voice can help strengthen this effort.
+        </p>
+        <p>
+          Whether you’re able to share ideas, connect with neighbors, or lend a hand at events, there’s a place for you here.
+        </p>
+        <button class="btn primary volunteer-button cta-space" type="button">
+          I’m Interested in Volunteering
+        </button>
+        <p class="soft-landing">
+          Every form of support strengthens this effort.
+        </p>
+      </div>
+    </section>
+
+    <!-- Support -->
+    <section id="support" class="section-deep fade-in" aria-labelledby="support-title">
+      <div class="section-inner readable">
+        <h2 id="support-title">Support the Effort</h2>
+        <div class="section-divider section-divider-light"></div>
+        <p class="lead">
+          Support helps sustain outreach, communication, and the tools needed to stay connected with the community.
+        </p>
+        <p>
+          Any contribution—time, attention, or resources—helps keep this work moving forward in a steady, responsible way.
+        </p>
+        <button class="btn secondary donate-button cta-space" type="button">
+          Learn How to Support
+        </button>
+        <p class="soft-landing">
+          Thank you for being part of this community.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <p>Community Forward · Built on transparency, accountability, and constructive leadership.</p>
+      <p class="footer-meta">© <span id="year"></span> Community Forward. All rights reserved.</p>
     </div>
-  </div>
-</section>
+  </footer>
 
-<!-- PRIORITIES SECTION -->
-<section id="priorities">
-  <h2>My Top Priorities</h2>
-  <div class="cards-grid">
-    <div class="card hidden"><h3>🏘️ Affordable Housing</h3><p>Protect renters. Build homes. End homelessness with real solutions.</p></div>
-    <div class="card hidden"><h3>🛡️ Public Safety</h3><p>Invest in community programs that keep neighborhoods safe and strong.</p></div>
-    <div class="card hidden"><h3>🔍 Transparency & Accountability</h3><p>Every decision open to the people, not lobbyists or PAC money.</p></div>
-  </div>
-</section>
-
-<!-- EVENTS SECTION -->
-<section id="events">
-  <h2>Get Involved — Upcoming Events</h2>
-  <div class="cards-grid">
-    <div class="card hidden">
-      <h3>Town Hall: Downtown LA</h3>
-      <p>📅 March 12 | 6 PM - 8 PM</p>
-      <a href="#rsvp" class="btn donate">RSVP Now</a>
-    </div>
-    <div class="card hidden">
-      <h3>Community Cleanup: Boyle Heights</h3>
-      <p>📅 March 18 | 9 AM - 12 PM</p>
-      <a href="#rsvp" class="btn donate">Sign Up</a>
-    </div>
-    <div class="card hidden">
-      <h3>Volunteer Training</h3>
-      <p>📅 March 25 | 1 PM - 4 PM</p>
-      <a href="#signup" class="btn primary">Join Now</a>
-    </div>
-  </div>
-</section>
-
-<!-- SOCIAL PROOF SECTION -->
-<section id="testimonials">
-  <h2>Supporter Voices</h2>
-  <div class="cards-grid">
-    <div class="card hidden"><p>⭐ “Neil listens — and fights for us!” — Maria R., Local Community Member</p></div>
-    <div class="card hidden"><p>⭐ “Finally, a candidate who puts people ahead of lobbyists.” — James T., Volunteer</p></div>
-    <div class="card hidden"><p>⭐ “I trust Neil to run City Hall with honesty and integrity.” — Ana S., LA Resident</p></div>
-  </div>
-</section>
-
-<!-- FLOATING CTA -->
-<div id="floating-cta">
-  <a href="#signup" class="btn primary">Join / Donate</a>
-</div>
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
