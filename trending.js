@@ -1,4 +1,4 @@
-// Example trending script for highlighting top 2 posts
+// Highlight top 2 trending Threads posts
 function highlightTopPosts(posts) {
   const wrappers = document.querySelectorAll('.iframe-wrapper');
   const topPosts = posts.sort((a,b)=>b.score-a.score).slice(0,2);
