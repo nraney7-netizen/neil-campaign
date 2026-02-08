@@ -38,7 +38,7 @@
     <div class="hero-buttons">
       <a href="YOUR_STRIPE_LINK" class="btn-primary" target="_blank" rel="noopener">Donate</a>
       <a href="#signup" class="btn-secondary">Join the Campaign</a>
-      <a href="#volunteer" class="btn-secondary">Volunteer Today</a>
+      <a href="#events" class="btn-secondary">Volunteer</a>
     </div>
   </div>
 </section>
@@ -78,10 +78,37 @@
   </div>
 </section>
 
-<!-- EVENTS -->
+<!-- EVENTS / VOLUNTEER -->
 <section id="events" class="fade-in">
-  <h2>Upcoming Events</h2>
-  <p>Meet Neil at rallies, town halls, and volunteer opportunities.</p>
+  <h2>Upcoming Events & Volunteer Opportunities</h2>
+  <p>Join Neil at rallies, town halls, and community volunteer initiatives.</p>
+
+  <div class="events-grid">
+    <article class="event-card">
+      <h3>City Hall Town Hall</h3>
+      <p><strong>Date:</strong> March 15, 2026<br>
+         <strong>Time:</strong> 6:00 PM – 8:00 PM<br>
+         <strong>Location:</strong> Downtown City Hall</p>
+      <form class="rsvp-form">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <button type="submit">RSVP</button>
+      </form>
+    </article>
+
+    <article class="event-card">
+      <h3>Neighborhood Volunteer Day</h3>
+      <p><strong>Date:</strong> March 20, 2026<br>
+         <strong>Time:</strong> 9:00 AM – 2:00 PM<br>
+         <strong>Location:</strong> Lincoln Park</p>
+      <form class="rsvp-form">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <button type="submit">RSVP</button>
+      </form>
+    </article>
+  </div>
+
   <iframe 
     src="https://calendar.google.com/calendar/embed?src=YOUR_CALENDAR_ID&ctz=America/Chicago" 
     style="border:0" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
@@ -180,6 +207,16 @@ function handleSignup(event){
   form.querySelector('.form-response').style.color = 'green';
   form.reset();
 }
+
+document.querySelectorAll('.rsvp-form').forEach(form => {
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const name = form.name.value;
+    form.querySelector('button').textContent = 'Thank you!';
+    form.reset();
+    alert(`Thanks ${name}, your RSVP is received!`);
+  });
+});
 </script>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </body>
