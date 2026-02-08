@@ -25,6 +25,7 @@ events.forEach(event=>{
 function openRSVP(title){ currentEvent=title; modal.style.display='flex'; modalTitle.textContent=title; }
 function closeRSVP(){ modal.style.display='none'; rsvpForm.reset(); rsvpFeedback.style.display='none'; }
 
+// RSVP FORM SUBMIT
 rsvpForm.addEventListener('submit', e=>{
   e.preventDefault();
   const formData=new FormData(rsvpForm); formData.append("EVENT", currentEvent);
@@ -55,6 +56,18 @@ signupForm.addEventListener('submit', e=>{
   fetch(signupForm.action,{method:'POST',body:formData,mode:'no-cors'})
     .then(()=>{ signupFeedback.style.display='block'; signupFeedback.style.color='green'; signupFeedback.textContent='Thank you! You are now signed up.'; signupForm.reset(); })
     .catch(()=>{ signupFeedback.style.display='block'; signupFeedback.style.color='red'; signupFeedback.textContent='Oops! Something went wrong. Try again.'; });
+});
+
+// ISSUE POLL
+const pollForm=document.getElementById('issue-poll');
+const pollFeedback=document.getElementById('poll-feedback');
+pollForm.addEventListener('submit', e=>{
+  e.preventDefault();
+  const choice=pollForm.issue.value;
+  pollFeedback.style.display='block';
+  pollFeedback.style.color='green';
+  pollFeedback.textContent=`Thanks! You selected "${choice}". Your input helps shape our campaign.`;
+  pollForm.reset();
 });
 
 document.addEventListener('DOMContentLoaded', loadNews);
