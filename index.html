@@ -1,165 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Community Forward</title>
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#0A2A6C">
-
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neil for Texas</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-  <header class="site-header">
-    <nav class="nav">
-      <div class="nav-inner">
-        <a href="#hero" class="brand">Community Forward</a>
 
-        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links">☰</button>
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">Neil for Texas</a>
 
-        <div class="nav-links" id="nav-links">
-          <a href="#signup">Sign Up</a>
-          <a href="#about">About</a>
-          <a href="#priorities">Priorities</a>
-          <a href="#volunteer">Get Involved</a>
-          <a href="support.html">Support</a>
-          <a href="contact.html">Contact</a>
-          <a href="faq.html">FAQ</a>
-          <a href="events.html">Events</a>
-          <a href="updates.html">Updates</a>
-          <a href="team.html">Team</a>
-        </div>
+      <button class="nav-toggle" aria-label="Toggle menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="priorities.html" class="nav-link">Priorities</a></li>
+        <li><a href="events.html" class="nav-link">Events</a></li>
+        <li><a href="updates.html" class="nav-link">Updates</a></li>
+        <li><a href="team.html" class="nav-link">Team</a></li>
+        <li><a href="support.html" class="nav-link nav-cta">Support</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1 class="hero-title">A New Standard for Texas Leadership</h1>
+      <p class="hero-subtitle">
+        Transparent decisions. Accountable leadership. A future built with integrity and community at the center.
+      </p>
+      <a href="support.html" class="hero-cta">Join the Movement</a>
+    </div>
+  </section>
+
+  <!-- Core Priorities -->
+  <section class="priorities">
+    <h2 class="section-title">Core Priorities</h2>
+
+    <div class="priorities-grid">
+
+      <div class="priority-card">
+        <div class="priority-icon">👁️</div>
+        <h3>Transparent Decision‑Making</h3>
+        <p>Clear communication, open processes, and leadership that earns trust through honesty and clarity.</p>
       </div>
-    </nav>
-  </header>
 
-  <main>
-
-    <!-- HERO -->
-    <section id="hero" class="hero fade-in">
-      <div class="section-inner readable">
-        <h1>Building Our Future, Together</h1>
-        <p class="lead">
-          A steady, community-focused effort grounded in transparency, accountability, and constructive leadership.
-        </p>
-
-        <div class="hero-actions">
-          <a href="#signup" class="btn primary">Join the Movement</a>
-          <a href="#about" class="btn ghost">Learn More</a>
-        </div>
+      <div class="priority-card">
+        <div class="priority-icon">🛡️</div>
+        <h3>Accountable Leadership</h3>
+        <p>Holding ourselves to the highest standards so Texans know their voices truly matter.</p>
       </div>
-    </section>
 
-    <!-- SIGNUP -->
-    <section id="signup" class="section-light fade-in">
-      <div class="section-inner readable">
-        <h2>Stay Connected</h2>
-        <div class="section-divider"></div>
-
-        <p class="lead">
-          Be the first to hear about updates, events, and ways to get involved.
-        </p>
-
-        <form class="signup-form">
-          <input type="email" placeholder="you@example.com" required />
-          <button type="submit" class="btn primary">Sign Up</button>
-        </form>
+      <div class="priority-card">
+        <div class="priority-icon">🤝</div>
+        <h3>Community Engagement</h3>
+        <p>Building solutions with the people they impact — not behind closed doors.</p>
       </div>
-    </section>
 
-    <!-- ABOUT -->
-    <section id="about" class="section-white fade-in">
-      <div class="section-inner readable">
-        <h2>Why Community Forward</h2>
-        <div class="section-divider"></div>
-
-        <p class="lead">
-          Community Forward is built on a simple idea: progress is strongest when it’s shared, steady, and grounded in trust.
-        </p>
-
-        <p>
-          This effort focuses on listening first, understanding real needs, and working toward solutions that reflect the voices of the people most affected by them.
-        </p>
-
-        <p>
-          Transparency, accountability, and constructive dialogue guide every decision.
-        </p>
+      <div class="priority-card">
+        <div class="priority-icon">🌱</div>
+        <h3>Sustainable Progress</h3>
+        <p>Long‑term planning that strengthens Texas for future generations.</p>
       </div>
-    </section>
 
-    <!-- PRIORITIES -->
-    <section id="priorities" class="section-light fade-in">
-      <div class="section-inner">
-        <h2>Core Priorities</h2>
-        <div class="section-divider"></div>
+    </div>
+  </section>
 
-        <div class="priority-grid">
+  <!-- Signup Block -->
+  <section class="signup">
+    <div class="signup-card">
+      <h2>Stay Connected</h2>
+      <p class="signup-text">
+        Get updates on events, priorities, and ways to support the movement for transparent, accountable leadership in Texas.
+      </p>
 
-          <article class="priority-card">
-            <h3>Transparent Decision‑Making</h3>
-            <p>Make information accessible and explain decisions clearly.</p>
-          </article>
+      <form class="signup-form">
+        <input type="email" placeholder="Enter your email" required>
+        <button type="submit">Sign Up</button>
+      </form>
 
-          <article class="priority-card">
-            <h3>Accountable Leadership</h3>
-            <p>Set clear expectations and follow through on commitments.</p>
-          </article>
+      <p class="signup-privacy">We respect your privacy. Your information will never be shared.</p>
+    </div>
+  </section>
 
-          <article class="priority-card">
-            <h3>Community Engagement</h3>
-            <p>Create meaningful opportunities for residents to participate.</p>
-          </article>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
 
-          <article class="priority-card">
-            <h3>Steady, Sustainable Progress</h3>
-            <p>Focus on long‑term solutions built to last.</p>
-          </article>
-
-        </div>
+      <div class="footer-column">
+        <h3>Neil for Texas</h3>
+        <p class="footer-tagline">Leadership built on transparency, accountability, and community.</p>
       </div>
-    </section>
 
-    <!-- VOLUNTEER -->
-    <section id="volunteer" class="section-white fade-in">
-      <div class="section-inner readable">
-        <h2>Get Involved</h2>
-        <div class="section-divider"></div>
-
-        <p class="lead">
-          Every skill, every hour, and every voice can help strengthen this effort.
-        </p>
-
-        <button class="btn primary cta-space">I’m Interested in Volunteering</button>
+      <div class="footer-column">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="priorities.html">Priorities</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="updates.html">Updates</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="support.html">Support</a></li>
+        </ul>
       </div>
-    </section>
 
-    <!-- SUPPORT -->
-    <section id="support" class="section-deep fade-in">
-      <div class="section-inner readable">
-        <h2>Support the Effort</h2>
-        <div class="section-divider section-divider-light"></div>
-
-        <p class="lead">
-          Support helps sustain outreach, communication, and the tools needed to stay connected.
-        </p>
-
-        <a href="support.html" class="btn secondary cta-space">Learn How to Support</a>
+      <div class="footer-column">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="#">Email</a></li>
+          <li><a href="#">Threads</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">LinkedIn</a></li>
+        </ul>
       </div>
-    </section>
 
-  </main>
+    </div>
 
-  <footer class="site-footer">
-    <div class="footer-inner">
-      <p>Community Forward · Built on transparency, accountability, and constructive leadership.</p>
-      <p class="footer-meta">© <span id="year"></span> Community Forward</p>
+    <div class="footer-bottom">
+      <p>© 2026 Neil for Texas. All rights reserved.</p>
+      <p class="footer-disclaimer">This website is for informational and campaign purposes only.</p>
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <!-- Script -->
+  <script>
+    const toggle = document.querySelector('.nav-toggle');
+    const links = document.querySelector('.nav-links');
+
+    toggle.addEventListener('click', () => {
+      links.classList.toggle('open');
+    });
+
+    // Highlight active page
+    const current = window.location.pathname.split('/').pop();
+    document.querySelectorAll('.nav-link').forEach(link => {
+      if (link.getAttribute('href') === current) {
+        link.classList.add('active');
+      }
+    });
+  </script>
+
 </body>
 </html>
