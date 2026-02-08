@@ -1,15 +1,11 @@
-# Community Forward – Single-Page Campaign-Style Site
+# Community Forward – Static Site
 
-A modern, accessible, mobile-first landing page with:
+A modern, mobile‑first, accessible landing page.
 
-- Sticky navigation + smooth scroll
-- Hero, Signup, About, Priorities, Volunteer, Support, Footer
-- Brand system, spacing rhythm, micro-interactions
-- Dark mode, high-contrast mode, reduced-motion support
-- Metadata + share cards + favicon hooks
+## Files
+- index.html
+- styles.css
+- script.js
 
-## Quick Start
-
-```bash
-# clone your repo, then:
-open index.html   # or use a simple static server
+## How to run
+Just open `index.html` in a browser or host via GitHub Pages.
