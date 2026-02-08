@@ -11,6 +11,8 @@ nav {
   padding: 1rem 2rem;
   background: #0a2540;
   color: white;
+  position: sticky;
+  top: 0;
 }
 
 .nav-links a {
@@ -46,7 +48,7 @@ section {
 
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
   gap: 1rem;
 }
 
@@ -67,6 +69,7 @@ input, select {
   border-radius: 6px;
   text-decoration: none;
   display: inline-block;
+  font-weight: bold;
 }
 
 .primary {
