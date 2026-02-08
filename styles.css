@@ -1,4 +1,4 @@
-/* GENERAL RESET */
+/* RESET & BASE */
 * { margin:0; padding:0; box-sizing:border-box; font-family:'Helvetica',sans-serif; }
 body { background:#f4f4f4; color:#222; line-height:1.6; }
 
@@ -27,7 +27,7 @@ nav ul li a:hover { color:#e63946; }
 
 /* STICKY CTA */
 #sticky-cta { position:fixed; bottom:15px; right:15px; display:flex; flex-direction:column; gap:10px; z-index:1000; }
-#sticky-cta a { padding:10px 15px; border-radius:8px; font-weight:bold; text-decoration:none; text-align:center; }
+#sticky-cta a { padding:10px 15px; border-radius:8px; font-weight:bold; text-align:center; text-decoration:none; }
 #sticky-cta a.btn-primary { background:#e63946; color:#fff; }
 #sticky-cta a.btn-secondary { background:#457b9d; color:#fff; }
 
