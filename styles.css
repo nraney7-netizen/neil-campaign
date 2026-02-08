@@ -271,7 +271,7 @@ section h2 {
   gap: 2rem;
 }
 
-.social-feed iframe {
+.social-feed iframe, .social-feed a {
   width: 100%;
   border-radius: 12px;
   height: 500px;
