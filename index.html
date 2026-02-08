@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Neil Raney 2026 Campaign | People First</title>
+<title>Neil Raney 2026 | People First</title>
 <meta name="description" content="Neil Raney 2026 campaign. Fighting corporate influence, empowering communities, and building a government that works for the people.">
 <link rel="stylesheet" href="styles.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,10 +31,10 @@
 </header>
 
 <!-- HERO -->
-<section id="hero" class="hero" aria-label="Hero section with campaign mission">
+<section id="hero" class="hero" aria-label="Hero section">
   <div class="hero-overlay">
     <h1>Putting Community First — A Government That Works for You</h1>
-    <p>Neil Raney is fighting corporate influence, championing small businesses, and building a government that answers to the people, not lobbyists.</p>
+    <p>Neil Raney fights corporate influence, champions small businesses, and builds a government that answers to the people.</p>
     <div class="hero-buttons">
       <a href="YOUR_STRIPE_LINK" class="btn-primary" target="_blank" rel="noopener">Donate</a>
       <a href="#signup" class="btn-secondary">Join the Campaign</a>
@@ -88,9 +88,9 @@
       <p><strong>Date:</strong> May 12, 2026</p>
       <p><strong>Time:</strong> 6:00 PM</p>
       <p><strong>Location:</strong> Des Moines Community Center</p>
-      <form class="rsvp-form" onsubmit="handleRSVP(event)" aria-label="RSVP form">
-        <input type="text" name="name" placeholder="Your Name" required aria-label="Your Name">
-        <input type="email" name="email" placeholder="Your Email" required aria-label="Your Email">
+      <form class="rsvp-form" onsubmit="handleRSVP(event)">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
         <button type="submit" class="btn-primary">RSVP Now</button>
         <p class="form-response" role="status"></p>
       </form>
@@ -113,15 +113,15 @@
   <div class="testimonials-grid">
     <div class="testimonial-card">
       <p>“Neil Raney is a true advocate for families and small businesses.”</p>
-      <span>— John Smith, Small Business Owner</span>
+      <span>— John Smith</span>
     </div>
     <div class="testimonial-card">
       <p>“A bold leader who fights for the people, not lobbyists.”</p>
-      <span>— Jane Doe, Community Organizer</span>
+      <span>— Jane Doe</span>
     </div>
     <div class="testimonial-card">
       <p>“Neil’s vision gives hope to everyday Americans.”</p>
-      <span>— Maria Lopez, Teacher</span>
+      <span>— Maria Lopez</span>
     </div>
   </div>
 </section>
@@ -139,18 +139,15 @@
   </form>
 </section>
 
-<!-- PRESS / ENDORSEMENTS -->
+<!-- PRESS -->
 <section id="press" class="fade-in" aria-labelledby="press-heading">
   <h2 id="press-heading">Endorsements & Media</h2>
   <div class="press-grid">
     <div class="press-card">
-      <p>“Neil Raney is the bold leadership our community needs.” – Jane Doe, Local Leader</p>
+      <p>“Neil Raney is the bold leadership our community needs.” – Jane Doe</p>
     </div>
     <div class="press-card">
-      <p>Featured in The Daily News for his progressive community work and fight against corporate influence.</p>
-    </div>
-    <div class="press-card">
-      <p>“A true advocate for families and small businesses.” – John Smith, Small Business Owner</p>
+      <p>Featured in The Daily News for his progressive work and fight against corporate influence.</p>
     </div>
   </div>
 </section>
@@ -164,21 +161,21 @@
   </div>
 </section>
 
-<!-- EMAIL SIGNUP -->
-<section id="signup" class="signup fade-in" aria-labelledby="signup-heading">
-  <h2 id="signup-heading">Join the People’s Campaign</h2>
-  <p>Get weekly updates, exclusive policy insights, and behind-the-scenes campaign access.</p>
-  <form id="signup-form" onsubmit="handleSignup(event)" aria-label="Signup form">
-    <input type="text" name="name" placeholder="Your Name" required aria-label="Your Name">
-    <input type="email" name="email" placeholder="Your Email" required aria-label="Your Email">
+<!-- SIGNUP -->
+<section id="signup" class="signup fade-in">
+  <h2>Join the People’s Campaign</h2>
+  <p>Get weekly updates, exclusive policy insights, and behind-the-scenes access.</p>
+  <form id="signup-form" onsubmit="handleSignup(event)">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
     <button type="submit" class="btn-primary">Sign Up for Updates</button>
     <p class="form-response" role="status"></p>
   </form>
 </section>
 
-<!-- SOCIAL MEDIA -->
-<section id="social" class="fade-in" aria-labelledby="social-heading">
-  <h2 id="social-heading">Follow Neil on Social Media</h2>
+<!-- SOCIAL -->
+<section id="social" class="fade-in">
+  <h2>Follow Neil on Social Media</h2>
   <div class="social-grid">
     <div class="social-feed">
       <a class="twitter-timeline" data-height="500" href="https://twitter.com/NeilRaney2028?ref_src=twsrc%5Etfw">
@@ -203,32 +200,26 @@
 
 <!-- SCRIPTS -->
 <script>
-  // Hamburger menu toggle
   const hamburger = document.querySelector('.hamburger');
   const navUL = document.querySelector('nav ul');
   hamburger.addEventListener('click', () => navUL.classList.toggle('active'));
 
-  // RSVP form
   function handleRSVP(event){
     event.preventDefault();
     const form = event.target;
-    const responseEl = form.querySelector('.form-response');
-    responseEl.textContent = `Thanks ${form.name.value}! You’re RSVP’d.`;
-    responseEl.style.color = 'green';
+    form.querySelector('.form-response').textContent = `Thanks ${form.name.value}! You’re RSVP’d.`;
+    form.querySelector('.form-response').style.color = 'green';
     form.reset();
   }
 
-  // Signup form
   function handleSignup(event){
     event.preventDefault();
-    const form = document.getElementById('signup-form');
-    const responseEl = form.querySelector('.form-response');
-    responseEl.textContent = `Thanks ${form.name.value}! You’re signed up.`;
-    responseEl.style.color = 'green';
+    const form = event.target;
+    form.querySelector('.form-response').textContent = `Thanks ${form.name.value}! You’re signed up.`;
+    form.querySelector('.form-response').style.color = 'green';
     form.reset();
   }
 
-  // Poll form
   function submitPoll(event){
     event.preventDefault();
     const form = event.target;
