@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Contact · Community Forward</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <div class="nav-inner">
+        <a href="index.html#hero" class="brand">Community Forward</a>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links">☰</button>
+        <div class="nav-links" id="nav-links">
+          <a href="index.html#signup">Sign Up</a>
+          <a href="index.html#about">About</a>
+          <a href="index.html#priorities">Priorities</a>
+          <a href="index.html#volunteer">Get Involved</a>
+          <a href="index.html#support">Support</a>
+          <a href="contact.html" class="active">Contact</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section-white fade-in">
+      <div class="section-inner readable">
+        <h1>Contact</h1>
+        <div class="section-divider"></div>
+
+        <p class="lead">
+          Have a question, idea, or message? We’d love to hear from you.
+        </p>
+
+        <form class="signup-form" aria-label="Contact form">
+          <input type="text" placeholder="Your name" required />
+          <input type="email" placeholder="Your email" required />
+          <textarea placeholder="Your message" rows="5" required></textarea>
+          <button type="submit" class="btn primary">Send Message</button>
+        </form>
+
+        <p class="soft-landing">
+          We read every message and respond as soon as we can.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>Community Forward · Built on transparency, accountability, and constructive leadership.</p>
+      <p class="footer-meta">© <span id="year"></span> Community Forward</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
