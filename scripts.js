@@ -1,51 +1,71 @@
-// TIMELINE ANIMATION
-const timelineItems = document.querySelectorAll(".timeline-item");
-const timelineLine = document.querySelector(".timeline-line");
+// Year in footer
+document.getElementById("year").textContent = new Date().getFullYear();
 
-function animateTimeline(){
-  const triggerBottom = window.innerHeight * 0.85;
-  let maxIndexVisible = -1;
-  timelineItems.forEach((item,index)=>{
-    const top = item.getBoundingClientRect().top;
-    if(top<triggerBottom && !item.classList.contains("show")){
-      setTimeout(()=>{ item.classList.add("show"); item.classList.remove("hidden"); }, index*250);
-      maxIndexVisible = index;
-    }
+// Mobile nav toggle
+const navToggle = document.querySelector(".nav-toggle");
+const navLinks = document.getElementById("nav-links");
+
+if (navToggle && navLinks) {
+  navToggle.addEventListener("click", () => {
+    const isOpen = navLinks.classList.toggle("open");
+    navToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
   });
-  if(maxIndexVisible>=0){
-    const totalHeight = timelineItems[maxIndexVisible].offsetTop+18;
-    timelineLine.style.height = totalHeight+"px";
-  }
-}
 
-// CARDS ANIMATION
-const cards = document.querySelectorAll(".cards-grid .card");
-function animateCards(){
-  const triggerBottom = window.innerHeight*0.85;
-  cards.forEach((card,index)=>{
-    const top = card.getBoundingClientRect().top;
-    if(top<triggerBottom && !card.classList.contains("show")){
-      setTimeout(()=>{ card.classList.add("show"); card.classList.remove("hidden"); }, index*200);
+  navLinks.addEventListener("click", (e) => {
+    if (e.target.tagName === "A") {
+      navLinks.classList.remove("open");
+      navToggle.setAttribute("aria-expanded", "false");
     }
   });
 }
 
-// SCROLL LISTENERS
-window.addEventListener("scroll",()=>{ animateTimeline(); animateCards(); });
-window.addEventListener("load",()=>{ animateTimeline(); animateCards(); });
+// Fade-in on scroll
+const fadeEls = document.querySelectorAll(".fade-in");
+if ("IntersectionObserver" in window) {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.15 }
+  );
 
-// FLOATING CTA SHOW/HIDE ON SCROLL
-let lastScroll = window.scrollY;
-const floatingCTA = document.getElementById('floating-cta');
+  fadeEls.forEach((el) => observer.observe(el));
+} else {
+  fadeEls.forEach((el) => el.classList.add("visible"));
+}
 
-window.addEventListener('scroll', () => {
-  const currentScroll = window.scrollY;
-  if(currentScroll > lastScroll + 50){ 
-    floatingCTA.style.transform = 'translateY(100px)';
-    floatingCTA.style.opacity = '0';
-  } else if(currentScroll < lastScroll - 50){
-    floatingCTA.style.transform = 'translateY(0)';
-    floatingCTA.style.opacity = '1';
-  }
-  lastScroll = currentScroll;
+// Active nav link on scroll
+const sections = document.querySelectorAll("section[id]");
+const navAnchors = document.querySelectorAll(".nav-links a");
+
+window.addEventListener("scroll", () => {
+  let current = "";
+  sections.forEach((section) => {
+    const top = section.offsetTop - 120;
+    if (window.pageYOffset >= top) {
+      current = section.getAttribute("id");
+    }
+  });
+
+  navAnchors.forEach((link) => {
+    link.classList.remove("active");
+    if (link.getAttribute("href") === "#" + current) {
+      link.classList.add("active");
+    }
+  });
 });
+
+// Basic non-submitting signup handler (placeholder)
+const signupForm = document.querySelector(".signup-form");
+if (signupForm) {
+  signupForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    alert("Thank you for signing up!");
+    signupForm.reset();
+  });
+}
