@@ -1,58 +1,51 @@
-/* ------------------ ABOUT ------------------ */
-.about-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  align-items: start;
-  position: relative;
-  overflow: hidden;
-}
+/* GENERAL RESET */
+* { box-sizing: border-box; margin:0; padding:0; font-family: sans-serif; }
 
-.about-grid img { width: 100%; border-radius: 10px; object-fit: cover; }
-.about-text ul { list-style: none; padding-left: 0; margin: 1rem 0; }
-.about-text ul li { margin-bottom: 0.5rem; }
-.about-text blockquote { background: #dce8f2; padding: 1rem; border-radius: 8px; margin: 1.5rem 0; font-style: italic; }
-.subheading { font-size: 1.2rem; font-weight: 400; color: #555; margin-bottom: 1rem; }
-
-/* ------------------ TIMELINE ------------------ */
-.timeline { position: relative; margin: 1.5rem 0; padding-left: 2rem; }
-.timeline-line { position: absolute; left: 12px; top: 0; width: 4px; height: 0; background: #d62828; transition: height 1s ease-out; border-radius: 2px; z-index: 0; }
-.timeline-item { position: relative; margin-bottom: 2rem; z-index: 1; opacity: 0; transform: translateX(-30px); transition: all 0.8s ease-out; }
-.timeline-item.show { opacity: 1; transform: translateX(0); }
-.timeline-item::before { content: ''; position: absolute; left: -9px; top: 0; width: 18px; height: 18px; background: #d62828; border-radius: 50%; z-index: 1; transition: transform 0.3s ease, box-shadow 0.3s ease; }
-.timeline-item:hover::before { transform: scale(1.4); box-shadow: 0 0 12px rgba(214,40,40,0.7); }
-.timeline-item:hover .year { color: #d62828; font-weight: bold; transform: scale(1.1); transition: transform 0.3s ease, color 0.3s ease; }
-.timeline-item .tooltip { visibility: hidden; width: 180px; background: #333; color: #fff; text-align: center; padding: 6px; border-radius: 6px; position: absolute; left: 25px; top: -5px; opacity: 0; transform: translateY(-5px); transition: opacity 0.3s ease, transform 0.3s ease; z-index: 2; }
-.timeline-item:hover .tooltip { visibility: visible; opacity: 1; transform: translateY(0); }
-
-/* ------------------ CARDS ------------------ */
-.cards-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(250px,1fr)); gap: 1.5rem; margin-top: 1rem; }
-.card { background: #f7f7f7; padding: 1.5rem; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); opacity: 0; transform: translateY(30px); transition: all 0.7s ease-out; }
-.card.show { opacity: 1; transform: translateY(0); }
-.card:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.2); }
-.card h3::before { content:"📅"; display:inline-block; margin-right:8px; transition: transform 0.3s ease; }
-.card:hover h3::before { transform: rotate(-10deg) scale(1.2); }
+/* ------------------ HERO ------------------ */
+#hero { background: #f2f2f2; text-align: center; padding: 3rem 1rem; position: relative; }
+.hero-content h1 { font-size:2.2rem; margin-bottom:1rem; }
+.hero-content p { font-size:1.2rem; margin-bottom:1.5rem; }
+.hero-cta { margin-bottom:1.5rem; }
+.signup-form { display:flex; flex-wrap:wrap; justify-content:center; gap:0.5rem; margin-top:1rem; }
+.signup-form input { padding:0.7rem; border-radius:5px; border:1px solid #ccc; width:200px; }
+.signup-form button { padding:0.7rem 1.2rem; border:none; border-radius:5px; background:#d62828; color:#fff; cursor:pointer; font-weight:bold; }
 
 /* ------------------ BUTTONS ------------------ */
-.btn { padding: 12px 20px; border-radius: 6px; text-decoration: none; display:inline-block; font-weight: bold; transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease; }
+.btn { padding:12px 20px; border-radius:6px; text-decoration:none; display:inline-block; font-weight:bold; transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease; }
+.btn.primary { background:#d62828; color:#fff; }
+.btn.donate { background:#26a69a; color:#fff; }
 .btn:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(214,40,40,0.3),0 0 8px rgba(214,40,40,0.2); }
-.btn:active { transform: translateY(1px); box-shadow: 0 2px 5px rgba(0,0,0,0.2); }
-.btn.primary:hover { background: #b71c1c; color: white; }
-.btn.donate:hover { background: #26a69a; color: black; }
-@keyframes bounce-in { 0%{transform:scale(0.9);opacity:0;}50%{transform:scale(1.05);opacity:1;}100%{transform:scale(1);opacity:1;} }
-.btn.primary { animation: bounce-in 0.6s ease forwards; }
+.btn:active { transform: translateY(1px); }
 
-/* ------------------ BACKGROUND ACCENTS ------------------ */
-#about::before { content:''; position:absolute; top:-50%; left:-50%; width:200%; height:200%; background: linear-gradient(45deg, rgba(214,40,40,0.05) 25%, transparent 25%, transparent 50%, rgba(214,40,40,0.05) 50%, rgba(214,40,40,0.05) 75%, transparent 75%, transparent); background-size:50px 50px; animation: moveBg 15s linear infinite; z-index:0; }
-@keyframes moveBg { 0%{transform:translate(0,0);}100%{transform:translate(50px,50px);} }
-.about-text { position: relative; z-index:1; }
+/* ------------------ SECTIONS ------------------ */
+section { padding:3rem 1rem; max-width:1100px; margin:0 auto; }
+.subheading { font-size:1.2rem; color:#555; margin-bottom:1rem; }
+.about-grid { display:grid; grid-template-columns:1fr 1fr; gap:2rem; align-items:start; position:relative; }
+.about-grid img { width:100%; border-radius:10px; object-fit:cover; }
+.about-text ul { list-style:none; margin:1rem 0; }
+.about-text ul li { margin-bottom:0.5rem; }
 
-/* ------------------ FLOATING CTA ------------------ */
-#floating-cta { position: fixed; bottom:20px; right:20px; z-index:999; transition: transform 0.3s ease, opacity 0.3s ease; }
-#floating-cta .btn { padding:14px 24px; border-radius:50px; font-weight:bold; box-shadow:0 4px 15px rgba(0,0,0,0.2); animation:pulse 2.5s infinite; }
-#floating-cta .btn:hover { transform: scale(1.1); box-shadow:0 8px 25px rgba(214,40,40,0.3),0 0 8px rgba(214,40,40,0.2); }
-@keyframes pulse { 0%{transform:scale(1);}50%{transform:scale(1.05);}100%{transform:scale(1);} }
+/* TIMELINE */
+.timeline { position: relative; margin:2rem 0; padding-left:2rem; }
+.timeline-line { position:absolute; left:12px; top:0; width:4px; height:0; background:#d62828; transition:height 1s ease-out; border-radius:2px; z-index:0; }
+.timeline-item { position:relative; margin-bottom:2rem; z-index:1; opacity:0; transform:translateX(-30px); transition:all 0.8s ease-out; }
+.timeline-item.show { opacity:1; transform:translateX(0); }
+.timeline-item::before { content:''; position:absolute; left:-9px; top:0; width:18px; height:18px; background:#d62828; border-radius:50%; transition:0.3s; }
+.timeline-item:hover::before { transform:scale(1.4); box-shadow:0 0 12px rgba(214,40,40,0.7); }
+.timeline-item .tooltip { visibility:hidden; width:180px; background:#333; color:#fff; text-align:center; padding:6px; border-radius:6px; position:absolute; left:25px; top:-5px; opacity:0; transform:translateY(-5px); transition:0.3s; }
+.timeline-item:hover .tooltip { visibility:visible; opacity:1; transform:translateY(0); }
 
-/* ------------------ RESPONSIVE ------------------ */
-@media (max-width:700px){ .about-grid { grid-template-columns:1fr; } .about-cta .btn { display:block; margin-bottom:1rem; } }
-@media (max-width:400px){ #floating-cta { display:none; } }
+/* CARDS */
+.cards-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:1.5rem; }
+.card { background:#f7f7f7; padding:1.5rem; border-radius:10px; box-shadow:0 2px 6px rgba(0,0,0,0.1); opacity:0; transform:translateY(30px); transition:all 0.7s ease-out; }
+.card.show { opacity:1; transform:translateY(0); }
+.card:hover { transform:translateY(-5px); box-shadow:0 8px 20px rgba(0,0,0,0.2); }
+
+/* FLOATING CTA */
+#floating-cta { position:fixed; bottom:20px; right:20px; z-index:999; transition:transform 0.3s, opacity 0.3s; }
+#floating-cta .btn { padding:14px 24px; border-radius:50px; font-weight:bold; animation:pulse 2.5s infinite; }
+@keyframes pulse {0%{transform:scale(1);}50%{transform:scale(1.05);}100%{transform:scale(1);}}
+
+/* RESPONSIVE */
+@media(max-width:700px){ .about-grid{grid-template-columns:1fr;} .signup-form input{width:100%;} }
+@media(max-width:400px){ #floating-cta{display:none;} }
