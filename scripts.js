@@ -1,4 +1,4 @@
-// Timeline animation
+// TIMELINE ANIMATION
 const timelineItems = document.querySelectorAll(".timeline-item");
 const timelineLine = document.querySelector(".timeline-line");
 
@@ -18,7 +18,7 @@ function animateTimeline(){
   }
 }
 
-// Cards animation
+// CARDS ANIMATION
 const cards = document.querySelectorAll(".cards-grid .card");
 function animateCards(){
   const triggerBottom = window.innerHeight*0.85;
@@ -30,10 +30,11 @@ function animateCards(){
   });
 }
 
+// SCROLL LISTENERS
 window.addEventListener("scroll",()=>{ animateTimeline(); animateCards(); });
 window.addEventListener("load",()=>{ animateTimeline(); animateCards(); });
 
-// Floating CTA scroll hide/show
+// FLOATING CTA SHOW/HIDE ON SCROLL
 let lastScroll = window.scrollY;
 const floatingCTA = document.getElementById('floating-cta');
 
