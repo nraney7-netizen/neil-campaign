@@ -1,37 +1,72 @@
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
-  background: #f5f5f5;
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  color: #222;
 }
 
-header {
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
   background: #0a2540;
   color: white;
-  padding: 3rem 1rem;
+}
+
+.nav-links a {
+  margin-left: 1rem;
+  text-decoration: none;
+  color: white;
+}
+
+.hero {
+  background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)), url("hero.jpg");
+  background-size: cover;
+  color: white;
   text-align: center;
+  padding: 5rem 1rem;
+}
+
+.hero-buttons {
+  margin-top: 2rem;
 }
 
 section {
-  padding: 2rem;
+  padding: 3rem 1rem;
   background: white;
   margin: 2rem;
+  border-radius: 10px;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+  gap: 1rem;
+}
+
+.card {
+  padding: 1.5rem;
+  background: #eef2f7;
   border-radius: 8px;
 }
 
 input, select {
-  display: block;
   width: 100%;
   padding: 10px;
   margin: 10px 0;
 }
 
 .btn {
-  display: inline-block;
   padding: 12px 20px;
-  margin: 10px 5px;
-  border-radius: 5px;
+  border-radius: 6px;
   text-decoration: none;
-  text-align: center;
+  display: inline-block;
 }
 
 .primary {
@@ -44,15 +79,29 @@ input, select {
   color: black;
 }
 
-#formMessage {
-  color: green;
-  font-weight: bold;
-  margin-top: 1rem;
+.donate {
+  background: #2ec4b6;
+  color: black;
+}
+
+.small {
+  padding: 8px 12px;
 }
 
 footer {
   text-align: center;
-  padding: 1rem;
+  padding: 1.5rem;
   background: #0a2540;
   color: white;
+}
+
+#formMessage {
+  color: green;
+  font-weight: bold;
+}
+
+@media (max-width: 700px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
 }
