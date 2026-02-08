@@ -3,10 +3,28 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Neil Raney — Campaign War Room</title>
+<title>Neil Raney — People-First Leadership for Los Angeles</title>
+<meta name="description" content="Neil Raney for Mayor of Los Angeles — Affordable housing, public safety, good jobs, and ending corruption. Join the people-powered movement.">
+<meta property="og:title" content="Neil Raney for Mayor">
+<meta property="og:description" content="Join the movement for people-powered change in Los Angeles. Stand with Neil Raney for real change.">
+<meta property="og:image" content="assets/images/hero-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+<!-- NAVIGATION -->
+<nav>
+  <div><strong>Neil Raney for Mayor</strong></div>
+  <div>
+    <a href="#hero">Home</a>
+    <a href="#issues">Issues</a>
+    <a href="#live-threads-feed">Updates</a>
+    <a href="#volunteer">Volunteer</a>
+    <a href="#donate">Donate</a>
+  </div>
+</nav>
 
 <!-- HERO -->
 <section id="hero">
@@ -16,6 +34,7 @@
 
 <!-- ISSUES -->
 <section id="issues">
+<h2>Key Issues</h2>
 <div class="issue-teaser"><h3>🏠 Housing That Works</h3><p>Truly affordable homes. End developer backroom deals.</p></div>
 <div class="issue-teaser"><h3>🚔 Public Safety With Accountability</h3><p>Safe neighborhoods. Transparent policing. Community programs.</p></div>
 <div class="issue-teaser"><h3>💼 Good Jobs & Fair Pay</h3><p>City contracts for locals. Workforce training. Small business support.</p></div>
@@ -26,9 +45,9 @@
 <section id="live-threads-feed">
 <h2>Latest Posts</h2>
 <div class="social-feed-grid">
-<div class="iframe-wrapper"><iframe src="YOUR_EMBEDSOCIAL_WIDGET_URL_1"></iframe></div>
-<div class="iframe-wrapper"><iframe src="YOUR_EMBEDSOCIAL_WIDGET_URL_2"></iframe></div>
-<div class="iframe-wrapper"><iframe src="YOUR_EMBEDSOCIAL_WIDGET_URL_3"></iframe></div>
+  <div class="iframe-wrapper" data-index="0"><iframe src="YOUR_EMBEDSOCIAL_WIDGET_URL_1" loading="lazy" title="Threads feed 1"></iframe></div>
+  <div class="iframe-wrapper" data-index="1"><iframe src="YOUR_EMBEDSOCIAL_WIDGET_URL_2" loading="lazy" title="Threads feed 2"></iframe></div>
+  <div class="iframe-wrapper" data-index="2"><iframe src="YOUR_EMBEDSOCIAL_WIDGET_URL_3" loading="lazy" title="Threads feed 3"></iframe></div>
 </div>
 </section>
 
@@ -60,5 +79,27 @@
 </section>
 
 <script src="trending.js"></script>
+<script>
+// Extra visual effect: Highlight top trending iframes dynamically
+function highlightTopPosts(posts) {
+  const wrappers = document.querySelectorAll('.iframe-wrapper');
+  const topPosts = posts.slice(0,2); // Top 2 trending
+  const maxScore = Math.max(...posts.map(p=>p.score));
+
+  wrappers.forEach((wrapper,index)=>{
+    wrapper.classList.remove('trending');
+    wrapper.style.boxShadow = 'none';
+  });
+
+  topPosts.forEach(post => {
+    const wrapper = document.querySelector(`.iframe-wrapper[data-index='${post.iframeIndex}']`);
+    if(wrapper){
+      wrapper.classList.add('trending');
+      const intensity = post.score / maxScore;
+      wrapper.style.boxShadow = `0 0 ${15+30*intensity}px ${2+6*intensity}px rgba(255,0,0,${0.5+0.4*intensity})`;
+    }
+  });
+}
+</script>
 </body>
 </html>
