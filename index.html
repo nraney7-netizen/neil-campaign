@@ -15,7 +15,7 @@
 <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
 <link rel="stylesheet" href="style.css">
 
-<!-- Structured Data for SEO -->
+<!-- Structured Data -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -41,7 +41,7 @@
   </div>
 </nav>
 
-<!-- HERO -->
+<!-- HERO SECTION -->
 <section id="hero">
 <h1>People First. Zero Corporate Money. Real Change for Los Angeles.</h1>
 <p>I’m Neil Raney. Running for Mayor to put power back in the hands of residents — not lobbyists or corporate donors.</p>
@@ -70,13 +70,23 @@
 <section id="volunteer">
 <h2>Power the People’s Campaign</h2>
 <form>
-<input type="text" placeholder="Your Name" required>
-<input type="email" placeholder="Your Email" required>
-<input type="tel" placeholder="Phone Number">
+<label for="name">Your Name</label>
+<input id="name" type="text" placeholder="Your Name" required>
+
+<label for="email">Email</label>
+<input id="email" type="email" placeholder="Your Email" required>
+
+<label for="phone">Phone Number</label>
+<input id="phone" type="tel" placeholder="Phone Number">
+
+<fieldset>
+<legend>How would you like to help?</legend>
 <label><input type="checkbox"> Door knocking</label>
 <label><input type="checkbox"> Phone/text banking</label>
 <label><input type="checkbox"> Events & rallies</label>
 <label><input type="checkbox"> Social media outreach</label>
+</fieldset>
+
 <button type="submit">Sign Up & Stand With Neil</button>
 </form>
 </section>
@@ -96,21 +106,22 @@
 <!-- Scripts -->
 <script src="trending.js"></script>
 <script>
+// Highlight top trending posts dynamically
 function highlightTopPosts(posts) {
   const wrappers = document.querySelectorAll('.iframe-wrapper');
-  const topPosts = posts.slice(0,2); // Top 2 trending
+  const topPosts = posts.sort((a,b)=>b.score-a.score).slice(0,2);
   const maxScore = Math.max(...posts.map(p=>p.score));
 
-  wrappers.forEach(wrapper => {
+  wrappers.forEach(wrapper=>{
     wrapper.classList.remove('trending');
     wrapper.style.boxShadow = 'none';
   });
 
-  topPosts.forEach(post => {
+  topPosts.forEach(post=>{
     const wrapper = document.querySelector(`.iframe-wrapper[data-index='${post.iframeIndex}']`);
     if(wrapper){
       wrapper.classList.add('trending');
-      const intensity = post.score / maxScore;
+      const intensity = post.score/maxScore;
       wrapper.style.boxShadow = `0 0 ${15+30*intensity}px ${2+6*intensity}px rgba(255,0,0,${0.5+0.4*intensity})`;
     }
   });
