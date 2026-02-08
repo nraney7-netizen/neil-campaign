@@ -185,8 +185,18 @@
   </div>
 </section>
 
-<!-- STICKY DONATE -->
+<!-- FLOATING DONATE BUTTON -->
 <a href="YOUR_STRIPE_LINK" class="floating-donate" target="_blank" rel="noopener">Donate</a>
+
+<!-- FLOATING EMAIL SIGNUP BAR -->
+<div id="signup-bar">
+  <form id="signup-bar-form" onsubmit="handleFloatingSignup(event)">
+    <label for="signup-bar-email">Get Updates from Neil Raney:</label>
+    <input type="email" id="signup-bar-email" name="email" placeholder="Your Email" required>
+    <button type="submit">Sign Up</button>
+  </form>
+  <span id="signup-bar-msg"></span>
+</div>
 
 <!-- FOOTER -->
 <footer>
@@ -217,6 +227,16 @@ document.querySelectorAll('.rsvp-form').forEach(form => {
     alert(`Thanks ${name}, your RSVP is received!`);
   });
 });
+
+function handleFloatingSignup(event) {
+  event.preventDefault();
+  const emailInput = document.getElementById('signup-bar-email');
+  const msg = document.getElementById('signup-bar-msg');
+  msg.textContent = `Thanks! ${emailInput.value} is signed up.`;
+  msg.style.color = '#fff';
+  emailInput.value = '';
+  // TODO: integrate with email CRM
+}
 </script>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </body>
