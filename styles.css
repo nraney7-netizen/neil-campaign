@@ -1,62 +1,12 @@
-/* General layout */
-section {
-  padding: 40px 15px;
-  max-width: 1000px;
-  margin: auto;
-}
-
-/* Headings */
-h1, h2, h3 {
-  color: #0b2c4d;
-}
-
-p {
-  font-size: 1.1rem;
-}
-
-/* Buttons */
-a.btn-primary, a.btn-secondary, button {
-  display: block;
-  width: 100%;
-  padding: 16px;
-  margin: 10px 0;
-  text-align: center;
-  font-weight: bold;
-  border-radius: 8px;
-}
-
-a.btn-primary { background: #d62828; color: #fff; }
-a.btn-primary:hover { background: #b51f1f; }
-a.btn-secondary { background: transparent; border: 2px solid #fff; color: #fff; }
-a.btn-secondary:hover { background: #fff; color: #0b2c4d; }
-
-/* Forms */
-form input, form textarea {
-  width: 100%;
-  padding: 14px;
-  margin: 10px 0;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-  font-size: 1rem;
-}
-
-/* Issues & News items */
-.issue-detailed, .feed-item {
-  background: #fff;
-  border-left: 5px solid #114b8a;
-  border-radius: 6px;
-  margin: 15px 0;
-  padding: 15px 20px;
-}
-
-/* News metadata */
-.feed-meta { font-size: 0.85rem; color: #555; }
-
-/* Mobile adjustments */
-@media (max-width: 768px) {
-  section { padding: 30px 10px; }
-  h1 { font-size: 1.8rem; }
-  h2 { font-size: 1.4rem; }
-  h3 { font-size: 1.2rem; }
-  p, form input, form textarea { font-size: 1rem; }
-}
+body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f9fafb; color:#222;}
+section {padding:40px 15px; max-width:1000px; margin:auto;}
+h1,h2,h3{color:#0b2c4d;margin-bottom:15px;}
+p{font-size:1.1rem;margin-bottom:15px;}
+.issue-teaser{background:#fff;border-left:5px solid #114b8a;border-radius:6px;margin:15px 0;padding:15px 20px;}
+.social-feed-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;}
+.iframe-wrapper iframe{width:100%;min-height:400px;border-radius:8px;border:none;transition:transform 0.3s ease,box-shadow 0.3s ease,opacity 0.6s ease;opacity:0;transform:translateY(20px);}
+.iframe-wrapper iframe.loaded{opacity:1;transform:translateY(0);}
+@keyframes pulseGlow{0%{box-shadow:0 0 0 rgba(255,200,0,0.7);}50%{box-shadow:0 0 15px rgba(255,200,0,0.9);}100%{box-shadow:0 0 0 rgba(255,200,0,0);}}
+.iframe-wrapper.new-post{animation:pulseGlow 1.2s ease-in-out 1;}
+@media(max-width:992px){.social-feed-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:600px){.social-feed-grid{grid-template-columns:1fr;}}
