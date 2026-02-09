@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Volunteer | Neil Raney for Texas</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Volunteer with Neil Raney’s campaign and help bring integrity and transparency to Texas government." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header class="header">
+    <div class="container nav-container">
+      <div class="brand">
+        <div class="brand-icon">NR</div>
+        <div class="brand-text">
+          <span class="brand-name">Neil Raney</span>
+          <span class="brand-tag">For Texas</span>
+        </div>
+      </div>
+
+      <button class="menu-toggle" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav">
+        <ul>
+          <li><a href="index.html#vision">Vision</a></li>
+          <li><a href="issues.html">Issues</a></li>
+          <li><a href="press.html">Press</a></li>
+          <li><a href="volunteer.html" class="nav-cta">Volunteer</a></li>
+          <li><a href="donate.html">Donate</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container two-col">
+        <div>
+          <h1>Volunteer with the Campaign</h1>
+          <p>
+            This campaign is powered by people who believe Texas deserves honest, accountable leadership. Whether you have an hour a week or a few hours a month, there’s a place for you on the team.
+          </p>
+          <ul class="checklist" style="margin-top: 1rem;">
+            <li>Knock doors and talk with neighbors</li>
+            <li>Make phone calls or send texts to voters</li>
+            <li>Host a house meeting or community conversation</li>
+            <li>Help with events, logistics, and outreach</li>
+          </ul>
+        </div>
+
+        <form class="join-form">
+          <h2 style="margin-bottom: 0.75rem;">Sign Up to Volunteer</h2>
+          <label>Name</label>
+          <input type="text" required />
+
+          <label>Email</label>
+          <input type="email" required />
+
+          <label>Phone</label>
+          <input type="tel" required />
+
+          <label>ZIP Code</label>
+          <input type="text" required />
+
+          <label>How would you like to help?</label>
+          <select required>
+            <option value="">Select an option</option>
+            <option value="doors">Door knocking</option>
+            <option value="phone">Phone banking</option>
+            <option value="events">Events & logistics</option>
+            <option value="hosting">Hosting a gathering</option>
+            <option value="other">Wherever needed</option>
+          </select>
+
+          <button class="btn primary full" style="margin-top: 0.75rem;">Submit</button>
+          <p class="fine-print" style="margin-top: 0.5rem; font-size: 0.8rem;">
+            By submitting this form, you agree to receive volunteer communications from the campaign.
+          </p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>Paid for by Friends of Neil Raney</p>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="issues.html">Issues</a>
+        <a href="press.html">Press</a>
+        <a href="donate.html">Donate</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
