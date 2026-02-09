@@ -1,15 +1,15 @@
-// Mobile navigation toggle
+// Mobile nav toggle
 const navToggle = document.querySelector(".nav-toggle");
 const nav = document.querySelector(".nav");
 
 if (navToggle && nav) {
   navToggle.addEventListener("click", () => {
     const isOpen = nav.classList.toggle("open");
-    navToggle.setAttribute("aria-expanded", isOpen);
+    navToggle.setAttribute("aria-expanded", String(isOpen));
   });
 }
 
-// Smooth scrolling with header offset
+// Smooth scroll for in-page links (only on same page)
 document.querySelectorAll('a[href^="#"]').forEach((link) => {
   link.addEventListener("click", (e) => {
     const targetId = link.getAttribute("href");
@@ -19,17 +19,13 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
     if (!target) return;
 
     e.preventDefault();
-
     const headerOffset = 70;
-    const elementPosition = target.getBoundingClientRect().top;
-    const offsetPosition = elementPosition + window.scrollY - headerOffset;
+    const rect = target.getBoundingClientRect();
+    const offsetTop = rect.top + window.scrollY - headerOffset;
 
-    window.scrollTo({
-      top: offsetPosition,
-      behavior: "smooth",
-    });
+    window.scrollTo({ top: offsetTop, behavior: "smooth" });
 
-    if (nav.classList.contains("open")) {
+    if (nav && nav.classList.contains("open")) {
       nav.classList.remove("open");
       navToggle.setAttribute("aria-expanded", "false");
     }
