@@ -8,20 +8,20 @@
   <link rel="stylesheet" href="styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <header class="header">
-    <div class="container nav-container">
-      <div class="brand">
-        <div class="brand-icon">NR</div>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <div class="brand-mark">NR</div>
         <div class="brand-text">
           <span class="brand-name">Neil Raney</span>
-          <span class="brand-tag">For Texas</span>
+          <span class="brand-sub">For Texas</span>
         </div>
-      </div>
+      </a>
 
-      <button class="menu-toggle" aria-expanded="false">
+      <button class="nav-toggle" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
 
@@ -38,40 +38,40 @@
   </header>
 
   <main>
-    <section class="section alt">
+    <section class="section section-alt">
       <div class="container">
         <h1 class="center">Press & Media</h1>
-        <p class="center" style="max-width: 640px; margin: 0.75rem auto 2rem;">
+        <p class="center intro">
           For media inquiries, statements, and campaign materials, please use the information and resources below.
         </p>
 
         <div class="grid press-grid">
           <article class="card press-card">
-            <p class="press-outlet">Press Contact</p>
-            <h3>Media Inquiries</h3>
+            <p class="press-label">Press Contact</p>
+            <h2>Media Inquiries</h2>
             <p>Email: <strong>press@neilraneyfortexas.org</strong></p>
             <p>Include your outlet, deadline, and topic in your message.</p>
           </article>
 
           <article class="card press-card">
-            <p class="press-outlet">Statement</p>
-            <h3>On Transparency in Government</h3>
+            <p class="press-label">Statement</p>
+            <h2>On Transparency in Government</h2>
             <p>
               Neil Raney believes Texans deserve a government that operates in the open, with clear records and honest reporting.
             </p>
           </article>
 
           <article class="card press-card">
-            <p class="press-outlet">Statement</p>
-            <h3>On Accountability</h3>
+            <p class="press-label">Statement</p>
+            <h2>On Accountability</h2>
             <p>
               Public office is a public trust. Neil supports strong ethics rules and real consequences for abuse of power.
             </p>
           </article>
         </div>
 
-        <div class="card" style="margin-top: 2rem;">
-          <h3>Press Kit</h3>
+        <div class="card press-kit">
+          <h2>Press Kit</h2>
           <p>
             Logos, photos, and a full campaign bio can be made available upon request. Please contact the campaign for access.
           </p>
@@ -80,10 +80,10 @@
     </section>
   </main>
 
-  <footer class="footer">
+  <footer class="site-footer">
     <div class="container footer-inner">
       <p>Paid for by Friends of Neil Raney</p>
-      <nav>
+      <nav class="footer-nav">
         <a href="index.html">Home</a>
         <a href="issues.html">Issues</a>
         <a href="volunteer.html">Volunteer</a>
