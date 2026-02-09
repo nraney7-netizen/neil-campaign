@@ -5,26 +5,23 @@
   <title>Neil Raney for Texas — Transparent, Accountable Leadership</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Neil Raney is running to restore integrity, transparency, and accountability in Texas government." />
-
   <link rel="stylesheet" href="styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
 </head>
-
 <body>
-  <!-- HEADER -->
-  <header class="header">
-    <div class="container nav-container">
-      <div class="brand">
-        <div class="brand-icon">NR</div>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <div class="brand-mark">NR</div>
         <div class="brand-text">
           <span class="brand-name">Neil Raney</span>
-          <span class="brand-tag">For Texas</span>
+          <span class="brand-sub">For Texas</span>
         </div>
-      </div>
+      </a>
 
-      <button class="menu-toggle" aria-expanded="false">
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
 
@@ -40,150 +37,144 @@
     </div>
   </header>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="container hero-inner">
-      <div class="hero-content">
-        <h1>A New Standard of Integrity for Texas</h1>
-        <p class="hero-sub">
-          Neil Raney is committed to restoring trust in public service through transparency, accountability, and principled leadership.
-        </p>
-
-        <div class="hero-buttons">
-          <a href="volunteer.html" class="btn primary">Get Involved</a>
-          <a href="issues.html" class="btn outline">Learn More</a>
-        </div>
-      </div>
-
-      <div class="hero-emblem">
-        <div class="emblem-circle">
-          <span class="emblem-top">Integrity</span>
-          <span class="emblem-mid">2026</span>
-          <span class="emblem-bottom">Raney</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- VISION -->
-  <section id="vision" class="section">
-    <div class="container two-col">
-      <div>
-        <h2>Why Neil Is Running</h2>
-        <p>
-          Texas deserves leaders who put people first. Neil is running to bring honesty, clarity, and responsibility back to public office.
-        </p>
-        <p>
-          His mission is simple: ensure every Texan has a government they can trust — one that works in the open, listens to its citizens, and delivers real results.
-        </p>
-      </div>
-
-      <div class="vision-card">
-        <h3>Core Values</h3>
-        <ul>
-          <li>Honesty in every decision</li>
-          <li>Transparency in budgeting and policy</li>
-          <li>Accountability for public officials</li>
-          <li>Respect for individual rights</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- ISSUES PREVIEW -->
-  <section class="section alt">
-    <div class="container">
-      <h2 class="center">Key Issues</h2>
-
-      <div class="issue-grid">
-        <div class="issue-card">
-          <h3>Government Transparency</h3>
-          <p>Open records, open meetings, and clear reporting so Texans always know the truth.</p>
-          <a href="issues.html" class="issue-link">Read More →</a>
-        </div>
-
-        <div class="issue-card">
-          <h3>Economic Fairness</h3>
-          <p>Policies that support workers, families, and small businesses — not special interests.</p>
-          <a href="issues.html" class="issue-link">Read More →</a>
-        </div>
-
-        <div class="issue-card">
-          <h3>Public Safety</h3>
-          <p>Safe communities built on trust, accountability, and constitutional policing.</p>
-          <a href="issues.html" class="issue-link">Read More →</a>
-        </div>
-
-        <div class="issue-card">
-          <h3>Healthcare Access</h3>
-          <p>Practical solutions that help Texans get the care they need without financial strain.</p>
-          <a href="issues.html" class="issue-link">Read More →</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- EVENTS -->
-  <section id="events" class="section">
-    <div class="container">
-      <h2 class="center">Upcoming Events</h2>
-
-      <div class="timeline">
-        <div class="time-item">
-          <div class="time-date">Feb 20</div>
-          <div class="time-info">
-            <h4>Community Roundtable</h4>
-            <p>Discuss transparency and ethics reform with neighbors.</p>
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <p class="hero-kicker">Neil Raney for Texas</p>
+          <h1>A New Standard of Integrity in Texas</h1>
+          <p class="hero-sub">
+            Neil Raney is committed to restoring trust in public service through transparency, accountability, and principled leadership.
+          </p>
+          <div class="hero-actions">
+            <a href="volunteer.html" class="btn btn-primary">Get Involved</a>
+            <a href="issues.html" class="btn btn-outline">View Issues</a>
           </div>
+          <ul className="hero-pillars">
+            <li>Transparent government</li>
+            <li>Accountable leadership</li>
+            <li>Economic fairness</li>
+            <li>Respect for rights</li>
+          </ul>
         </div>
 
-        <div class="time-item">
-          <div class="time-date">Feb 24</div>
-          <div class="time-info">
-            <h4>Town Hall</h4>
-            <p>Open Q&A on public safety, fairness, and accountability.</p>
-          </div>
-        </div>
-
-        <div class="time-item">
-          <div class="time-date">Feb 28</div>
-          <div class="time-info">
-            <h4>Volunteer Kickoff</h4>
-            <p>Learn how to help spread Neil’s message across Texas.</p>
+        <div class="hero-panel">
+          <div class="hero-badge">
+            <span class="hero-badge-top">Texans First</span>
+            <span class="hero-badge-main">2026</span>
+            <span class="hero-badge-bottom">Raney</span>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- JOIN -->
-  <section id="join" class="section alt">
-    <div class="container two-col">
-      <div>
-        <h2>Join the Movement</h2>
-        <p>Be part of a campaign built on integrity, service, and community.</p>
+    <section id="vision" class="section">
+      <div class="container two-col">
+        <div>
+          <h2>Why Neil Is Running</h2>
+          <p>
+            Texas deserves leaders who put people first. Neil is running to bring honesty, clarity, and responsibility back to public office.
+          </p>
+          <p>
+            His mission is simple: ensure every Texan has a government they can trust — one that works in the open, listens to its citizens, and delivers real results.
+          </p>
+        </div>
+
+        <div class="card highlight">
+          <h3>Core Values</h3>
+          <ul class="checklist">
+            <li>Honesty in every decision</li>
+            <li>Transparency in budgeting and policy</li>
+            <li>Accountability for public officials</li>
+            <li>Respect for individual rights</li>
+          </ul>
+        </div>
       </div>
+    </section>
 
-      <form class="join-form">
-        <label>Name</label>
-        <input type="text" required />
+    <section class="section section-alt">
+      <div class="container">
+        <h2 class="center">Key Issues</h2>
+        <div class="grid issues-preview">
+          <article class="card">
+            <h3>Government Transparency</h3>
+            <p>Open records, open meetings, and clear reporting so Texans always know the truth.</p>
+            <a href="issues.html" class="card-link">Read more →</a>
+          </article>
+          <article class="card">
+            <h3>Economic Fairness</h3>
+            <p>Policies that support workers, families, and small businesses — not special interests.</p>
+            <a href="issues.html" class="card-link">Read more →</a>
+          </article>
+          <article class="card">
+            <h3>Public Safety</h3>
+            <p>Safe communities built on trust, accountability, and constitutional policing.</p>
+            <a href="issues.html" class="card-link">Read more →</a>
+          </article>
+          <article class="card">
+            <h3>Healthcare Access</h3>
+            <p>Practical solutions that help Texans get the care they need without financial strain.</p>
+            <a href="issues.html" class="card-link">Read more →</a>
+          </article>
+        </div>
+      </div>
+    </section>
 
-        <label>Email</label>
-        <input type="email" required />
+    <section id="events" class="section">
+      <div class="container">
+        <h2 class="center">Upcoming Events</h2>
+        <div class="timeline">
+          <article class="timeline-item">
+            <div class="timeline-date">Feb 20</div>
+            <div class="timeline-body">
+              <h3>Community Roundtable</h3>
+              <p>Discuss transparency and ethics reform with neighbors.</p>
+            </div>
+          </article>
+          <article class="timeline-item">
+            <div class="timeline-date">Feb 24</div>
+            <div class="timeline-body">
+              <h3>Town Hall</h3>
+              <p>Open Q&amp;A on public safety, fairness, and accountability.</p>
+            </div>
+          </article>
+          <article class="timeline-item">
+            <div class="timeline-date">Feb 28</div>
+            <div class="timeline-body">
+              <h3>Volunteer Kickoff</h3>
+              <p>Learn how to help share Neil’s message across Texas.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
 
-        <label>ZIP Code</label>
-        <input type="text" required />
+    <section id="join" class="section section-alt">
+      <div class="container two-col">
+        <div>
+          <h2>Join the Movement</h2>
+          <p>Be part of a campaign built on integrity, service, and community.</p>
+        </div>
+        <form class="form-card">
+          <label>Name</label>
+          <input type="text" required />
+          <label>Email</label>
+          <input type="email" required />
+          <label>ZIP Code</label>
+          <input type="text" required />
+          <button class="btn btn-primary btn-full">Sign Up</button>
+          <p class="form-note">
+            By submitting this form, you agree to receive campaign communications.
+          </p>
+        </form>
+      </div>
+    </section>
+  </main>
 
-        <button class="btn primary full">Sign Up</button>
-      </form>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="footer">
+  <footer class="site-footer">
     <div class="container footer-inner">
       <p>Paid for by Friends of Neil Raney</p>
-      <nav>
+      <nav class="footer-nav">
         <a href="index.html">Home</a>
         <a href="issues.html">Issues</a>
         <a href="press.html">Press</a>
