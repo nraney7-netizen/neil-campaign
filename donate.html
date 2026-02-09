@@ -8,20 +8,22 @@
   <link rel="stylesheet" href="styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
 </head>
+
 <body>
-  <header class="header">
-    <div class="container nav-container">
-      <div class="brand">
-        <div class="brand-icon">NR</div>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <div class="brand-mark">NR</div>
         <div class="brand-text">
           <span class="brand-name">Neil Raney</span>
-          <span class="brand-tag">For Texas</span>
+          <span class="brand-sub">For Texas</span>
         </div>
-      </div>
+      </a>
 
-      <button class="menu-toggle" aria-expanded="false">
+      <button class="nav-toggle" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
 
@@ -37,15 +39,17 @@
     </div>
   </header>
 
+  <!-- MAIN -->
   <main>
-    <section class="section alt">
+    <section class="section section-alt">
       <div class="container">
         <h1 class="center">Donate to Neil Raney for Texas</h1>
-        <p class="center" style="max-width: 640px; margin: 0.75rem auto 2rem;">
+        <p class="center intro">
           Your contribution helps build a campaign focused on integrity, transparency, and accountability in Texas government.
         </p>
 
         <div class="donate-grid">
+          <!-- Donation Amount Buttons -->
           <div class="donate-options">
             <button class="donate-pill">$10</button>
             <button class="donate-pill">$25</button>
@@ -54,25 +58,37 @@
             <button class="donate-pill">Other</button>
           </div>
 
+          <!-- Stripe Integration -->
           <div class="donate-copy">
             <p>
               Every dollar goes toward reaching voters, organizing communities, and sharing a message of honest, responsible leadership.
             </p>
-            <a href="#" class="btn primary">Proceed to Secure Donation</a>
-            <p class="fine-print" style="margin-top: 0.75rem; font-size: 0.8rem;">
+
+            <!-- STRIPE BUTTON -->
+            <a 
+              href="https://buy.stripe.com/3cI5kE4iY8sOfEJ7LW4ko01" 
+              class="btn btn-primary"
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              Donate Securely via Stripe
+            </a>
+
+            <p class="form-note">
               Contributions are not tax-deductible. By donating, you confirm that you are a U.S. citizen or lawful permanent resident and are contributing your own funds.
             </p>
-            <p class="fine-print">Paid for by Friends of Neil Raney.</p>
+            <p class="form-note">Paid for by Friends of Neil Raney.</p>
           </div>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="footer">
+  <!-- FOOTER -->
+  <footer class="site-footer">
     <div class="container footer-inner">
       <p>Paid for by Friends of Neil Raney</p>
-      <nav>
+      <nav class="footer-nav">
         <a href="index.html">Home</a>
         <a href="issues.html">Issues</a>
         <a href="press.html">Press</a>
