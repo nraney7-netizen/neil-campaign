@@ -1,33 +1,18 @@
-// Footer year
-document.getElementById("year").textContent = new Date().getFullYear();
-
 // Mobile nav toggle
-const navToggle = document.querySelector(".nav-toggle");
-const navLinks = document.getElementById("nav-links");
+const navToggle = document.getElementById("navToggle");
+const navLinks = document.getElementById("navLinks");
 
-if (navToggle) {
-  navToggle.addEventListener("click", () => {
-    navLinks.classList.toggle("open");
+navToggle.addEventListener("click", () => {
+  navLinks.classList.toggle("open");
+});
+
+// Smooth scroll for internal links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener("click", function (e) {
+    const target = document.querySelector(this.getAttribute("href"));
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({ behavior: "smooth" });
+    }
   });
-}
-
-// Fade-in on scroll
-const fadeEls = document.querySelectorAll(".fade-in");
-
-if ("IntersectionObserver" in window) {
-  const observer = new IntersectionObserver(
-    entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.15 }
-  );
-
-  fadeEls.forEach(el => observer.observe(el));
-} else {
-  fadeEls.forEach(el => el.classList.add("visible"));
-}
+});
