@@ -9,7 +9,7 @@ if (navToggle && nav) {
   });
 }
 
-// Optional: smooth-scroll offset for sticky header (basic)
+// Smooth-scroll with offset for sticky header
 document.querySelectorAll('a[href^="#"]').forEach((link) => {
   link.addEventListener("click", (e) => {
     const targetId = link.getAttribute("href");
@@ -26,7 +26,7 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
     window.scrollTo({ top: offsetTop, behavior: "smooth" });
 
     // Close mobile nav after click
-    if (nav.classList.contains("open")) {
+    if (nav && nav.classList.contains("open")) {
       nav.classList.remove("open");
       navToggle.setAttribute("aria-expanded", "false");
     }
